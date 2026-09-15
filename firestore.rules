@@ -1,0 +1,140 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // ---------- Helpers ----------
+
+    function isSignedIn() {
+      return request.auth != null;
+    }
+
+    // Um "staff" (gestor ou barbeiro) só pode agir dentro da própria barbearia.
+    // O vínculo uid -> tenantId fica em staff/{uid}, provisionado manualmente
+    // pelo console do Firebase (ou por uma Cloud Function futura) — não existe
+    // criação/edição de staff pelo próprio app nesta fase do projeto.
+    function isStaffOf(tenantId) {
+      return isSignedIn()
+        && exists(/databases/$(database)/documents/staff/$(request.auth.uid))
+        && get(/databases/$(database)/documents/staff/$(request.auth.uid)).data.tenantId == tenantId;
+    }
+
+    function tenantIsActive(tenantId) {
+      return exists(/databases/$(database)/documents/tenants/$(tenantId))
+        && get(/databases/$(database)/documents/tenants/$(tenantId)).data.ativo == true;
+    }
+
+    // ---------- tenants ----------
+    // Dados públicos da barbearia (nome, marca, endereço) — precisam ser
+    // legíveis sem login para montar a página de agendamento.
+    match /tenants/{tenantId} {
+      allow read: if true;
+      allow write: if isStaffOf(tenantId);
+    }
+
+    // ---------- staff ----------
+    // Cada barbeiro/gestor só enxerga o próprio vínculo. Escrita bloqueada
+    // pelo app nesta fase (provisionamento manual) — ver docs/modelo-dados.md.
+    match /staff/{uid} {
+      allow read: if isSignedIn() && request.auth.uid == uid;
+      allow write: if false;
+    }
+
+    // ---------- professionals ----------
+    match /professionals/{professionalId} {
+      allow read: if true;
+
+      allow create: if isStaffOf(request.resource.data.tenantId)
+        && tenantIsActive(request.resource.data.tenantId);
+
+      allow update: if isStaffOf(resource.data.tenantId)
+        && request.resource.data.tenantId == resource.data.tenantId;
+
+      allow delete: if isStaffOf(resource.data.tenantId);
+    }
+
+    // ---------- services ----------
+    match /services/{serviceId} {
+      allow read: if true;
+
+      allow create: if isStaffOf(request.resource.data.tenantId)
+        && tenantIsActive(request.resource.data.tenantId)
+        && request.resource.data.duracaoMinutos > 0
+        && request.resource.data.preco >= 0;
+
+      allow update: if isStaffOf(resource.data.tenantId)
+        && request.resource.data.tenantId == resource.data.tenantId
+        && request.resource.data.duracaoMinutos > 0
+        && request.resource.data.preco >= 0;
+
+      allow delete: if isStaffOf(resource.data.tenantId);
+    }
+
+    // ---------- clients ----------
+    // Identificação automática sem cadastro: o app cria/atualiza o próprio
+    // documento do cliente (id = tenantId_telefone) sem exigir login.
+    // Não é publicamente legível nem listável — evita expor a base de
+    // clientes de uma barbearia (nome/telefone) para qualquer visitante.
+    match /clients/{clientId} {
+      allow read: if isStaffOf(resource.data.tenantId);
+
+      allow create: if tenantIsActive(request.resource.data.tenantId)
+        && clientId.matches(request.resource.data.tenantId + '_.*')
+        && request.resource.data.telefone.matches('^[0-9]{10,11}$');
+
+      allow update: if tenantIsActive(resource.data.tenantId)
+        && request.resource.data.tenantId == resource.data.tenantId
+        && request.resource.data.telefone == resource.data.telefone;
+
+      allow delete: if isStaffOf(resource.data.tenantId);
+    }
+
+    // ---------- appointments ----------
+    // Criação pública (sem login), mas validando que profissional e serviço
+    // realmente pertencem à barbearia informada. Leitura pública só por
+    // "get" direto do id (o cliente guarda o id retornado após agendar),
+    // nunca por "list" — assim ninguém consegue listar agendamentos de
+    // outro cliente. Cancelamento/edição fica restrito ao staff por ora:
+    // cancelamento público exigiria comprovar posse do telefone (token),
+    // o mesmo risco já identificado no PDR do Mimy Unhas — pendente de
+    // decisão antes de liberar essa função ao cliente final.
+    match /appointments/{appointmentId} {
+      allow get: if true;
+      allow list: if isStaffOf(resource.data.tenantId);
+
+      allow create: if tenantIsActive(request.resource.data.tenantId)
+        && get(/databases/$(database)/documents/professionals/$(request.resource.data.professionalId)).data.tenantId == request.resource.data.tenantId
+        && get(/databases/$(database)/documents/services/$(request.resource.data.serviceId)).data.tenantId == request.resource.data.tenantId
+        && request.resource.data.status == 'confirmado'
+        && request.resource.data.horaInicio < request.resource.data.horaFim;
+
+      allow update: if isStaffOf(resource.data.tenantId)
+        && request.resource.data.tenantId == resource.data.tenantId;
+
+      allow delete: if isStaffOf(resource.data.tenantId);
+    }
+
+    // ---------- availability ----------
+    // Espelho "sem dado pessoal" de cada agendamento (mesmo id do
+    // agendamento correspondente), só com profissional/data/horário. Existe
+    // exclusivamente para o cliente conseguir ver quais horários já estão
+    // ocupados sem precisar de permissão para listar `appointments` (o que
+    // exporia nome/telefone de outros clientes). Criado junto com o
+    // agendamento, na mesma escrita em lote; removido/atualizado pelo staff
+    // quando um agendamento é cancelado.
+    match /availability/{id} {
+      allow read: if true;
+
+      allow create: if tenantIsActive(request.resource.data.tenantId)
+        && get(/databases/$(database)/documents/professionals/$(request.resource.data.professionalId)).data.tenantId == request.resource.data.tenantId
+        && request.resource.data.horaInicio < request.resource.data.horaFim;
+
+      allow update, delete: if isStaffOf(resource.data.tenantId);
+    }
+
+    // Qualquer coleção não prevista acima é negada por padrão.
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

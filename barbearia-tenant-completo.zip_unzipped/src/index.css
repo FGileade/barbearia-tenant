@@ -1,0 +1,58 @@
+/*
+  Identidade visual "APP Barb": barbearia clássica, sóbria e confiante —
+  carvão quente + latão, tipografia condensada nos títulos (só com pesos e
+  tracking do próprio sistema, sem depender de fonte externa: uma fonte
+  externa via CDN quebrou o funcionamento offline do Mimy Unhas antes).
+  --tenant-primary é sobrescrita por barbearia (ver TenantContext), o valor
+  abaixo é só o padrão de fallback.
+*/
+:root {
+  --tenant-primary: #c17f3b;
+  --ink: #f3ede3;
+  --ink-muted: #a89a89;
+  --coal: #191714;
+  --coal-raised: #221f1b;
+  --line: rgba(243, 237, 227, 0.14);
+  --danger: #d9694f;
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background: var(--coal);
+  color: var(--ink);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin: 0;
+}
+
+button {
+  font-family: inherit;
+}
+
+.status-message {
+  padding: 3rem 1.5rem;
+  text-align: center;
+  color: var(--ink-muted);
+}
+
+.status-message--error {
+  color: var(--danger);
+}

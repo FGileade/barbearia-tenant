@@ -1,6 +1,7 @@
 import { useState, type FormEvent } from "react";
 import type { Professional } from "../../types";
 import WeekdaySchedule from "./WeekdaySchedule";
+import { formatName } from "../../lib/masks";
 
 const JORNADA_VAZIA: Professional["jornada"] = { 0: null, 1: null, 2: null, 3: null, 4: null, 5: null, 6: null };
 
@@ -50,7 +51,15 @@ export default function ProfessionalForm({
     <form className="manager-form" onSubmit={handleSubmit}>
       <div className="field">
         <label htmlFor="prof-nome">Nome</label>
-        <input id="prof-nome" value={nome} onChange={(e) => setNome(e.target.value)} required />
+        <input
+          id="prof-nome"
+          value={nome}
+          onChange={(e) => setNome(e.target.value)}
+          onBlur={() => setNome((n) => formatName(n))}
+          autoComplete="off"
+          autoCapitalize="words"
+          required
+        />
       </div>
 
       <div className="field">

@@ -37,7 +37,7 @@ export default function ServiceForm({
     <form className="manager-form" onSubmit={handleSubmit}>
       <div className="field">
         <label htmlFor="serv-nome">Nome do serviço</label>
-        <input id="serv-nome" value={nome} onChange={(e) => setNome(e.target.value)} required />
+        <input id="serv-nome" value={nome} onChange={(e) => setNome(e.target.value)} autoComplete="off" autoCapitalize="sentences" required />
       </div>
 
       <div className="field">
@@ -45,6 +45,7 @@ export default function ServiceForm({
         <input
           id="serv-duracao"
           type="number"
+          inputMode="numeric"
           min={5}
           step={5}
           value={duracaoMinutos}
@@ -58,6 +59,7 @@ export default function ServiceForm({
         <input
           id="serv-preco"
           type="number"
+          inputMode="decimal"
           min={0}
           step={0.5}
           value={preco}

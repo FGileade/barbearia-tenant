@@ -5,6 +5,8 @@ import BookingHome from "./features/booking/BookingHome";
 import BarberLogin from "./features/barber-portal/BarberLogin";
 import BarberDashboard from "./features/barber-portal/BarberDashboard";
 import LandingPage from "./features/landing/LandingPage";
+import AppSignature from "./components/AppSignature";
+import VersiculoDoDia from "./components/VersiculoDoDia";
 
 // Cada barbearia tem o próprio deploy (um projeto Vercel por barbearia) com
 // essa variável fixa no build — o app nasce travado naquela barbearia, sem
@@ -78,13 +80,19 @@ function SingleTenantApp({ slug }: { slug: string }) {
 export default function App() {
   return (
     <BrowserRouter>
-      {FIXED_TENANT_SLUG ? (
-        <SingleTenantApp slug={FIXED_TENANT_SLUG} />
-      ) : (
-        <p className="status-message status-message--error">
-          Barbearia não configurada: defina VITE_TENANT_SLUG no build.
-        </p>
-      )}
+      <div className="app-shell">
+        <div className="app-shell__content">
+          {FIXED_TENANT_SLUG ? (
+            <SingleTenantApp slug={FIXED_TENANT_SLUG} />
+          ) : (
+            <p className="status-message status-message--error">
+              Barbearia não configurada: defina VITE_TENANT_SLUG no build.
+            </p>
+          )}
+        </div>
+        <AppSignature />
+      </div>
+      <VersiculoDoDia />
     </BrowserRouter>
   );
 }

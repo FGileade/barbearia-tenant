@@ -2,6 +2,7 @@ import { useState, type FormEvent } from "react";
 import { User, Phone, Calendar, Scissors, ArrowLeft, CheckCircle2 } from "lucide-react";
 import type { Professional, Service } from "../../types";
 import { isValidBrazilianPhone } from "../../lib/clientId";
+import { formatName, maskPhone } from "../../lib/masks";
 
 export default function ClientFormStep({
   professional,
@@ -39,7 +40,7 @@ export default function ClientFormStep({
     event.preventDefault();
     setTouched(true);
     if (!nomeValido || !telefoneValido) return;
-    onSubmit(nome.trim(), telefone);
+    onSubmit(formatName(nome), telefone);
   }
 
   return (
@@ -98,12 +99,18 @@ export default function ClientFormStep({
             id="nome"
             value={nome}
             onChange={(e) => setNome(e.target.value)}
+            onBlur={() => setNome((n) => formatName(n))}
             placeholder="Ex: Carlos Eduardo"
             autoComplete="name"
+            autoCapitalize="words"
+            required
+            aria-required="true"
+            aria-invalid={touched && !nomeValido}
+            aria-describedby={touched && !nomeValido ? "nome-erro" : undefined}
             className="w-full bg-surface text-on-surface placeholder-[#6C6255] border border-[#383129] focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary rounded-lg px-3.5 py-3 text-sm transition-colors"
           />
           {touched && !nomeValido && (
-            <span className="text-error text-xs font-medium">Por favor, informe seu nome.</span>
+            <span id="nome-erro" role="alert" className="text-error text-xs font-medium">Por favor, informe seu nome.</span>
           )}
         </div>
 
@@ -114,14 +121,20 @@ export default function ClientFormStep({
           <input
             id="telefone"
             value={telefone}
-            onChange={(e) => setTelefone(e.target.value)}
+            onChange={(e) => setTelefone(maskPhone(e.target.value))}
             placeholder="(11) 91234-5678"
+            type="tel"
             inputMode="tel"
             autoComplete="tel"
+            maxLength={15}
+            required
+            aria-required="true"
+            aria-invalid={touched && !telefoneValido}
+            aria-describedby={touched && !telefoneValido ? "telefone-erro" : undefined}
             className="w-full bg-surface text-on-surface placeholder-[#6C6255] border border-[#383129] focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary rounded-lg px-3.5 py-3 text-sm transition-colors"
           />
           {touched && !telefoneValido && (
-            <span className="text-error text-xs font-medium">Digite um número válido com DDD (Ex: 11987654321).</span>
+            <span id="telefone-erro" role="alert" className="text-error text-xs font-medium">Digite um número válido com DDD (Ex: (11) 98765-4321).</span>
           )}
         </div>
 

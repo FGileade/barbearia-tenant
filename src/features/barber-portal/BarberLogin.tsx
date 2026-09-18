@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { Lock, Mail, LogIn } from "lucide-react";
 import { auth } from "../../lib/firebase";
+import PasswordInput from "../../components/PasswordInput";
 
 function mensagemDeErro(codigo: string): string {
   switch (codigo) {
@@ -89,6 +90,9 @@ export default function BarberLogin({
               onChange={(e) => setEmail(e.target.value)}
               placeholder="barbeiro@exemplo.com"
               autoComplete="email"
+              inputMode="email"
+              autoCapitalize="none"
+              spellCheck={false}
               required
               className="w-full bg-surface text-on-surface placeholder-[#6C6255] border border-[#383129] focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary rounded-lg px-3.5 py-2.5 text-sm transition-colors"
             />
@@ -101,9 +105,8 @@ export default function BarberLogin({
             >
               <Lock size={13} className="text-primary" /> Senha
             </label>
-            <input
+            <PasswordInput
               id="senha"
-              type="password"
               value={senha}
               onChange={(e) => setSenha(e.target.value)}
               placeholder="••••••••"

@@ -9,14 +9,22 @@ service cloud.firestore {
       return request.auth != null;
     }
 
+    // Usuário "master" (dev da plataforma): staff/{uid}.role == 'master'.
+    // Age em qualquer barbearia — só deve existir para o dono da plataforma.
+    function isMaster() {
+      return isSignedIn()
+        && exists(/databases/$(database)/documents/staff/$(request.auth.uid))
+        && get(/databases/$(database)/documents/staff/$(request.auth.uid)).data.role == 'master';
+    }
+
     // Um "staff" (gestor ou barbeiro) só pode agir dentro da própria barbearia.
     // O vínculo uid -> tenantId fica em staff/{uid}, provisionado manualmente
     // pelo console do Firebase (ou por uma Cloud Function futura) — não existe
     // criação/edição de staff pelo próprio app nesta fase do projeto.
     function isStaffOf(tenantId) {
-      return isSignedIn()
+      return isMaster() || (isSignedIn()
         && exists(/databases/$(database)/documents/staff/$(request.auth.uid))
-        && get(/databases/$(database)/documents/staff/$(request.auth.uid)).data.tenantId == tenantId;
+        && get(/databases/$(database)/documents/staff/$(request.auth.uid)).data.tenantId == tenantId);
     }
 
     function tenantIsActive(tenantId) {

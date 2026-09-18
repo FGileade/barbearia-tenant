@@ -43,7 +43,7 @@ function TenantGate() {
 // deploy, ou vindo da URL no modo hub).
 function BarberArea({ slug, loginPath, homePath }: { slug: string; loginPath: string; homePath: string }) {
   return (
-    <BarberAuthProvider>
+    <BarberAuthProvider tenantSlug={slug}>
       <Routes>
         <Route path="login" element={<BarberLogin tenantSlug={slug} homePath={homePath} />} />
         <Route path="*" element={<ProtectedBarberArea tenantSlug={slug} loginPath={loginPath} />} />

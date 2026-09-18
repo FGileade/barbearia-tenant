@@ -79,7 +79,7 @@ export default function BarberDashboard() {
             <div className="flex flex-col min-w-0">
               <div className="flex items-center gap-2">
                 <span className="font-bold text-sm text-on-surface truncate">
-                  {staff.role === "gestor" ? "Gestor da Barbearia" : "Barbeiro / Staff"}
+                  {staff.role === "master" ? "Master Dev" : staff.role === "gestor" ? "Gestor da Barbearia" : "Barbeiro / Staff"}
                 </span>
                 <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-secondary-container/20 text-secondary text-[10px] font-semibold border border-secondary/20 flex-shrink-0">
                   <span className="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse" />

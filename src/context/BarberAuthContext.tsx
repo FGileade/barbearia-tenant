@@ -5,7 +5,7 @@ import { auth, db } from "../lib/firebase";
 
 interface StaffLink {
   tenantId: string;
-  role: "gestor" | "barbeiro";
+  role: "master" | "gestor" | "barbeiro";
   nome?: string;
 }
 
@@ -23,7 +23,9 @@ const BarberAuthContext = createContext<BarberAuthValue>({
   logout: async () => {},
 });
 
-export function BarberAuthProvider({ children }: { children: ReactNode }) {
+// `tenantSlug` é a barbearia aberta agora (fixa no deploy, ou vinda da URL no
+// modo hub). O usuário master não pertence a uma barbearia só, então herda essa.
+export function BarberAuthProvider({ tenantSlug, children }: { tenantSlug: string; children: ReactNode }) {
   const [user, setUser] = useState<User | null>(null);
   const [staff, setStaff] = useState<StaffLink | null>(null);
   const [loading, setLoading] = useState(true);
@@ -45,7 +47,12 @@ export function BarberAuthProvider({ children }: { children: ReactNode }) {
     const unsub = onSnapshot(
       doc(db, "staff", user.uid),
       (snap) => {
-        setStaff(snap.exists() ? (snap.data() as StaffLink) : null);
+        if (!snap.exists()) {
+          setStaff(null);
+        } else {
+          const link = snap.data() as StaffLink;
+          setStaff(link.role === "master" ? { ...link, tenantId: tenantSlug } : link);
+        }
         setLoading(false);
       },
       () => {
@@ -55,7 +62,7 @@ export function BarberAuthProvider({ children }: { children: ReactNode }) {
     );
 
     return unsub;
-  }, [user]);
+  }, [user, tenantSlug]);
 
   return (
     <BarberAuthContext.Provider value={{ user, staff, loading, logout: () => signOut(auth) }}>

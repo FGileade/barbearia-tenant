@@ -85,6 +85,18 @@ app — o vínculo `staff/{uid} -> tenantId` é criado manualmente pelo
 console do Firebase. Uma Cloud Function para automatizar esse
 provisionamento é uma melhoria futura, não implementada nesta fase.
 
+## Usuário master (dev da plataforma)
+
+`staff/{uid}` com `role: "master"` dá acesso de staff a **todas** as
+barbearias (a função `isMaster()` em `firestore.rules` faz `isStaffOf`
+retornar verdadeiro para qualquer `tenantId`). No frontend, o master herda
+o `tenantId` da barbearia aberta (slug fixo do deploy, ou da URL no modo
+hub), então entra no painel de qualquer uma delas. O documento não tem
+`tenantId` próprio e, como toda escrita em `staff` é bloqueada pelas regras,
+só pode ser criado pelo Console do Firebase ou Admin SDK.
+
+Master atual: `MQqsCzFnT4VVVqdKzsz7fWOn2Oj2` (filipegileade@gmail.com).
+
 ## Histórico de decisões
 
 - **[Revisado]** Multi-tenant com um único app/backend compartilhado (URL

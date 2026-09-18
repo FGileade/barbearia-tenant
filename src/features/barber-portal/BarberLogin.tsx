@@ -53,7 +53,7 @@ export default function BarberLogin({
         {/* Brand Header */}
         <div className="flex flex-col items-center text-center gap-2">
           <img
-            src="/logo_icon.png"
+            src="/logo.svg"
             alt="Logo Barbearia"
             className="w-14 h-14 object-contain rounded-xl p-1 bg-surface-container border border-[#383129] shadow-md"
           />

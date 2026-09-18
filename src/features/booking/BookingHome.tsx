@@ -81,12 +81,12 @@ export default function BookingHome() {
         <div className="max-w-3xl mx-auto h-16 px-4 flex items-center justify-between">
           <div className="flex items-center gap-3">
             <img
-              src={tenant.logoUrl || "/logo_icon.png"}
+              src={tenant.logoUrl || "/logo.svg"}
               alt={tenant.nome}
               className="h-8 w-auto object-contain rounded"
               onError={(e) => {
                 // Fallback to local logo if custom url fails
-                (e.target as HTMLImageElement).src = "/logo_icon.png";
+                (e.target as HTMLImageElement).src = "/logo.svg";
               }}
             />
             <div className="flex flex-col">

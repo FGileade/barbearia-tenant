@@ -52,11 +52,11 @@ export default function LandingPage() {
       >
         <div className="max-w-2xl mx-auto px-5 py-14 flex flex-col items-center text-center gap-4">
           <img
-            src={tenant.logoUrl || "/logo_icon.png"}
+            src={tenant.logoUrl || "/logo.svg"}
             alt={tenant.nome}
             className="h-20 w-auto object-contain rounded-xl"
             onError={(e) => {
-              (e.target as HTMLImageElement).src = "/logo_icon.png";
+              (e.target as HTMLImageElement).src = "/logo.svg";
             }}
           />
           <h1 className="text-3xl font-bold tracking-tight">{tenant.nome}</h1>

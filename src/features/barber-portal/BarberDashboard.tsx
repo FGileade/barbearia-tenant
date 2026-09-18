@@ -43,7 +43,7 @@ export default function BarberDashboard() {
         <div className="max-w-4xl mx-auto h-16 px-4 flex items-center justify-between">
           <div className="flex items-center gap-3">
             <img
-              src="/logo_icon.png"
+              src="/logo.svg"
               alt="Logo Barbearia"
               className="h-8 w-auto object-contain rounded"
             />

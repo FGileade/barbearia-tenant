@@ -1,6 +1,18 @@
-import { doc, serverTimestamp, setDoc, updateDoc, FirestoreError } from "firebase/firestore";
+import {
+  collection,
+  deleteDoc,
+  doc,
+  onSnapshot,
+  query,
+  serverTimestamp,
+  setDoc,
+  updateDoc,
+  where,
+  FirestoreError,
+} from "firebase/firestore";
 import { db } from "../firebase";
 import { buildClientId, isValidBrazilianPhone, normalizePhone } from "../clientId";
+import type { Client } from "../../types";
 
 /**
  * Cria ou atualiza o cliente automaticamente, sem cadastro/login prévio.
@@ -38,4 +50,46 @@ export async function upsertClient(tenantId: string, nome: string, telefoneRaw: 
   }
 
   return clientId;
+}
+
+// serverTimestamp() volta do Firestore como Timestamp; o resto do app usa ms.
+function toMillis(value: unknown): number | undefined {
+  if (typeof value === "number") return value;
+  if (value && typeof (value as { toMillis?: unknown }).toMillis === "function") {
+    return (value as { toMillis: () => number }).toMillis();
+  }
+  return undefined;
+}
+
+/** Painel do staff: todos os clientes da barbearia, em tempo real. */
+export function watchClients(tenantId: string, onChange: (clients: Client[]) => void, onError?: () => void) {
+  const q = query(collection(db, "clients"), where("tenantId", "==", tenantId));
+  return onSnapshot(
+    q,
+    (snap) => {
+      onChange(
+        snap.docs.map((d) => {
+          const data = d.data();
+          return {
+            id: d.id,
+            tenantId: data.tenantId,
+            nome: data.nome,
+            telefone: data.telefone,
+            criadoEm: toMillis(data.criadoEm) ?? 0,
+            ultimoAgendamentoEm: toMillis(data.ultimoAgendamentoEm),
+          } as Client;
+        }),
+      );
+    },
+    onError,
+  );
+}
+
+export async function renameClient(clientId: string, nome: string): Promise<void> {
+  await updateDoc(doc(db, "clients", clientId), { nome });
+}
+
+/** Remove só o cadastro do cliente; os agendamentos dele continuam no histórico da barbearia. */
+export async function deleteClient(clientId: string): Promise<void> {
+  await deleteDoc(doc(db, "clients", clientId));
 }

@@ -134,3 +134,22 @@ export async function cancelAppointment(appointmentId: string): Promise<void> {
 export async function completeAppointment(appointmentId: string): Promise<void> {
   await updateDoc(doc(db, "appointments", appointmentId), { status: "concluido" });
 }
+
+/** Histórico de um cliente na barbearia (painel do staff), em tempo real. */
+export function watchClientAppointments(
+  tenantId: string,
+  clientId: string,
+  onChange: (appointments: Appointment[]) => void,
+) {
+  const q = query(
+    collection(db, "appointments"),
+    where("tenantId", "==", tenantId),
+    where("clientId", "==", clientId),
+  );
+
+  return onSnapshot(q, (snap) => {
+    const list = snap.docs.map((d) => ({ id: d.id, ...d.data() }) as Appointment);
+    list.sort((a, b) => `${b.data} ${b.horaInicio}`.localeCompare(`${a.data} ${a.horaInicio}`));
+    onChange(list);
+  });
+}

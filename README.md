@@ -33,16 +33,13 @@ functions/        Cloud Function que avisa o staff a cada novo agendamento
 
 ## Dois modos de rodar o app
 
-**Modo barbearia única (produção)** — `VITE_TENANT_SLUG` preenchida no `.env`
-(ou nas env vars do deploy). O app já nasce travado naquela barbearia: `/`
-é o agendamento, `/admin/login` é o painel. Não existe slug na URL.
+**Uma barbearia por deploy** — `VITE_TENANT_SLUG` é obrigatória (no `.env`
+local ou nas env vars do deploy). O app nasce travado naquela barbearia,
+sem slug na URL:
 
-**Modo hub (só para desenvolvimento local)** — `VITE_TENANT_SLUG` em branco.
-Um único servidor local serve várias barbearias pelo slug na URL, útil para
-testar sem precisar configurar um deploy por barbearia:
-
-- Cliente: `http://localhost:5173/b/{slug}`
-- Painel do barbeiro: `http://localhost:5173/admin/{slug}/login`
+- `/` — landing page da barbearia (marca, serviços, equipe, contato)
+- `/agendar` — fluxo de agendamento do cliente
+- `/admin/login` — painel do barbeiro/gestor
 
 ## Rodando localmente
 
@@ -64,8 +61,7 @@ publicado uma única vez, não por barbearia:
 firebase deploy
 ```
 
-Isso publica as regras do Firestore, os índices, o hosting (do modo hub,
-se usado) e a Cloud Function juntos (veja `firebase.json`). Para publicar
+Isso publica as regras do Firestore, os índices, o hosting e a Cloud Function juntos (veja `firebase.json`). Para publicar
 só as functions: `cd functions && npm run deploy`.
 
 ## O que ainda falta (próximos passos sugeridos)

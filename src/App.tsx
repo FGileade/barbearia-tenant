@@ -1,18 +1,23 @@
-import { BrowserRouter, Routes, Route, Navigate, useParams } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { TenantProvider, useTenant } from "./context/TenantContext";
 import { BarberAuthProvider, useBarberAuth } from "./context/BarberAuthContext";
 import BookingHome from "./features/booking/BookingHome";
 import BarberLogin from "./features/barber-portal/BarberLogin";
 import BarberDashboard from "./features/barber-portal/BarberDashboard";
-import HomeLanding from "./HomeLanding";
+import LandingPage from "./features/landing/LandingPage";
 
-// Em produção, cada barbearia tem o próprio deploy (um projeto Vercel por
-// barbearia) com essa variável fixa no build — o app já nasce travado
-// naquela barbearia, sem slug na URL (ver README.md). Sem ela, o app roda
-// em "modo hub": a URL carrega o slug (/b/{slug}, /admin/{slug}/...) — só
-// serve para testar várias barbearias num mesmo servidor local, não é
-// usado em produção.
+// Cada barbearia tem o próprio deploy (um projeto Vercel por barbearia) com
+// essa variável fixa no build — o app nasce travado naquela barbearia, sem
+// slug na URL (ver README.md). Em dev local, defina-a no .env.
 const FIXED_TENANT_SLUG = import.meta.env.VITE_TENANT_SLUG?.trim() || undefined;
+
+function LandingArea({ slug }: { slug: string }) {
+  return (
+    <TenantProvider slug={slug}>
+      <LandingPage />
+    </TenantProvider>
+  );
+}
 
 function ClientArea({ slug }: { slug: string }) {
   return (
@@ -20,12 +25,6 @@ function ClientArea({ slug }: { slug: string }) {
       <TenantGate />
     </TenantProvider>
   );
-}
-
-function ClientAreaFromUrl() {
-  const { tenantSlug } = useParams<{ tenantSlug: string }>();
-  if (!tenantSlug) return <Navigate to="/" replace />;
-  return <ClientArea slug={tenantSlug} />;
 }
 
 function TenantGate() {
@@ -39,8 +38,7 @@ function TenantGate() {
 }
 
 // Área do barbeiro/gestor: login público, painel protegido por sessão +
-// vínculo staff/{uid}.tenantId igual ao slug da barbearia (fixo por
-// deploy, ou vindo da URL no modo hub).
+// vínculo staff/{uid}.tenantId igual ao slug da barbearia (fixo por deploy).
 function BarberArea({ slug, loginPath, homePath }: { slug: string; loginPath: string; homePath: string }) {
   return (
     <BarberAuthProvider tenantSlug={slug}>
@@ -50,12 +48,6 @@ function BarberArea({ slug, loginPath, homePath }: { slug: string; loginPath: st
       </Routes>
     </BarberAuthProvider>
   );
-}
-
-function BarberAreaFromUrl() {
-  const { tenantSlug } = useParams<{ tenantSlug: string }>();
-  if (!tenantSlug) return <Navigate to="/" replace />;
-  return <BarberArea slug={tenantSlug} loginPath={`/admin/${tenantSlug}/login`} homePath={`/admin/${tenantSlug}`} />;
 }
 
 function ProtectedBarberArea({ tenantSlug, loginPath }: { tenantSlug: string; loginPath: string }) {
@@ -72,7 +64,8 @@ function ProtectedBarberArea({ tenantSlug, loginPath }: { tenantSlug: string; lo
 function SingleTenantApp({ slug }: { slug: string }) {
   return (
     <Routes>
-      <Route path="/" element={<ClientArea slug={slug} />} />
+      <Route path="/" element={<LandingArea slug={slug} />} />
+      <Route path="/agendar" element={<ClientArea slug={slug} />} />
       <Route
         path="/admin/*"
         element={<BarberArea slug={slug} loginPath="/admin/login" homePath="/admin" />}
@@ -82,24 +75,16 @@ function SingleTenantApp({ slug }: { slug: string }) {
   );
 }
 
-// Modo hub: um único deploy servindo várias barbearias pelo slug na URL.
-// Usado só em desenvolvimento local (ver README.md) — não é a forma de
-// publicar em produção.
-function HubApp() {
-  return (
-    <Routes>
-      <Route path="/" element={<HomeLanding />} />
-      <Route path="/b/:tenantSlug/*" element={<ClientAreaFromUrl />} />
-      <Route path="/admin/:tenantSlug/*" element={<BarberAreaFromUrl />} />
-      <Route path="*" element={<Navigate to="/" replace />} />
-    </Routes>
-  );
-}
-
 export default function App() {
   return (
     <BrowserRouter>
-      {FIXED_TENANT_SLUG ? <SingleTenantApp slug={FIXED_TENANT_SLUG} /> : <HubApp />}
+      {FIXED_TENANT_SLUG ? (
+        <SingleTenantApp slug={FIXED_TENANT_SLUG} />
+      ) : (
+        <p className="status-message status-message--error">
+          Barbearia não configurada: defina VITE_TENANT_SLUG no build.
+        </p>
+      )}
     </BrowserRouter>
   );
 }

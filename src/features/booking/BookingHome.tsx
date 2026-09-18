@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import { useTenant } from "../../context/TenantContext";
 import { watchProfessionals, watchServices } from "../../lib/repositories/catalog";
 import { createAppointment } from "../../lib/repositories/appointments";
@@ -123,6 +124,12 @@ export default function BookingHome() {
             </p>
           </div>
         </section>
+
+        {step === 1 && (
+          <Link to="/" className="text-xs text-on-surface-variant hover:text-primary transition-colors self-start">
+            ← Voltar ao início
+          </Link>
+        )}
 
         {step <= 4 && <StepProgress currentStep={step} />}
 

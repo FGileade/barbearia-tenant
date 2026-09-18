@@ -10,6 +10,9 @@ export interface Tenant {
   corPrimaria?: string; // permite marca própria por barbearia, ex. "#1E293B"
   endereco?: string;
   telefone?: string; // usado nos links de WhatsApp
+  descricao?: string; // texto curto da landing page
+  heroImagemUrl?: string; // imagem de fundo da landing page
+  instagram?: string; // ex. "@barbeclub"
   ativo: boolean;
   criadoEm: number;
 }

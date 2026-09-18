@@ -23,8 +23,8 @@ const BarberAuthContext = createContext<BarberAuthValue>({
   logout: async () => {},
 });
 
-// `tenantSlug` é a barbearia aberta agora (fixa no deploy, ou vinda da URL no
-// modo hub). O usuário master não pertence a uma barbearia só, então herda essa.
+// `tenantSlug` é a barbearia do deploy (fixa no build, `VITE_TENANT_SLUG`).
+// O usuário master não pertence a uma barbearia só, então herda essa.
 export function BarberAuthProvider({ tenantSlug, children }: { tenantSlug: string; children: ReactNode }) {
   const [user, setUser] = useState<User | null>(null);
   const [staff, setStaff] = useState<StaffLink | null>(null);

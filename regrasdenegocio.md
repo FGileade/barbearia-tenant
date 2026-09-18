@@ -14,11 +14,9 @@ que pertence a uma barbearia carrega o campo `tenantId` — é assim que o
 isolamento entre barbearias é garantido nas regras de segurança,
 independente de quantos frontends existirem.
 
-O **frontend** tem dois modos (ver decisão revisada no histórico):
-produção usa um deploy separado por barbearia (`VITE_TENANT_SLUG` fixa no
-build, sem slug na URL); o modo com slug na URL (`/b/{slug}`,
-`/admin/{slug}`) existe só para testar várias barbearias num servidor
-local de desenvolvimento.
+O **frontend** é um deploy separado por barbearia (`VITE_TENANT_SLUG` fixa no
+build, sem slug na URL). A primeira tela (`/`) é a landing page da barbearia,
+o agendamento fica em `/agendar` e o painel em `/admin/login`.
 
 ## Coleções do Firestore
 
@@ -90,8 +88,7 @@ provisionamento é uma melhoria futura, não implementada nesta fase.
 `staff/{uid}` com `role: "master"` dá acesso de staff a **todas** as
 barbearias (a função `isMaster()` em `firestore.rules` faz `isStaffOf`
 retornar verdadeiro para qualquer `tenantId`). No frontend, o master herda
-o `tenantId` da barbearia aberta (slug fixo do deploy, ou da URL no modo
-hub), então entra no painel de qualquer uma delas. O documento não tem
+o `tenantId` da barbearia do deploy, então entra no painel de qualquer uma delas. O documento não tem
 `tenantId` próprio e, como toda escrita em `staff` é bloqueada pelas regras,
 só pode ser criado pelo Console do Firebase ou Admin SDK.
 
@@ -112,9 +109,12 @@ Master atual: `MQqsCzFnT4VVVqdKzsz7fWOn2Oj2` (filipegileade@gmail.com).
   publicado. Motivo da mudança: cada barbearia precisa da própria
   marca/imagens sem depender de um app "genérico" pedindo slug — e
   travar o tenant no build evita qualquer risco de um frontend acessar
-  dados de outra barbearia por engano. O modo antigo (slug na URL,
-  `/b/{slug}`, `/admin/{slug}`) foi mantido só como "modo hub" para
-  desenvolvimento local, não é mais usado em produção.
+  dados de outra barbearia por engano. O modo antigo (slug na URL, "modo hub") foi **removido**: sem
+  `VITE_TENANT_SLUG` o app mostra um aviso de barbearia não configurada.
+- A primeira tela de cada deploy é a landing page da barbearia (`/`),
+  montada só com dados do Firestore (`tenants`, `services`, `professionals`;
+  campos opcionais `descricao`, `heroImagemUrl`, `instagram`); o botão
+  "Agendar horário" leva ao fluxo existente em `/agendar`.
 - Branding por barbearia (`logoUrl`, `corPrimaria` em `tenants/{slug}`)
   já existia antes dessa mudança e continua vindo do Firestore, não do
   código — trocar a marca não exige rebuild/redeploy do frontend.

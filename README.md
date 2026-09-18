@@ -1,7 +1,9 @@
-# APP Barb — barbearia-tenant
+# Barbe Club — barbearia-tenant
 
 Site + app de agendamento para barbearias, multi-tenant: um único projeto
-Firebase atende várias barbearias, cada uma com sua própria URL e marca.
+Firebase (backend/Firestore compartilhado, isolado por `tenantId`) atende
+várias barbearias. Cada barbearia tem seu **próprio deploy de frontend**
+(domínio e visual próprios), configurado pela variável `VITE_TENANT_SLUG`.
 
 Antes de mexer no código, leia o **`regrasdenegocio.md`** — ele documenta
 o modelo de dados, as regras de segurança e as decisões já tomadas.
@@ -23,11 +25,24 @@ functions/        Cloud Function que avisa o staff a cada novo agendamento
 
 ## Configuração
 
-1. Crie um projeto no Firebase Console, com Firestore, Authentication (e-mail/senha) e Cloud Messaging ativados.
+1. Crie um projeto no Firebase Console, com Firestore, Authentication (e-mail/senha) e Cloud Messaging ativados. Esse mesmo projeto atende **todas** as barbearias.
 2. Copie `.env.example` para `.env` e preencha com as credenciais do projeto (Configurações do projeto > Seus apps > Web). O `VITE_FIREBASE_VAPID_KEY` fica em Cloud Messaging > Certificados push da Web.
 3. `npm install`
-4. Crie ao menos um documento em `tenants/{slug}` pelo Console (nome, slug, ativo: true) para ter uma barbearia para testar.
+4. Crie ao menos um documento em `tenants/{slug}` pelo Console (nome, slug, logoUrl, corPrimaria, ativo: true) para ter uma barbearia para testar.
 5. Crie o usuário do barbeiro/gestor em Authentication, e depois um documento em `staff/{uid}` com `{ tenantId: "{slug}", role: "gestor" }` — esse vínculo ainda é manual (ver `regrasdenegocio.md`).
+
+## Dois modos de rodar o app
+
+**Modo barbearia única (produção)** — `VITE_TENANT_SLUG` preenchida no `.env`
+(ou nas env vars do deploy). O app já nasce travado naquela barbearia: `/`
+é o agendamento, `/admin/login` é o painel. Não existe slug na URL.
+
+**Modo hub (só para desenvolvimento local)** — `VITE_TENANT_SLUG` em branco.
+Um único servidor local serve várias barbearias pelo slug na URL, útil para
+testar sem precisar configurar um deploy por barbearia:
+
+- Cliente: `http://localhost:5173/b/{slug}`
+- Painel do barbeiro: `http://localhost:5173/admin/{slug}/login`
 
 ## Rodando localmente
 
@@ -35,19 +50,23 @@ functions/        Cloud Function que avisa o staff a cada novo agendamento
 npm run dev
 ```
 
-- Cliente: `http://localhost:5173/b/{slug}`
-- Painel do barbeiro: `http://localhost:5173/admin/{slug}/login`
-
 ## Publicando
 
+Cada barbearia é **um projeto Vercel separado**, com domínio próprio e as
+mesmas env vars `VITE_FIREBASE_*` (mesmo projeto Firebase para todas) mais
+a sua própria `VITE_TENANT_SLUG`. O código-fonte é o mesmo repositório para
+todos os deploys — só a env var muda.
+
+O backend (Firestore rules, índices e a Cloud Function de notificação) é
+publicado uma única vez, não por barbearia:
+
 ```
-npm run build
 firebase deploy
 ```
 
-Isso publica as regras do Firestore, os índices, o hosting e a Cloud
-Function de notificação juntos (veja `firebase.json`). Para publicar só as
-functions: `cd functions && npm run deploy`.
+Isso publica as regras do Firestore, os índices, o hosting (do modo hub,
+se usado) e a Cloud Function juntos (veja `firebase.json`). Para publicar
+só as functions: `cd functions && npm run deploy`.
 
 ## O que ainda falta (próximos passos sugeridos)
 

@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="pt-BR"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><title>APP Barb - Agendamento</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base { html, body { margin: 0; padding: 0; } body { overscroll-behavior: none; } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "surface-dim": "#151310", "on-tertiary": "#5d171a", "surface-container-lowest": "#100e0b", "tertiary-container": "#d67573", "on-secondary-fixed-variant": "#185123", "secondary-fixed-dim": "#98d599", "surface-tint": "#ffb873", "on-primary-container": "#412200", "on-secondary": "#003910", "surface-container-high": "#2c2a26", "primary": "#ffb873", "on-background": "#e8e1dc", "background": "#151310", "surface-container-highest": "#373431", "on-primary-fixed": "#2d1600", "on-surface-variant": "#d7c3b4", "on-tertiary-container": "#531014", "on-primary": "#4b2800", "primary-fixed-dim": "#ffb873", "secondary-fixed": "#b4f2b3", "surface-container-low": "#1d1b18", "secondary": "#98d599", "error": "#ffb4ab", "on-error": "#690005", "on-tertiary-fixed": "#3f0207", "on-primary-fixed-variant": "#6a3b00", "on-secondary-fixed": "#002107", "error-container": "#93000a", "outline": "#9f8e80", "surface-variant": "#373431", "outline-variant": "#524439", "on-secondary-container": "#8bc78b", "on-surface": "#e8e1dc", "surface-bright": "#3b3935", "tertiary-fixed": "#ffdad8", "primary-fixed": "#ffdcbf", "surface-container": "#211f1c", "inverse-primary": "#89510e", "surface": "#151310", "secondary-container": "#1b5425", "inverse-on-surface": "#33302d", "tertiary": "#ffb3b0", "inverse-surface": "#e8e1dc", "on-error-container": "#ffdad6", "primary-container": "#c5823e", "on-tertiary-fixed-variant": "#7a2d2e", "tertiary-fixed-dim": "#ffb3b0" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "spacing": { "space-lg": "1.5rem", "space-xs": "0.25rem", "space-xl": "2.5rem", "space-sm": "0.5rem", "margin": "2rem", "gutter": "1.5rem", "space-md": "1rem" }, "fontFamily": { "headline-xl": [ "Plus Jakarta Sans" ], "headline-md": [ "Plus Jakarta Sans" ], "headline-sm": [ "Plus Jakarta Sans" ], "body-lg": [ "Plus Jakarta Sans" ], "body-sm": [ "Plus Jakarta Sans" ], "label-caps": [ "Plus Jakarta Sans" ], "display-lg": [ "Plus Jakarta Sans" ], "label-data": [ "Plus Jakarta Sans" ], "body-md": [ "Plus Jakarta Sans" ] }, "fontSize": { "headline-xl": [ "32px", { "lineHeight": "40px", "letterSpacing": "-0.025em", "fontWeight": "700" } ], "headline-md": [ "24px", { "lineHeight": "32px", "letterSpacing": "-0.02em", "fontWeight": "700" } ], "headline-sm": [ "18px", { "lineHeight": "26px", "letterSpacing": "-0.015em", "fontWeight": "600" } ], "body-lg": [ "16px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400" } ], "body-sm": [ "13px", { "lineHeight": "18px", "letterSpacing": "0.01em", "fontWeight": "400" } ], "label-caps": [ "11px", { "lineHeight": "16px", "letterSpacing": "0.08em", "fontWeight": "700" } ], "display-lg": [ "44px", { "lineHeight": "52px", "letterSpacing": "-0.03em", "fontWeight": "800" } ], "label-data": [ "12px", { "lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "600" } ], "body-md": [ "14px", { "lineHeight": "22px", "letterSpacing": "0em", "fontWeight": "400" } ] } } } };</script></head><body class="bg-background font-body-md text-on-surface antialiased min-h-screen"><header class="fixed top-0 left-0 right-0 z-50 bg-surface-container/90 backdrop-blur-md"><div class="h-20 max-w-6xl mx-auto px-margin flex items-center justify-between gap-gutter"><div class="flex items-center gap-space-md"><img alt="Selo e monograma circular de precisão 'AB' para APP Barb em latão/âmbar sobre carvão escuro. Brand logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1UsF3GCqriu_ZD6yOgvm1IZxBREvFM-Ox1vO2Sj5RjOQvaP-T2vSMFXhesQzovEB7ixmqrCVhjPRAju1mx7jd6wcSdoK7m9KUi9jizdfkI7smjjYeFyrigPmuWXYPka5JmZ-yi81Ld8b4alqaoM-16la1gTtRZnHlc3Y9qyMpQuFdFIhBZivqC5qia24HfiJBHLXs5ksZtipBm1e1xL2vDIN89SSR0Vqq5uzaglkzgJjTEnQWcxJYxc9v4"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-primary uppercase tracking-wider">APP Barb</span><span class="font-body-sm text-body-sm text-on-surface-variant">Barbearia Dom Pedro • Rua Augusta, 1420</span></div></div><nav class="hidden lg:flex items-center gap-space-sm bg-surface-container-low px-space-md py-space-xs rounded-xl" data-active-classes="bg-primary-container text-on-primary-container font-bold rounded-lg"><a class="px-space-md py-space-xs font-label-caps text-label-caps uppercase transition-colors text-on-surface-variant hover:text-on-surface" data-path="selecao-de-profissional" href="#">1. Profissional</a><span class="text-outline-variant font-label-data text-label-data">→</span><a aria-current="page" class="px-space-md py-space-xs uppercase transition-colors bg-primary-container text-on-primary-container font-bold rounded-lg" data-path="selecao-de-servicos" href="#">2. Serviços</a><span class="text-outline-variant font-label-data text-label-data">→</span><a class="px-space-md py-space-xs font-label-caps text-label-caps uppercase transition-colors text-on-surface-variant hover:text-on-surface" data-path="selecao-de-horario" href="#">3. Horário</a><span class="text-outline-variant font-label-data text-label-data">→</span><a class="px-space-md py-space-xs font-label-caps text-label-caps uppercase transition-colors text-on-surface-variant hover:text-on-surface" data-path="confirmacao-do-agendamento" href="#">4. Confirmação</a></nav><div class="flex items-center gap-space-md"><a class="hidden sm:inline-block font-label-caps text-label-caps uppercase tracking-wider text-on-surface-variant hover:text-primary transition-colors" data-path="login-administrativo" href="#">Acesso Barbeiro / Gestão</a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-20 bg-background min-h-[calc(100vh-80px)]"><div class="max-w-6xl mx-auto px-margin py-space-xl"><div class="flex flex-col w-full">
+<!-- Progress Header & Active Master Barber Brief -->
+<div class="flex flex-col lg:flex-row lg:items-end justify-between gap-space-lg mb-space-xl">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-sm text-primary font-label-caps text-label-caps uppercase tracking-wider">
+<span class="inline-block w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+        Passo 02 de 04 • Quadro de Serviços
+      </div>
+<h1 class="font-display-lg text-display-lg text-on-surface tracking-tight">
+        Selecione seu Atendimento
+      </h1>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-xl">
+        Tradição, navalha afiada e rituais refinados. Escolha um ou mais serviços para compor a sua experiência nesta sessão.
+      </p>
+</div>
+<!-- Active Barber Card (Compact Mid-Century Badge) -->
+<div class="bg-surface-container-low p-space-md rounded-xl flex items-center gap-space-md shadow-md">
+<div class="relative w-12 h-12 rounded-lg overflow-hidden flex-shrink-0 bg-surface-container-highest">
+<img class="w-full h-full object-cover" data-alt="Retrato frontal discreto de Mateus Silva, barbeiro master sênior com colete artesanal escuro e barba milimetricamente alinhada em iluminação suave de lâmpadas vintage de estúdio." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCo7tawprzrfWh4o6EbzjQkJmf8g8X3LW_nf8SPfEt5Q2LzW6SLzNVhp0hu6gvHp4G5DtVUXiIpcL1RXuaNtOFvsghcgpSNM20i5Du6kDedcJtwFO5jxbGtF7L_2cL1B0hseL1bM1MnW5_l_VR7vObXeNo27QoXpXopFAsl7zIUs9Ry-9tIegDt7sxg00jkmeuJCDjvfZSGsKyHYrHZR_B5YpziTMv8x7kDE9bNf_6OgGVkDN4Fu2oQTA"/>
+</div>
+<div class="flex flex-col min-w-0 pr-space-sm">
+<span class="font-label-caps text-label-caps uppercase text-outline tracking-wider">Profissional Selecionado</span>
+<span class="font-headline-sm text-headline-sm text-on-surface truncate">Mateus Silva</span>
+<span class="font-body-sm text-body-sm text-primary">Barbeiro Master Especialista</span>
+</div>
+<a class="ml-auto bg-surface-container-high hover:bg-surface-bright text-on-surface px-space-md py-space-xs rounded-lg font-label-caps text-label-caps uppercase tracking-wider transition-colors flex items-center gap-space-xs" data-path="selecao-de-profissional" href="#">
+<span class="material-symbols-outlined text-[16px] text-primary">swap_horiz</span>
+        Trocar
+      </a>
+</div>
+</div>
+<!-- Filter Pills / Categories -->
+<div class="flex items-center gap-space-sm overflow-x-auto pb-space-sm mb-space-lg no-scrollbar">
+<button class="category-filter-btn px-space-lg py-space-sm rounded-lg bg-primary text-on-primary font-headline-sm text-[14px] uppercase tracking-wider transition-all flex items-center gap-space-xs shadow-sm" data-category="all">
+<span>Todos os Rituais</span>
+<span class="bg-on-primary/20 text-on-primary text-label-caps font-label-caps px-space-xs rounded">6</span>
+</button>
+<button class="category-filter-btn px-space-lg py-space-sm rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface-variant hover:text-on-surface font-headline-sm text-[14px] uppercase tracking-wider transition-all flex items-center gap-space-xs" data-category="hair">
+<span>Cabelo &amp; Corte</span>
+</button>
+<button class="category-filter-btn px-space-lg py-space-sm rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface-variant hover:text-on-surface font-headline-sm text-[14px] uppercase tracking-wider transition-all flex items-center gap-space-xs" data-category="beard">
+<span>Barba &amp; Terapia</span>
+</button>
+<button class="category-filter-btn px-space-lg py-space-sm rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface-variant hover:text-on-surface font-headline-sm text-[14px] uppercase tracking-wider transition-all flex items-center gap-space-xs" data-category="combos">
+<span class="text-primary font-bold">•</span>
+<span>Combos Exclusivos</span>
+</button>
+<button class="category-filter-btn px-space-lg py-space-sm rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface-variant hover:text-on-surface font-headline-sm text-[14px] uppercase tracking-wider transition-all flex items-center gap-space-xs" data-category="treatment">
+<span>Tratamentos &amp; Estética</span>
+</button>
+</div>
+<!-- Classic Barbershop Board Structure -->
+<div class="bg-surface-container rounded-xl shadow-xl overflow-hidden mb-36">
+<!-- Header Plaque -->
+<div class="bg-surface-container-high px-space-lg py-space-md flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[20px]">content_cut</span>
+<span class="font-label-caps text-label-caps uppercase tracking-widest text-on-surface">Cardápio Oficial de Barba &amp; Cabelo</span>
+</div>
+<div class="hidden sm:flex items-center gap-space-md text-outline font-label-data text-label-data">
+<span>PREÇOS VÁLIDOS PARA 2025</span>
+<span>•</span>
+<span>LAVAGEM PREMIUM INCLUSA</span>
+</div>
+</div>
+<!-- The Services List -->
+<div class="divide-y divide-surface-container-highest/40" id="services-board">
+<!-- Item 1: Corte Clássico (Pre-selected) -->
+<div class="service-row group p-space-lg flex flex-col md:flex-row md:items-center justify-between gap-space-md bg-surface-container-low/40 hover:bg-surface-container-high/30 transition-colors cursor-pointer" data-category="hair" data-duration="45" data-duration-label="45 min" data-id="1" data-name="Corte Clássico na Tesoura" data-price="75">
+<div class="flex items-start gap-space-md flex-1 min-w-0">
+<div class="custom-checkbox w-6 h-6 rounded bg-primary text-on-primary flex items-center justify-center flex-shrink-0 mt-1 transition-all shadow-sm">
+<span class="material-symbols-outlined text-[18px] font-bold">check</span>
+</div>
+<div class="flex-1 min-w-0 pr-space-md">
+<div class="flex items-baseline gap-space-sm flex-wrap">
+<span class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors">Corte Clássico na Tesoura</span>
+<span class="bg-surface-container-highest px-space-xs rounded text-[10px] font-label-caps uppercase text-primary tracking-wider">Assinatura</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5 line-clamp-1">
+              Finalização com secador, alinhamento térmico, lavagem com shampoo revigorante de mentol e pomada mate artesanal.
+            </p>
+</div>
+</div>
+<!-- Dotted Leader for desktop -->
+<div class="hidden lg:flex flex-1 mx-space-sm items-center">
+<div class="w-full border-b border-dotted border-outline-variant opacity-60"></div>
+</div>
+<div class="flex items-center justify-between md:justify-end gap-space-lg flex-shrink-0 pl-10 md:pl-0">
+<div class="flex items-center gap-space-xs bg-surface-container-highest/60 px-space-sm py-space-xs rounded font-label-data text-label-data text-on-surface-variant">
+<span class="material-symbols-outlined text-[14px]">schedule</span>
+<span>45 min</span>
+</div>
+<div class="font-headline-sm text-headline-sm text-primary font-bold min-w-[90px] text-right">
+            R$ 75,00
+          </div>
+<button class="btn-toggle text-label-caps font-label-caps uppercase px-space-md py-space-xs rounded bg-primary text-on-primary hover:bg-primary-container transition-colors" type="button">
+            Selecionado
+          </button>
+</div>
+</div>
+<!-- Item 2: Fade de Precisão -->
+<div class="service-row group p-space-lg flex flex-col md:flex-row md:items-center justify-between gap-space-md hover:bg-surface-container-high/30 transition-colors cursor-pointer" data-category="hair" data-duration="40" data-duration-label="40 min" data-id="2" data-name="Degradê / Fade de Precisão" data-price="70">
+<div class="flex items-start gap-space-md flex-1 min-w-0">
+<div class="custom-checkbox w-6 h-6 rounded bg-surface-container-highest text-transparent flex items-center justify-center flex-shrink-0 mt-1 transition-all">
+<span class="material-symbols-outlined text-[18px]">check</span>
+</div>
+<div class="flex-1 min-w-0 pr-space-md">
+<div class="flex items-baseline gap-space-sm flex-wrap">
+<span class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors">Degradê / Fade de Precisão</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5 line-clamp-1">
+              Transição perfeita (Skin, Low, Mid ou High Fade), polimento em shaver e definição milimétrica de contornos.
+            </p>
+</div>
+</div>
+<!-- Dotted Leader for desktop -->
+<div class="hidden lg:flex flex-1 mx-space-sm items-center">
+<div class="w-full border-b border-dotted border-outline-variant opacity-60"></div>
+</div>
+<div class="flex items-center justify-between md:justify-end gap-space-lg flex-shrink-0 pl-10 md:pl-0">
+<div class="flex items-center gap-space-xs bg-surface-container-highest/60 px-space-sm py-space-xs rounded font-label-data text-label-data text-on-surface-variant">
+<span class="material-symbols-outlined text-[14px]">schedule</span>
+<span>40 min</span>
+</div>
+<div class="font-headline-sm text-headline-sm text-primary font-bold min-w-[90px] text-right">
+            R$ 70,00
+          </div>
+<button class="btn-toggle text-label-caps font-label-caps uppercase px-space-md py-space-xs rounded bg-surface-container-highest text-on-surface hover:bg-primary hover:text-on-primary transition-colors" type="button">
+            Adicionar
+          </button>
+</div>
+</div>
+<!-- Item 3: Barboterapia Tradicional (Pre-selected) -->
+<div class="service-row group p-space-lg flex flex-col md:flex-row md:items-center justify-between gap-space-md bg-surface-container-low/40 hover:bg-surface-container-high/30 transition-colors cursor-pointer" data-category="beard" data-duration="35" data-duration-label="35 min" data-id="3" data-name="Barboterapia com Toalha Quente" data-price="60">
+<div class="flex items-start gap-space-md flex-1 min-w-0">
+<div class="custom-checkbox w-6 h-6 rounded bg-primary text-on-primary flex items-center justify-center flex-shrink-0 mt-1 transition-all shadow-sm">
+<span class="material-symbols-outlined text-[18px] font-bold">check</span>
+</div>
+<div class="flex-1 min-w-0 pr-space-md">
+<div class="flex items-baseline gap-space-sm flex-wrap">
+<span class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors">Barboterapia Tradicional com Toalha Quente &amp; Óleos</span>
+<span class="bg-secondary-container px-space-xs rounded text-[10px] font-label-caps uppercase text-on-secondary-container tracking-wider">Relaxante</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5 line-clamp-1">
+              Ritual completo com vapor de ozônio, toalha quente emulsionada com óleos essenciais, massagem facial e navalha afiada.
+            </p>
+</div>
+</div>
+<!-- Dotted Leader for desktop -->
+<div class="hidden lg:flex flex-1 mx-space-sm items-center">
+<div class="w-full border-b border-dotted border-outline-variant opacity-60"></div>
+</div>
+<div class="flex items-center justify-between md:justify-end gap-space-lg flex-shrink-0 pl-10 md:pl-0">
+<div class="flex items-center gap-space-xs bg-surface-container-highest/60 px-space-sm py-space-xs rounded font-label-data text-label-data text-on-surface-variant">
+<span class="material-symbols-outlined text-[14px]">schedule</span>
+<span>35 min</span>
+</div>
+<div class="font-headline-sm text-headline-sm text-primary font-bold min-w-[90px] text-right">
+            R$ 60,00
+          </div>
+<button class="btn-toggle text-label-caps font-label-caps uppercase px-space-md py-space-xs rounded bg-primary text-on-primary hover:bg-primary-container transition-colors" type="button">
+            Selecionado
+          </button>
+</div>
+</div>
+<!-- Item 4: Combo Dom Pedro -->
+<div class="service-row group p-space-lg flex flex-col md:flex-row md:items-center justify-between gap-space-md hover:bg-surface-container-high/30 transition-colors cursor-pointer" data-category="combos" data-duration="75" data-duration-label="1h 15min" data-id="4" data-name="Combo Dom Pedro Completo" data-price="125">
+<div class="flex items-start gap-space-md flex-1 min-w-0">
+<div class="custom-checkbox w-6 h-6 rounded bg-surface-container-highest text-transparent flex items-center justify-center flex-shrink-0 mt-1 transition-all">
+<span class="material-symbols-outlined text-[18px]">check</span>
+</div>
+<div class="flex-1 min-w-0 pr-space-md">
+<div class="flex items-baseline gap-space-sm flex-wrap">
+<span class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors">Combo Dom Pedro (Corte + Barba + Lavagem)</span>
+<span class="bg-primary/20 text-primary px-space-xs rounded text-[10px] font-label-caps uppercase tracking-wider">Melhor Valor</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5 line-clamp-1">
+              Experiência imersiva com corte personalizado, barboterapia profunda, lavagem dupla e tônico capilar fortalecedor.
+            </p>
+</div>
+</div>
+<!-- Dotted Leader for desktop -->
+<div class="hidden lg:flex flex-1 mx-space-sm items-center">
+<div class="w-full border-b border-dotted border-outline-variant opacity-60"></div>
+</div>
+<div class="flex items-center justify-between md:justify-end gap-space-lg flex-shrink-0 pl-10 md:pl-0">
+<div class="flex items-center gap-space-xs bg-surface-container-highest/60 px-space-sm py-space-xs rounded font-label-data text-label-data text-on-surface-variant">
+<span class="material-symbols-outlined text-[14px]">schedule</span>
+<span>1h 15min</span>
+</div>
+<div class="font-headline-sm text-headline-sm text-primary font-bold min-w-[90px] text-right">
+            R$ 125,00
+          </div>
+<button class="btn-toggle text-label-caps font-label-caps uppercase px-space-md py-space-xs rounded bg-surface-container-highest text-on-surface hover:bg-primary hover:text-on-primary transition-colors" type="button">
+            Adicionar
+          </button>
+</div>
+</div>
+<!-- Item 5: Alinhamento e Camuflagem de Grisalhos -->
+<div class="service-row group p-space-lg flex flex-col md:flex-row md:items-center justify-between gap-space-md hover:bg-surface-container-high/30 transition-colors cursor-pointer" data-category="treatment" data-duration="30" data-duration-label="30 min" data-id="5" data-name="Camuflagem de Grisalhos" data-price="55">
+<div class="flex items-start gap-space-md flex-1 min-w-0">
+<div class="custom-checkbox w-6 h-6 rounded bg-surface-container-highest text-transparent flex items-center justify-center flex-shrink-0 mt-1 transition-all">
+<span class="material-symbols-outlined text-[18px]">check</span>
+</div>
+<div class="flex-1 min-w-0 pr-space-md">
+<div class="flex items-baseline gap-space-sm flex-wrap">
+<span class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors">Alinhamento &amp; Camuflagem de Grisalhos</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5 line-clamp-1">
+              Tonalização sutil e elegante para barba ou cabelo, mantendo a naturalidade dos fios sem tom avermelhado.
+            </p>
+</div>
+</div>
+<!-- Dotted Leader for desktop -->
+<div class="hidden lg:flex flex-1 mx-space-sm items-center">
+<div class="w-full border-b border-dotted border-outline-variant opacity-60"></div>
+</div>
+<div class="flex items-center justify-between md:justify-end gap-space-lg flex-shrink-0 pl-10 md:pl-0">
+<div class="flex items-center gap-space-xs bg-surface-container-highest/60 px-space-sm py-space-xs rounded font-label-data text-label-data text-on-surface-variant">
+<span class="material-symbols-outlined text-[14px]">schedule</span>
+<span>30 min</span>
+</div>
+<div class="font-headline-sm text-headline-sm text-primary font-bold min-w-[90px] text-right">
+            R$ 55,00
+          </div>
+<button class="btn-toggle text-label-caps font-label-caps uppercase px-space-md py-space-xs rounded bg-surface-container-highest text-on-surface hover:bg-primary hover:text-on-primary transition-colors" type="button">
+            Adicionar
+          </button>
+</div>
+</div>
+<!-- Item 6: Tratamento Anticaspa e Revitalização -->
+<div class="service-row group p-space-lg flex flex-col md:flex-row md:items-center justify-between gap-space-md hover:bg-surface-container-high/30 transition-colors cursor-pointer" data-category="treatment" data-duration="25" data-duration-label="25 min" data-id="6" data-name="Tratamento Anticaspa &amp; Couro" data-price="50">
+<div class="flex items-start gap-space-md flex-1 min-w-0">
+<div class="custom-checkbox w-6 h-6 rounded bg-surface-container-highest text-transparent flex items-center justify-center flex-shrink-0 mt-1 transition-all">
+<span class="material-symbols-outlined text-[18px]">check</span>
+</div>
+<div class="flex-1 min-w-0 pr-space-md">
+<div class="flex items-baseline gap-space-sm flex-wrap">
+<span class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors">Tratamento Anticaspa &amp; Revitalização de Couro Cabeludo</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5 line-clamp-1">
+              Esfoliação com argila purificante, massagem capilar estimulante e aplicação de loção de tea tree com arrefecimento térmico.
+            </p>
+</div>
+</div>
+<!-- Dotted Leader for desktop -->
+<div class="hidden lg:flex flex-1 mx-space-sm items-center">
+<div class="w-full border-b border-dotted border-outline-variant opacity-60"></div>
+</div>
+<div class="flex items-center justify-between md:justify-end gap-space-lg flex-shrink-0 pl-10 md:pl-0">
+<div class="flex items-center gap-space-xs bg-surface-container-highest/60 px-space-sm py-space-xs rounded font-label-data text-label-data text-on-surface-variant">
+<span class="material-symbols-outlined text-[14px]">schedule</span>
+<span>25 min</span>
+</div>
+<div class="font-headline-sm text-headline-sm text-primary font-bold min-w-[90px] text-right">
+            R$ 50,00
+          </div>
+<button class="btn-toggle text-label-caps font-label-caps uppercase px-space-md py-space-xs rounded bg-surface-container-highest text-on-surface hover:bg-primary hover:text-on-primary transition-colors" type="button">
+            Adicionar
+          </button>
+</div>
+</div>
+</div>
+<!-- Bottom Notice Guarantee -->
+<div class="p-space-lg bg-surface-container-lowest/70 flex flex-col sm:flex-row items-center justify-between gap-space-md text-on-surface-variant font-body-sm text-body-sm">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-[20px]">verified</span>
+<span>Todos os atendimentos incluem toalha quente, esterilização hospitalar e café expresso de boas-vindas.</span>
+</div>
+<div class="font-label-caps text-label-caps uppercase text-outline">
+        Tolerância de atraso: 10 min
+      </div>
+</div>
+</div>
+<!-- Persistent Bottom Booking Summary Drawer -->
+<div class="fixed bottom-0 left-0 right-0 z-40 bg-surface-container-high/95 backdrop-blur-lg shadow-2xl">
+<div class="max-w-6xl mx-auto px-margin py-space-md flex flex-col md:flex-row items-center justify-between gap-space-md">
+<!-- Summary Info Box -->
+<div class="flex items-center gap-space-lg w-full md:w-auto justify-between md:justify-start">
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs">
+<span class="bg-primary text-on-primary text-[11px] font-label-caps px-space-xs rounded-full font-bold" id="selected-count-badge">2</span>
+<span class="font-label-caps text-label-caps uppercase text-outline tracking-wider">Serviços Selecionados</span>
+</div>
+<span class="font-headline-sm text-[16px] text-on-surface truncate max-w-sm" id="selected-names-summary">
+            Corte Clássico + Barboterapia
+          </span>
+</div>
+<div class="hidden sm:flex items-center gap-space-xs bg-surface-container-lowest px-space-md py-space-sm rounded-lg text-on-surface-variant font-label-data text-label-data">
+<span class="material-symbols-outlined text-primary text-[18px]">timelapse</span>
+<span>Duração: <strong class="text-on-surface" id="summary-duration">1h 20min</strong></span>
+</div>
+<div class="flex flex-col text-right md:text-left">
+<span class="font-label-caps text-label-caps uppercase text-outline tracking-wider">Total Estimado</span>
+<span class="font-display-lg text-[26px] leading-tight text-primary font-extrabold tracking-tight" id="summary-total">
+            R$ 135,00
+          </span>
+</div>
+</div>
+<!-- Action Button -->
+<div class="flex items-center gap-space-md w-full md:w-auto">
+<a class="w-full md:w-auto px-space-xl py-space-md rounded-xl bg-primary hover:bg-primary-container text-on-primary hover:text-on-primary-container font-headline-sm text-headline-sm flex items-center justify-center gap-space-sm transition-all shadow-md active:scale-95" data-path="selecao-de-horario" href="#" id="btn-submit-booking">
+<span>Continuar para Horários</span>
+<span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+<script>
+    (function() {
+      // Internal State
+      const selectedIds = new Set(['1', '3']);
+
+      const rows = document.querySelectorAll('.service-row');
+      const countBadge = document.getElementById('selected-count-badge');
+      const namesSummary = document.getElementById('selected-names-summary');
+      const durationSummary = document.getElementById('summary-duration');
+      const totalSummary = document.getElementById('summary-total');
+      const submitBtn = document.getElementById('btn-submit-booking');
+
+      function formatDuration(minutes) {
+        if (minutes < 60) return minutes + ' min';
+        const h = Math.floor(minutes / 60);
+        const m = minutes % 60;
+        return m > 0 ? `${h}h ${m}min` : `${h}h`;
+      }
+
+      function updateSummary() {
+        let total = 0;
+        let totalMinutes = 0;
+        const selectedNames = [];
+
+        rows.forEach(row => {
+          const id = row.dataset.id;
+          const isSelected = selectedIds.has(id);
+          const checkbox = row.querySelector('.custom-checkbox');
+          const toggleBtn = row.querySelector('.btn-toggle');
+
+          if (isSelected) {
+            row.classList.add('bg-surface-container-low/40');
+            checkbox.classList.remove('bg-surface-container-highest', 'text-transparent');
+            checkbox.classList.add('bg-primary', 'text-on-primary', 'shadow-sm');
+            toggleBtn.classList.remove('bg-surface-container-highest', 'text-on-surface');
+            toggleBtn.classList.add('bg-primary', 'text-on-primary');
+            toggleBtn.textContent = 'Selecionado';
+
+            total += parseFloat(row.dataset.price);
+            totalMinutes += parseInt(row.dataset.duration, 10);
+            selectedNames.push(row.dataset.name.split(' ')[0] + ' ' + (row.dataset.name.split(' ')[1] || ''));
+          } else {
+            row.classList.remove('bg-surface-container-low/40');
+            checkbox.classList.add('bg-surface-container-highest', 'text-transparent');
+            checkbox.classList.remove('bg-primary', 'text-on-primary', 'shadow-sm');
+            toggleBtn.classList.add('bg-surface-container-highest', 'text-on-surface');
+            toggleBtn.classList.remove('bg-primary', 'text-on-primary');
+            toggleBtn.textContent = 'Adicionar';
+          }
+        });
+
+        countBadge.textContent = selectedIds.size;
+        durationSummary.textContent = totalMinutes > 0 ? formatDuration(totalMinutes) : '0 min';
+        totalSummary.textContent = `R$ ${total.toFixed(2).replace('.', ',')}`;
+
+        if (selectedNames.length === 0) {
+          namesSummary.textContent = 'Nenhum serviço selecionado';
+          submitBtn.classList.add('opacity-50', 'pointer-events-none');
+        } else {
+          namesSummary.textContent = selectedNames.join(' + ');
+          submitBtn.classList.remove('opacity-50', 'pointer-events-none');
+        }
+      }
+
+      // Handle Row clicks
+      rows.forEach(row => {
+        row.addEventListener('click', (e) => {
+          const id = row.dataset.id;
+          if (selectedIds.has(id)) {
+            selectedIds.delete(id);
+          } else {
+            selectedIds.add(id);
+          }
+          updateSummary();
+        });
+      });
+
+      // Filter Category Pills
+      const categoryBtns = document.querySelectorAll('.category-filter-btn');
+      categoryBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          categoryBtns.forEach(b => {
+            b.classList.remove('bg-primary', 'text-on-primary');
+            b.classList.add('bg-surface-container-low', 'text-on-surface-variant');
+          });
+          btn.classList.add('bg-primary', 'text-on-primary');
+          btn.classList.remove('bg-surface-container-low', 'text-on-surface-variant');
+
+          const category = btn.dataset.category;
+          rows.forEach(row => {
+            if (category === 'all' || row.dataset.category === category) {
+              row.classList.remove('hidden');
+            } else {
+              row.classList.add('hidden');
+            }
+          });
+        });
+      });
+
+      // Initial run
+      updateSummary();
+    })();
+  </script>
+</div></div></main><footer class="w-full bg-surface-container-lowest py-space-xl"><div class="max-w-6xl mx-auto px-margin flex flex-col md:flex-row items-center justify-between gap-space-md text-on-surface-variant font-body-sm text-body-sm"><div>© 2025 APP Barb • Sistema de Gestão &amp; Agendamento de Alta Barbearia.</div><div class="flex items-center gap-space-lg"><span class="font-label-caps text-label-caps text-outline uppercase tracking-wider">Atendimento: Ter a Sáb, 09h às 21h</span><span class="font-label-caps text-label-caps text-primary uppercase tracking-wider">Contato: (11) 3289-0091</span></div></div></footer></body></html>

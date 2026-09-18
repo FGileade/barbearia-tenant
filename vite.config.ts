@@ -1,4 +1,5 @@
 import react from '@vitejs/plugin-react'
+import tailwindcss from '@tailwindcss/vite'
 import { defineConfig, loadEnv, type Plugin } from 'vite'
 import { writeFileSync } from 'node:fs'
 import { resolve } from 'node:path'
@@ -46,6 +47,6 @@ messaging.onBackgroundMessage((payload) => {
 export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, process.cwd(), 'VITE_')
   return {
-    plugins: [react(), generateFirebaseMessagingSw(env)],
+    plugins: [react(), tailwindcss(), generateFirebaseMessagingSw(env)],
   }
 })

@@ -24,3 +24,5 @@ dist-ssr
 .env
 desktop.ini
 Thumbs.db
+
+.vercel

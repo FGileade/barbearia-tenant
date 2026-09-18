@@ -1,5 +1,3 @@
-/* Reaproveita os primitivos visuais (field, btn-primary, step__title...)
-   definidos em ../booking/booking.css — mesma identidade visual do app. */
 @import "../booking/booking.css";
 
 .barber-portal {
@@ -10,36 +8,10 @@
   padding: 1.5rem;
 }
 
-.barber-login-card {
-  width: 100%;
-  max-width: 22rem;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-.barber-login-card h1 {
-  font-size: 1.5rem;
-}
-
-.barber-dashboard {
-  max-width: 34rem;
-  margin: 0 auto;
-  padding: 1.25rem;
-  display: flex;
-  flex-direction: column;
-  gap: 1.25rem;
-}
-
-.barber-dashboard__header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
 .notification-optin {
+  background: var(--coal-raised);
   border: 1px solid var(--line);
-  border-radius: 0.9rem;
+  border-radius: 0.75rem;
   padding: 1rem;
   display: flex;
   flex-direction: column;
@@ -53,45 +25,35 @@
 }
 
 .notification-optin__status {
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   color: var(--ink-muted);
-}
-
-/* ---------- Tabs ---------- */
-
-.tab-bar {
-  display: flex;
-  gap: 0.25rem;
-  border-bottom: 1px solid var(--line);
-}
-
-.tab-bar__item {
-  background: none;
-  border: none;
-  color: var(--ink-muted);
-  font-weight: 700;
-  padding: 0.6rem 0.75rem;
-  cursor: pointer;
-  border-bottom: 2px solid transparent;
-}
-
-.tab-bar__item--active {
-  color: var(--ink);
-  border-bottom-color: var(--tenant-primary);
 }
 
 /* ---------- Manager (profissionais/serviços) ---------- */
 
 .manager-section {
+  background: var(--coal-raised);
+  border: 1px solid var(--line);
+  border-radius: 0.875rem;
+  padding: 1.25rem;
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
 }
 
 .manager-section__header {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 0.75rem;
+}
+
+.manager-section__header h2 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--ink);
 }
 
 .manager-list {
@@ -107,8 +69,13 @@
   align-items: center;
   justify-content: space-between;
   gap: 0.75rem;
-  padding: 0.85rem 0;
-  border-bottom: 1px solid var(--line);
+  padding: 0.85rem 0.25rem;
+  border-bottom: 1px solid rgba(56, 49, 41, 0.7);
+  transition: background 0.15s ease;
+}
+
+.manager-list__item:last-child {
+  border-bottom: none;
 }
 
 .manager-list__meta {
@@ -120,30 +87,90 @@
 .tag-inactive {
   margin-left: 0.5rem;
   font-size: 0.65rem;
+  font-weight: 700;
   text-transform: uppercase;
-  color: var(--danger);
-  border: 1px solid var(--danger);
+  color: #ffb4ab;
+  background: rgba(139, 58, 58, 0.2);
+  border: 1px solid rgba(139, 58, 58, 0.4);
   border-radius: 999px;
-  padding: 0.05rem 0.4rem;
+  padding: 0.1rem 0.5rem;
 }
 
 .manager-form {
+  background: var(--coal-raised);
+  border: 1px solid var(--line);
+  border-radius: 0.875rem;
+  padding: 1.25rem;
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 1.1rem;
+}
+
+.manager-form h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--ink);
+  margin-top: 0.5rem;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.field label {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--ink-muted);
+}
+
+.field input,
+.field textarea,
+.field select {
+  background: var(--coal);
+  border: 1px solid var(--line);
+  color: var(--ink);
+  border-radius: 0.5rem;
+  padding: 0.65rem 0.85rem;
+  font-size: 0.875rem;
+  font-family: inherit;
+  transition: border-color 0.15s ease;
+}
+
+.field input:focus,
+.field textarea:focus,
+.field select:focus {
+  outline: none;
+  border-color: var(--tenant-primary);
 }
 
 .checkbox-field {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
+  color: var(--ink);
+  cursor: pointer;
+}
+
+.checkbox-field input[type="checkbox"] {
+  accent-color: var(--tenant-primary);
+  width: 1rem;
+  height: 1rem;
+  cursor: pointer;
 }
 
 .weekday-schedule {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+  background: var(--coal);
+  border: 1px solid var(--line);
+  border-radius: 0.75rem;
+  padding: 0.75rem;
 }
 
 .weekday-schedule__row {
@@ -151,7 +178,11 @@
   align-items: center;
   gap: 0.75rem;
   padding: 0.4rem 0;
-  border-bottom: 1px solid var(--line);
+  border-bottom: 1px solid rgba(56, 49, 41, 0.5);
+}
+
+.weekday-schedule__row:last-child {
+  border-bottom: none;
 }
 
 .weekday-schedule__toggle {
@@ -160,6 +191,9 @@
   gap: 0.4rem;
   width: 4rem;
   flex-shrink: 0;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--ink);
 }
 
 .weekday-schedule__times {
@@ -174,92 +208,55 @@
   background: var(--coal-raised);
   border: 1px solid var(--line);
   border-radius: 0.4rem;
-  padding: 0.3rem 0.4rem;
+  padding: 0.3rem 0.5rem;
   color: var(--ink);
-}
-
-/* ---------- Agenda do dia ---------- */
-
-.date-input {
-  background: var(--coal-raised);
-  border: 1px solid var(--line);
-  border-radius: 0.5rem;
-  padding: 0.4rem 0.5rem;
-  color: var(--ink);
-}
-
-.agenda-list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-}
-
-.agenda-item {
-  display: flex;
-  align-items: center;
-  gap: 0.85rem;
-  padding: 0.85rem 0;
-  border-bottom: 1px solid var(--line);
-}
-
-.agenda-item__time {
-  font-weight: 800;
-  min-width: 3rem;
-}
-
-.agenda-item__info {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
   font-size: 0.85rem;
-  color: var(--ink-muted);
 }
 
-.agenda-item__info strong {
+.btn-primary {
+  background: var(--tenant-primary);
+  color: #191714;
+  font-weight: 700;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.75rem 1.25rem;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  transition: filter 0.15s ease;
+}
+
+.btn-primary:hover {
+  filter: brightness(1.1);
+}
+
+.btn-ghost {
+  background: transparent;
+  border: 1px solid var(--line);
   color: var(--ink);
-  font-size: 0.95rem;
+  border-radius: 0.5rem;
+  padding: 0.5rem 0.9rem;
+  cursor: pointer;
+  font-size: 0.8rem;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  transition: all 0.15s ease;
 }
 
-.agenda-item__status {
-  font-size: 0.7rem;
-  text-transform: uppercase;
-  margin-top: 0.15rem;
-}
-
-.agenda-item__status--confirmado {
+.btn-ghost:hover {
+  border-color: var(--tenant-primary);
   color: var(--tenant-primary);
 }
 
-.agenda-item__status--concluido {
-  color: #6fae6f;
-}
-
-.agenda-item__status--cancelado {
-  color: var(--danger);
-}
-
-.agenda-item__actions {
+.manager-form__actions {
   display: flex;
-  gap: 0.4rem;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
 }
 
-.icon-btn {
-  background: none;
-  border: 1px solid var(--line);
-  border-radius: 0.5rem;
-  padding: 0.4rem;
-  color: var(--ink);
-  cursor: pointer;
-}
-
-.icon-btn--danger {
-  color: var(--danger);
-  border-color: var(--danger);
-}
-
-.icon-btn:disabled {
-  opacity: 0.5;
-  cursor: not-allowed;
-}

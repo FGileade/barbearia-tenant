@@ -1,4 +1,4 @@
-# Regras de negócio — APP Barb (barbearia-tenant)
+# Regras de negócio — Barbe Club (barbearia-tenant)
 
 > Qualquer agente (CODEX, Antigravity, Claude, humano) que for trabalhar
 > neste repositório deve ler este arquivo antes de alterar modelo de dados,
@@ -7,12 +7,18 @@
 
 ## Visão geral
 
-Uma única aplicação (frontend + backend Firebase) atende **várias
-barbearias**. Cada barbearia é um "tenant", identificado por um `slug` na
-URL (`/b/{slug}` para o cliente, `/admin/{slug}` para o barbeiro/gestor).
-Todo documento do Firestore que pertence a uma barbearia carrega o campo
-`tenantId` — é assim que o isolamento entre barbearias é garantido, tanto
-no app quanto nas regras de segurança.
+Um único **backend** Firebase (Firestore + Auth + Cloud Functions) atende
+**várias barbearias**. Cada barbearia é um "tenant", identificado por um
+`slug` (id do documento em `tenants/{slug}`). Todo documento do Firestore
+que pertence a uma barbearia carrega o campo `tenantId` — é assim que o
+isolamento entre barbearias é garantido nas regras de segurança,
+independente de quantos frontends existirem.
+
+O **frontend** tem dois modos (ver decisão revisada no histórico):
+produção usa um deploy separado por barbearia (`VITE_TENANT_SLUG` fixa no
+build, sem slug na URL); o modo com slug na URL (`/b/{slug}`,
+`/admin/{slug}`) existe só para testar várias barbearias num servidor
+local de desenvolvimento.
 
 ## Coleções do Firestore
 
@@ -81,9 +87,25 @@ provisionamento é uma melhoria futura, não implementada nesta fase.
 
 ## Histórico de decisões
 
-- Multi-tenant com um único app/backend compartilhado (URL por slug),
-  em vez de um frontend separado por barbearia — decisão tomada para
-  facilitar manutenção (uma alteração vale para todas as barbearias).
+- **[Revisado]** Multi-tenant com um único app/backend compartilhado (URL
+  por slug), em vez de um frontend separado por barbearia — decisão
+  tomada para facilitar manutenção (uma alteração vale para todas as
+  barbearias). **Substituída pela decisão abaixo.**
+- Cada barbearia passou a ter seu **próprio deploy de frontend** (projeto
+  Vercel + domínio próprios, mesma URL sem slug), identificado por uma
+  variável de ambiente fixa no build (`VITE_TENANT_SLUG`), em vez de pelo
+  slug na URL. O backend/Firestore continua único e compartilhado — o
+  isolamento entre barbearias não muda, continua sendo garantido pelas
+  regras de segurança por `tenantId`, não pela forma como o frontend é
+  publicado. Motivo da mudança: cada barbearia precisa da própria
+  marca/imagens sem depender de um app "genérico" pedindo slug — e
+  travar o tenant no build evita qualquer risco de um frontend acessar
+  dados de outra barbearia por engano. O modo antigo (slug na URL,
+  `/b/{slug}`, `/admin/{slug}`) foi mantido só como "modo hub" para
+  desenvolvimento local, não é mais usado em produção.
+- Branding por barbearia (`logoUrl`, `corPrimaria` em `tenants/{slug}`)
+  já existia antes dessa mudança e continua vindo do Firestore, não do
+  código — trocar a marca não exige rebuild/redeploy do frontend.
 - Regras de segurança do Firestore e modelo de dados implementados no
   Bloco 2 do projeto (ver checklist na conversa).
 - Login do staff (Firebase Auth, e-mail/senha) foi adiantado para o

@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;background-color:#151310;}body{overscroll-behavior:none;-webkit-tap-highlight-color:transparent;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"inverse-surface":"#e8e1dc","on-tertiary":"#5d171a","secondary-container":"#1b5425","on-primary":"#4b2800","surface-tint":"#ffb873","surface-container-low":"#1d1b18","primary-fixed-dim":"#ffb873","primary-fixed":"#ffdcbf","surface-variant":"#373431","primary-container":"#c5823e","inverse-primary":"#89510e","on-primary-fixed-variant":"#6a3b00","on-surface":"#e8e1dc","error-container":"#93000a","inverse-on-surface":"#33302d","surface-container-highest":"#373431","secondary":"#98d599","on-secondary-fixed-variant":"#185123","on-tertiary-container":"#531014","outline":"#9f8e80","surface-container-high":"#2c2a26","surface-container-lowest":"#100e0b","primary":"#ffb873","on-primary-container":"#412200","secondary-fixed":"#b4f2b3","on-background":"#e8e1dc","on-error":"#690005","tertiary-fixed-dim":"#ffb3b0","background":"#151310","tertiary-fixed":"#ffdad8","on-tertiary-fixed-variant":"#7a2d2e","tertiary":"#ffb3b0","on-secondary-fixed":"#002107","on-secondary-container":"#8bc78b","surface":"#151310","on-surface-variant":"#d7c3b4","outline-variant":"#524439","surface-bright":"#3b3935","on-secondary":"#003910","on-tertiary-fixed":"#3f0207","on-primary-fixed":"#2d1600","secondary-fixed-dim":"#98d599","surface-container":"#211f1c","surface-dim":"#151310","tertiary-container":"#d67573","on-error-container":"#ffdad6","error":"#ffb4ab"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"space-sm":"0.5rem","space-md":"1rem","space-lg":"1.5rem","space-xs":"0.25rem","gutter":"1.5rem","space-xl":"2.5rem","margin":"2rem"},"fontFamily":{"headline-md":["Plus Jakarta Sans"],"headline-sm":["Plus Jakarta Sans"],"body-lg":["Plus Jakarta Sans"],"headline-xl":["Plus Jakarta Sans"],"label-data":["Plus Jakarta Sans"],"label-caps":["Plus Jakarta Sans"],"body-sm":["Plus Jakarta Sans"],"body-md":["Plus Jakarta Sans"],"display-lg":["Plus Jakarta Sans"]},"fontSize":{"headline-md":["24px",{"lineHeight":"32px","letterSpacing":"-0.02em","fontWeight":"700"}],"headline-sm":["18px",{"lineHeight":"26px","letterSpacing":"-0.015em","fontWeight":"600"}],"body-lg":["16px",{"lineHeight":"24px","letterSpacing":"0em","fontWeight":"400"}],"headline-xl":["32px",{"lineHeight":"40px","letterSpacing":"-0.025em","fontWeight":"700"}],"label-data":["12px",{"lineHeight":"16px","letterSpacing":"0.04em","fontWeight":"600"}],"label-caps":["11px",{"lineHeight":"16px","letterSpacing":"0.08em","fontWeight":"700"}],"body-sm":["13px",{"lineHeight":"18px","letterSpacing":"0.01em","fontWeight":"400"}],"body-md":["14px",{"lineHeight":"22px","letterSpacing":"0em","fontWeight":"400"}],"display-lg":["44px",{"lineHeight":"52px","letterSpacing":"-0.03em","fontWeight":"800"}]}}}};</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface text-on-surface font-body-md min-h-screen flex flex-col antialiased selection:bg-primary-container selection:text-on-primary-container"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/90 backdrop-blur-xl shadow-[0_1px_12px_rgba(0,0,0,0.4)]"><div class="h-16 px-gutter flex items-center justify-between"><div class="flex items-center gap-space-sm"><button class="w-11 h-11 -ml-space-xs flex items-center justify-center rounded-lg text-on-surface hover:text-primary transition-colors active:scale-95" onclick="history.back()"><span class="material-symbols-outlined text-[22px]">arrow_back</span></button><img alt="logo icon.png" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1XpCGDTjET34zT_DpGh8x00NkmPIWgJ_ONuvl9e_ZDrQ6FmI4sKBVngg1H-7RhPT8Xu4hU0ft19PJxueGAbmDTM294f3qRmRHbNiGojfzRYaDhNZR5to1Go27gi1Bf_XQLMeHNLaoU7jba850qWhHpl2cDq7IvjpCIhcgmK13OfBNFIz49kZX80FFTVuPd_6JdDQ_MRtBR2XZMzpqtO09NDb-eSzZCOMbBVqOIwr3NbGERIpabgFNq24vk_fdmJR6JdSyhydhozgNk"/><h1 class="font-headline-sm text-headline-sm text-on-surface tracking-tight truncate max-w-[190px]">Booking Wizard</h1></div><div class="flex items-center"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 pb-safe bg-surface min-h-screen"><div class="flex flex-col w-full">
+<!-- Progress Section -->
+<div class="px-gutter pt-space-sm pb-space-md flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-caps text-label-caps text-primary tracking-wider uppercase">Etapa 2 de 4</span>
+<span class="font-label-data text-label-data text-on-surface-variant">50% concluído</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container-high rounded-full overflow-hidden">
+<div class="h-full bg-primary rounded-full transition-all duration-300" style="width: 50%;"></div>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface mt-space-xs tracking-tight">Escolha os Serviços</h2>
+</div>
+<!-- Selected Barber Context Tile -->
+<div class="px-gutter pb-space-md">
+<div class="bg-surface-container rounded-xl p-space-md flex items-center justify-between shadow-sm">
+<div class="flex items-center gap-space-md min-w-0">
+<div class="relative shrink-0">
+<img class="w-12 h-12 rounded-full object-cover" data-alt="Close-up portrait of Master Barber Mateus Silva in modern vintage barbershop, warm directional lighting on dark textured apron, refined grooming aesthetic, rich tones" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAXLAgaozwuJfc1ULniAq8SrXIkWgbnXC5z1RTaL4KfdhOeHMnXd8aLjsMHJu8R-3eIEaIq3Uj-PqtqMbfVY2aOHxhZrf9Z1PpkHDp_7fTAqzgAKdTd99xBzAodZpMJlltXWl5gvfFLOMIhAnh0JeJpHPb1Njwo7ze4NkMgDNPazsERB2bTvX8tP73vPHMG8mp8dJEXQNz1ISHVfc0lxsiMyMzyjShtMAXXgKYORFUNNg3liEGB56OE4A"/>
+<span class="absolute bottom-0 right-0 w-3.5 h-3.5 rounded-full bg-secondary ring-2 ring-surface-container"></span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">Profissional Selecionado</span>
+</div>
+<p class="font-headline-sm text-body-lg text-on-surface font-semibold truncate">Mateus Silva</p>
+<span class="font-label-data text-label-data text-primary">Master Barber • Cadeira 01</span>
+</div>
+</div>
+<button class="shrink-0 font-label-data text-label-data text-primary hover:text-primary-fixed uppercase tracking-wider px-space-sm py-space-xs rounded-lg hover:bg-surface-container-high transition-colors active:scale-95" type="button">
+        Trocar
+      </button>
+</div>
+</div>
+<!-- Category Filter Chips -->
+<div class="w-full overflow-x-auto pb-space-md px-gutter flex gap-space-sm no-scrollbar">
+<button class="shrink-0 px-space-md py-space-xs rounded-full bg-primary text-on-primary font-label-data text-label-data font-semibold shadow-sm transition-transform active:scale-95" type="button">
+      Todos
+    </button>
+<button class="shrink-0 px-space-md py-space-xs rounded-full bg-surface-container text-on-surface-variant hover:text-on-surface font-label-data text-label-data font-semibold transition-colors active:scale-95" type="button">
+      Cabelo &amp; Corte
+    </button>
+<button class="shrink-0 px-space-md py-space-xs rounded-full bg-surface-container text-on-surface-variant hover:text-on-surface font-label-data text-label-data font-semibold transition-colors active:scale-95" type="button">
+      Barba &amp; Terapia
+    </button>
+<button class="shrink-0 px-space-md py-space-xs rounded-full bg-surface-container text-on-surface-variant hover:text-on-surface font-label-data text-label-data font-semibold transition-colors active:scale-95" type="button">
+      Combos
+    </button>
+</div>
+<!-- Price List / Services Selection -->
+<div class="px-gutter flex flex-col gap-space-sm pb-40">
+<div class="flex items-center justify-between pt-space-xs pb-space-xs">
+<span class="font-label-caps text-label-caps text-on-surface-variant tracking-wider uppercase">Menu de Serviços Dom Pedro</span>
+<span class="font-label-data text-label-data text-outline">Toque para selecionar</span>
+</div>
+<!-- Item 1: Selected -->
+<div class="service-card cursor-pointer rounded-xl bg-surface-container p-space-md shadow-sm transition-all active:scale-[0.99] flex items-start gap-space-md" data-duration="45" data-price="75" data-selected="true">
+<div class="pt-0.5 shrink-0">
+<div class="w-5 h-5 rounded bg-primary flex items-center justify-center text-on-primary shadow-sm">
+<span class="material-symbols-outlined text-[16px] leading-none font-bold">check</span>
+</div>
+</div>
+<div class="flex-1 flex flex-col min-w-0">
+<div class="flex items-baseline justify-between gap-space-xs w-full">
+<span class="font-headline-sm text-body-lg text-on-surface font-semibold truncate">Corte Clássico na Tesoura</span>
+<div class="flex-1 mx-space-xs border-b border-dotted border-outline-variant/60 relative -top-1 hidden sm:block"></div>
+<span class="font-headline-sm text-body-md text-primary font-bold whitespace-nowrap">R$ 75,00</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5 line-clamp-2">Lavagem especial, alinhamento térmico e finalização artesanal</p>
+<div class="flex items-center gap-space-xs mt-space-xs text-outline">
+<span class="material-symbols-outlined text-[14px]">schedule</span>
+<span class="font-label-data text-label-data">45 min</span>
+</div>
+</div>
+</div>
+<!-- Item 2: Unselected -->
+<div class="service-card cursor-pointer rounded-xl bg-surface-container-low p-space-md shadow-sm transition-all active:scale-[0.99] flex items-start gap-space-md opacity-90 hover:opacity-100" data-duration="40" data-price="70" data-selected="false">
+<div class="pt-0.5 shrink-0">
+<div class="w-5 h-5 rounded bg-surface-container-high flex items-center justify-center text-transparent">
+<span class="material-symbols-outlined text-[16px] leading-none">check</span>
+</div>
+</div>
+<div class="flex-1 flex flex-col min-w-0">
+<div class="flex items-baseline justify-between gap-space-xs w-full">
+<span class="font-headline-sm text-body-lg text-on-surface font-semibold truncate">Degradê / Fade de Precisão</span>
+<div class="flex-1 mx-space-xs border-b border-dotted border-outline-variant/60 relative -top-1 hidden sm:block"></div>
+<span class="font-headline-sm text-body-md text-on-surface font-bold whitespace-nowrap">R$ 70,00</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5 line-clamp-2">Transição perfeita (Skin, Low, Mid ou High com acabamento a navalha)</p>
+<div class="flex items-center gap-space-xs mt-space-xs text-outline">
+<span class="material-symbols-outlined text-[14px]">schedule</span>
+<span class="font-label-data text-label-data">40 min</span>
+</div>
+</div>
+</div>
+<!-- Item 3: Selected -->
+<div class="service-card cursor-pointer rounded-xl bg-surface-container p-space-md shadow-sm transition-all active:scale-[0.99] flex items-start gap-space-md" data-duration="35" data-price="60" data-selected="true">
+<div class="pt-0.5 shrink-0">
+<div class="w-5 h-5 rounded bg-primary flex items-center justify-center text-on-primary shadow-sm">
+<span class="material-symbols-outlined text-[16px] leading-none font-bold">check</span>
+</div>
+</div>
+<div class="flex-1 flex flex-col min-w-0">
+<div class="flex items-baseline justify-between gap-space-xs w-full">
+<span class="font-headline-sm text-body-lg text-on-surface font-semibold truncate">Barboterapia com Toalha Quente</span>
+<div class="flex-1 mx-space-xs border-b border-dotted border-outline-variant/60 relative -top-1 hidden sm:block"></div>
+<span class="font-headline-sm text-body-md text-primary font-bold whitespace-nowrap">R$ 60,00</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5 line-clamp-2">Óleos essenciais, massagem facial e navalha afiada tradicional</p>
+<div class="flex items-center gap-space-xs mt-space-xs text-outline">
+<span class="material-symbols-outlined text-[14px]">schedule</span>
+<span class="font-label-data text-label-data">35 min</span>
+</div>
+</div>
+</div>
+<!-- Item 4: Combo with Badge -->
+<div class="service-card cursor-pointer rounded-xl bg-surface-container-low p-space-md shadow-sm transition-all active:scale-[0.99] flex items-start gap-space-md opacity-90 hover:opacity-100 relative overflow-hidden" data-duration="75" data-price="125" data-selected="false">
+<div class="pt-0.5 shrink-0">
+<div class="w-5 h-5 rounded bg-surface-container-high flex items-center justify-center text-transparent">
+<span class="material-symbols-outlined text-[16px] leading-none">check</span>
+</div>
+</div>
+<div class="flex-1 flex flex-col min-w-0">
+<div class="flex items-center gap-space-xs mb-0.5">
+<span class="px-space-xs py-0.5 rounded bg-secondary-container text-on-secondary-container font-label-caps text-label-caps uppercase tracking-wider">Melhor Valor</span>
+</div>
+<div class="flex items-baseline justify-between gap-space-xs w-full">
+<span class="font-headline-sm text-body-lg text-on-surface font-semibold truncate">Combo Dom Pedro</span>
+<div class="flex-1 mx-space-xs border-b border-dotted border-outline-variant/60 relative -top-1 hidden sm:block"></div>
+<span class="font-headline-sm text-body-md text-on-surface font-bold whitespace-nowrap">R$ 125,00</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5 line-clamp-2">Corte completo + Barboterapia relaxante + Lavagem com massagem capilar</p>
+<div class="flex items-center gap-space-xs mt-space-xs text-outline">
+<span class="material-symbols-outlined text-[14px]">schedule</span>
+<span class="font-label-data text-label-data">1h 15min</span>
+</div>
+</div>
+</div>
+<!-- Item 5: Unselected Therapy -->
+<div class="service-card cursor-pointer rounded-xl bg-surface-container-low p-space-md shadow-sm transition-all active:scale-[0.99] flex items-start gap-space-md opacity-90 hover:opacity-100" data-duration="25" data-price="50" data-selected="false">
+<div class="pt-0.5 shrink-0">
+<div class="w-5 h-5 rounded bg-surface-container-high flex items-center justify-center text-transparent">
+<span class="material-symbols-outlined text-[16px] leading-none">check</span>
+</div>
+</div>
+<div class="flex-1 flex flex-col min-w-0">
+<div class="flex items-baseline justify-between gap-space-xs w-full">
+<span class="font-headline-sm text-body-lg text-on-surface font-semibold truncate">Tratamento Anticaspa &amp; Couro</span>
+<div class="flex-1 mx-space-xs border-b border-dotted border-outline-variant/60 relative -top-1 hidden sm:block"></div>
+<span class="font-headline-sm text-body-md text-on-surface font-bold whitespace-nowrap">R$ 50,00</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5 line-clamp-2">Esfoliação profunda, tônico fortalecedor e vapor de ozônio revigorante</p>
+<div class="flex items-center gap-space-xs mt-space-xs text-outline">
+<span class="material-symbols-outlined text-[14px]">schedule</span>
+<span class="font-label-data text-label-data">25 min</span>
+</div>
+</div>
+</div>
+<!-- Atmosphere photo moment -->
+<div class="pt-space-sm">
+<div class="relative w-full h-32 rounded-xl overflow-hidden bg-surface-container-lowest flex items-end p-space-md">
+<img class="absolute inset-0 w-full h-full object-cover opacity-35" data-alt="Traditional barber station with vintage leather chair, polished wooden cabinetry, amber glass bottles, straight razors, and warm interior lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBZ0YQU5KJfp4ri1O8vzlCmmVCwRdZ3ynzPUdx5G37qLxgchekCXLeD1tx7ibDmnAwCYj4ecWZmhilJ8ICIb5hw7Gg8j_ZsBgcWhdDtwO79rMpZWgZQMceXE9xQ_Yy-S7MXW07Sg_G7zU6AqwHcGHZ3w6FBJPdw1PsilxEVeVStJ88l95w4r_SYwIhRWgutAwJ2FNz0WEbScfqF7-2bUxHxmKFFJrWMTQCLFdsG67XWgxAdLR2bOrhubw"/>
+<div class="relative z-10 flex items-center gap-space-xs text-on-surface-variant">
+<span class="material-symbols-outlined text-[18px] text-primary">verified</span>
+<p class="font-body-sm text-body-sm">Atendimento individual com toalhas esterilizadas e navalha descartável.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Bottom Floating Summary Bar (Thumb Zone) -->
+<div class="fixed bottom-0 inset-x-0 bg-surface-container-lowest/95 backdrop-blur-xl pt-space-sm pb-space-lg px-gutter shadow-2xl z-40">
+<div class="max-w-md mx-auto flex flex-col gap-space-sm">
+<!-- Live Summary Line -->
+<div class="flex items-center justify-between px-space-xs">
+<div class="flex items-center gap-space-xs text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px] text-primary">content_cut</span>
+<span class="font-label-data text-label-data font-semibold text-on-surface" id="summary-count">2 serviços</span>
+<span class="text-outline">•</span>
+<span class="font-label-data text-label-data" id="summary-duration">1h 20min</span>
+</div>
+<div class="flex items-baseline gap-1">
+<span class="font-label-caps text-label-caps text-outline uppercase">Total</span>
+<span class="font-headline-sm text-body-lg text-primary font-bold" id="summary-total">R$ 135,00</span>
+</div>
+</div>
+<!-- Action Button -->
+<button class="w-full h-12 bg-primary text-on-primary font-headline-sm text-body-lg rounded-xl flex items-center justify-center gap-space-xs shadow-lg hover:bg-primary-fixed transition-all active:scale-[0.98]" type="button">
+<span>Continuar para Horários</span>
+<span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+</button>
+<!-- Back Navigation Button -->
+<button class="w-full py-1 text-center font-label-data text-label-data text-on-surface-variant hover:text-on-surface tracking-wider uppercase transition-colors" onclick="history.back()" type="button">
+        Voltar para Escolha de Profissional
+      </button>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    const cards = document.querySelectorAll('.service-card');
+    const countEl = document.getElementById('summary-count');
+    const durationEl = document.getElementById('summary-duration');
+    const totalEl = document.getElementById('summary-total');
+
+    function updateSummary() {
+      let count = 0;
+      let totalMinutes = 0;
+      let totalPrice = 0;
+
+      cards.forEach(card => {
+        if (card.getAttribute('data-selected') === 'true') {
+          count++;
+          totalMinutes += parseInt(card.getAttribute('data-duration') || '0', 10);
+          totalPrice += parseInt(card.getAttribute('data-price') || '0', 10);
+        }
+      });
+
+      countEl.textContent = count === 1 ? '1 serviço' : count + ' serviços';
+      
+      const hours = Math.floor(totalMinutes / 60);
+      const minutes = totalMinutes % 60;
+      if (hours > 0 && minutes > 0) {
+        durationEl.textContent = hours + 'h ' + minutes + 'min';
+      } else if (hours > 0) {
+        durationEl.textContent = hours + 'h';
+      } else {
+        durationEl.textContent = minutes + ' min';
+      }
+
+      totalEl.textContent = 'R$ ' + totalPrice.toFixed(2).replace('.', ',');
+    }
+
+    cards.forEach(card => {
+      card.addEventListener('click', () => {
+        const isSelected = card.getAttribute('data-selected') === 'true';
+        const newSelected = !isSelected;
+        card.setAttribute('data-selected', newSelected ? 'true' : 'false');
+
+        const checkbox = card.querySelector('div.rounded');
+        const priceLabel = card.querySelector('.whitespace-nowrap');
+
+        if (newSelected) {
+          card.classList.remove('bg-surface-container-low', 'opacity-90');
+          card.classList.add('bg-surface-container');
+          checkbox.className = 'w-5 h-5 rounded bg-primary flex items-center justify-center text-on-primary shadow-sm';
+          if (priceLabel) priceLabel.className = 'font-headline-sm text-body-md text-primary font-bold whitespace-nowrap';
+        } else {
+          card.classList.remove('bg-surface-container');
+          card.classList.add('bg-surface-container-low', 'opacity-90');
+          checkbox.className = 'w-5 h-5 rounded bg-surface-container-high flex items-center justify-center text-transparent';
+          if (priceLabel) priceLabel.className = 'font-headline-sm text-body-md text-on-surface font-bold whitespace-nowrap';
+        }
+
+        updateSummary();
+      });
+    });
+  })();
+</script></main></body></html>

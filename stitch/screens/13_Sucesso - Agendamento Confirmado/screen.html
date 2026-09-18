@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;background-color:#151310;}body{overscroll-behavior:none;-webkit-tap-highlight-color:transparent;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"inverse-surface":"#e8e1dc","on-tertiary":"#5d171a","secondary-container":"#1b5425","on-primary":"#4b2800","surface-tint":"#ffb873","surface-container-low":"#1d1b18","primary-fixed-dim":"#ffb873","primary-fixed":"#ffdcbf","surface-variant":"#373431","primary-container":"#c5823e","inverse-primary":"#89510e","on-primary-fixed-variant":"#6a3b00","on-surface":"#e8e1dc","error-container":"#93000a","inverse-on-surface":"#33302d","surface-container-highest":"#373431","secondary":"#98d599","on-secondary-fixed-variant":"#185123","on-tertiary-container":"#531014","outline":"#9f8e80","surface-container-high":"#2c2a26","surface-container-lowest":"#100e0b","primary":"#ffb873","on-primary-container":"#412200","secondary-fixed":"#b4f2b3","on-background":"#e8e1dc","on-error":"#690005","tertiary-fixed-dim":"#ffb3b0","background":"#151310","tertiary-fixed":"#ffdad8","on-tertiary-fixed-variant":"#7a2d2e","tertiary":"#ffb3b0","on-secondary-fixed":"#002107","on-secondary-container":"#8bc78b","surface":"#151310","on-surface-variant":"#d7c3b4","outline-variant":"#524439","surface-bright":"#3b3935","on-secondary":"#003910","on-tertiary-fixed":"#3f0207","on-primary-fixed":"#2d1600","secondary-fixed-dim":"#98d599","surface-container":"#211f1c","surface-dim":"#151310","tertiary-container":"#d67573","on-error-container":"#ffdad6","error":"#ffb4ab"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"space-sm":"0.5rem","space-md":"1rem","space-lg":"1.5rem","space-xs":"0.25rem","gutter":"1.5rem","space-xl":"2.5rem","margin":"2rem"},"fontFamily":{"headline-md":["Plus Jakarta Sans"],"headline-sm":["Plus Jakarta Sans"],"body-lg":["Plus Jakarta Sans"],"headline-xl":["Plus Jakarta Sans"],"label-data":["Plus Jakarta Sans"],"label-caps":["Plus Jakarta Sans"],"body-sm":["Plus Jakarta Sans"],"body-md":["Plus Jakarta Sans"],"display-lg":["Plus Jakarta Sans"]},"fontSize":{"headline-md":["24px",{"lineHeight":"32px","letterSpacing":"-0.02em","fontWeight":"700"}],"headline-sm":["18px",{"lineHeight":"26px","letterSpacing":"-0.015em","fontWeight":"600"}],"body-lg":["16px",{"lineHeight":"24px","letterSpacing":"0em","fontWeight":"400"}],"headline-xl":["32px",{"lineHeight":"40px","letterSpacing":"-0.025em","fontWeight":"700"}],"label-data":["12px",{"lineHeight":"16px","letterSpacing":"0.04em","fontWeight":"600"}],"label-caps":["11px",{"lineHeight":"16px","letterSpacing":"0.08em","fontWeight":"700"}],"body-sm":["13px",{"lineHeight":"18px","letterSpacing":"0.01em","fontWeight":"400"}],"body-md":["14px",{"lineHeight":"22px","letterSpacing":"0em","fontWeight":"400"}],"display-lg":["44px",{"lineHeight":"52px","letterSpacing":"-0.03em","fontWeight":"800"}]}}}};</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface text-on-surface font-body-md min-h-screen flex flex-col antialiased selection:bg-primary-container selection:text-on-primary-container"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/90 backdrop-blur-xl shadow-[0_1px_12px_rgba(0,0,0,0.4)]"><div class="h-16 px-gutter flex items-center justify-between"><div class="flex items-center gap-space-sm"><button class="w-11 h-11 -ml-space-xs flex items-center justify-center rounded-lg text-on-surface hover:text-primary transition-colors active:scale-95" onclick="history.back()"><span class="material-symbols-outlined text-[22px]">arrow_back</span></button><img alt="logo icon.png" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1XpCGDTjET34zT_DpGh8x00NkmPIWgJ_ONuvl9e_ZDrQ6FmI4sKBVngg1H-7RhPT8Xu4hU0ft19PJxueGAbmDTM294f3qRmRHbNiGojfzRYaDhNZR5to1Go27gi1Bf_XQLMeHNLaoU7jba850qWhHpl2cDq7IvjpCIhcgmK13OfBNFIz49kZX80FFTVuPd_6JdDQ_MRtBR2XZMzpqtO09NDb-eSzZCOMbBVqOIwr3NbGERIpabgFNq24vk_fdmJR6JdSyhydhozgNk"/><h1 class="font-headline-sm text-headline-sm text-on-surface tracking-tight truncate max-w-[190px]">Booking Wizard</h1></div><div class="flex items-center"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 pb-safe bg-surface min-h-screen"><div class="flex flex-col w-full max-w-md mx-auto px-space-md pb-space-xl">
+<!-- Interactive Canvas Micro-delight Banner -->
+<div class="flex flex-col items-center text-center mt-space-md mb-space-lg relative">
+<!-- Subtle Golden Glow Background -->
+<div class="absolute -top-6 w-44 h-44 rounded-full bg-primary/10 blur-2xl pointer-events-none"></div>
+<!-- Seal of Confirmation -->
+<div class="relative mb-space-md">
+<div class="w-20 h-20 rounded-full bg-surface-container-high flex items-center justify-center shadow-lg relative">
+<div class="w-16 h-16 rounded-full bg-surface-container flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-[32px]" style="font-variation-settings: 'FILL' 1;">verified</span>
+</div>
+</div>
+<div class="absolute -bottom-1 -right-1 w-7 h-7 rounded-full bg-primary flex items-center justify-center shadow-md">
+<span class="material-symbols-outlined text-on-primary text-[16px]" style="font-variation-settings: 'FILL' 1;">content_cut</span>
+</div>
+</div>
+<!-- Status Pill -->
+<div class="inline-flex items-center gap-space-xs px-space-sm py-1 rounded-full bg-secondary-container text-on-secondary-container mb-space-sm shadow-sm">
+<span class="material-symbols-outlined text-[13px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="font-label-caps text-label-caps uppercase tracking-wider">Reserva Garantida</span>
+</div>
+<!-- Title & Subtitle -->
+<h2 class="font-headline-md text-headline-md text-on-surface tracking-tight mb-space-xs">
+      Agendamento Confirmado!
+    </h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-xs leading-relaxed">
+      Seu horário foi bloqueado com sucesso na agenda do mestre <strong class="text-on-surface font-semibold">Mateus Silva</strong>.
+    </p>
+<!-- Reservation Code Chip with Copy Toast -->
+<div class="mt-space-md flex items-center bg-surface-container-low px-space-md py-space-xs rounded-full shadow-sm gap-space-sm">
+<span class="font-label-caps text-label-caps text-outline uppercase tracking-wider">Código</span>
+<span class="font-headline-sm text-headline-sm text-primary tracking-widest font-mono" id="booking-code">#BP-84920</span>
+<button class="w-8 h-8 rounded-full bg-surface-container-highest hover:bg-surface-bright active:scale-90 flex items-center justify-center transition-all text-on-surface" id="copy-btn" onclick="copyCode()" title="Copiar código">
+<span class="material-symbols-outlined text-[16px]" id="copy-icon">content_copy</span>
+</button>
+</div>
+<div class="opacity-0 transition-opacity duration-300 font-label-data text-label-data text-secondary mt-1" id="copy-toast">Código copiado com sucesso!</div>
+</div>
+<!-- Master Ticket / Comprovante Card -->
+<div class="w-full bg-surface-container rounded-xl p-space-lg shadow-xl relative overflow-hidden mb-space-lg">
+<!-- Ticket Scalloped Edge Decor (Top accent) -->
+<div class="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-primary via-primary-fixed-dim to-primary-container"></div>
+<!-- Barber Profile Snippet -->
+<div class="flex items-center justify-between pb-space-md mb-space-md">
+<div class="flex items-center gap-space-md">
+<img class="w-12 h-12 rounded-full object-cover shadow-sm bg-surface-container-highest" data-alt="Portrait of an experienced refined barber with neatly trimmed beard wearing a vintage brown leather apron inside a warm atmospheric barbershop with amber lighting and walnut wood shelving." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD1d7yeGiEpzUJ7ZoHsf0kPg5mR62kMpQ7Bw7hrLjts7kwu2WHjNCA7U7_8vkgNowALL_aYdHeEvFVPVVCrpmCs4vSK4XtBwP4KlPp6n6pHY15PYF2w83z5krpWjUcwMYMn5ohBS6V2f2wRyNgiowQYDbxGmOoyXVhCRWioRDb3gEmCH1goNkZCzqEMoncSDl_GIE8LiQIxmT1lrdj8-0M2uvkXOCejXPhcSbl6-8TCoeOdTJX1ZningA"/>
+<div class="min-w-0">
+<div class="font-headline-sm text-headline-sm text-on-surface truncate">Mateus Silva</div>
+<div class="flex items-center gap-1.5 font-label-data text-label-data text-on-surface-variant">
+<span class="w-2 h-2 rounded-full bg-primary inline-block"></span>
+<span>Cadeira 01 • Master Barber</span>
+</div>
+</div>
+</div>
+<div class="text-right">
+<span class="font-label-caps text-label-caps text-outline uppercase">Total Balcão</span>
+<div class="font-headline-sm text-headline-sm text-primary font-bold">R$ 135<span class="font-label-data text-label-data">,00</span></div>
+</div>
+</div>
+<!-- Agenda Details List (Classic Millwork Aesthetic) -->
+<div class="flex flex-col gap-space-md">
+<!-- Time & Date -->
+<div class="bg-surface-container-low p-space-md rounded-lg flex items-start gap-space-md">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center shrink-0 text-primary">
+<span class="material-symbols-outlined text-[22px]">calendar_clock</span>
+</div>
+<div class="min-w-0 flex-1">
+<span class="font-label-caps text-label-caps text-outline uppercase block">Data &amp; Horário</span>
+<p class="font-headline-sm text-headline-sm text-on-surface mt-0.5">Sexta, 25 de Outubro</p>
+<div class="flex items-center gap-space-xs mt-1 font-body-sm text-body-sm text-primary">
+<span class="material-symbols-outlined text-[15px]">schedule</span>
+<span class="font-semibold">15:00</span>
+<span class="text-on-surface-variant font-normal">• Pontualidade britânica</span>
+</div>
+</div>
+</div>
+<!-- Services List (Price List Style) -->
+<div class="bg-surface-container-low p-space-md rounded-lg">
+<span class="font-label-caps text-label-caps text-outline uppercase block mb-space-sm">Serviços Selecionados</span>
+<div class="space-y-space-sm">
+<div class="flex items-baseline justify-between text-on-surface">
+<div>
+<div class="font-body-md text-body-md font-semibold text-on-surface">Corte Clássico Masculino</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Tesoura, navalha e finalização</div>
+</div>
+<span class="font-body-md text-body-md font-bold text-on-surface shrink-0 ml-space-sm">R$ 80,00</span>
+</div>
+<div class="flex items-baseline justify-between text-on-surface">
+<div>
+<div class="font-body-md text-body-md font-semibold text-on-surface">Barboterapia Completa</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Toalha quente, óleos e alinhamento</div>
+</div>
+<span class="font-body-md text-body-md font-bold text-on-surface shrink-0 ml-space-sm">R$ 55,00</span>
+</div>
+</div>
+</div>
+<!-- Location Info -->
+<div class="bg-surface-container-low p-space-md rounded-lg flex items-start gap-space-md">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center shrink-0 text-primary">
+<span class="material-symbols-outlined text-[22px]">storefront</span>
+</div>
+<div class="min-w-0 flex-1">
+<span class="font-label-caps text-label-caps text-outline uppercase block">Localização</span>
+<p class="font-body-md text-body-md font-semibold text-on-surface mt-0.5">Barbearia Dom Pedro</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">Rua Augusta, 1420 - Consolação, SP</p>
+<a class="inline-flex items-center gap-1 font-label-data text-label-data text-primary hover:text-primary-fixed transition-colors mt-space-xs" href="https://maps.google.com" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[15px]">directions</span>
+<span>Abrir no Google Maps</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Map Preview Placeholder Visual -->
+<div class="mt-space-md rounded-lg overflow-hidden h-28 relative shadow-inner">
+<div class="w-full h-full bg-cover bg-center" data-location="Rua Augusta 1420, Consolação, São Paulo" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD_ybtp659Ntk5dR79e8QdRGlfcQX0ljMvfkkojKjT5uJvfFPYlv4EAGPv--8FsDNsEwguPcl5tp7cnCb0kezPq5xvh2AAPT1XZiagg2vIIQDKJT3oy_9Rtyin0favUVowL1YV9ic5o6KTVjfVOu0-BR-5Niqg4axfBsmNFEuVhpAuqoHFG7FuvKnGEWXPefgFBW0EgwBrwOSXuTf5Y9TbBanFPZOwHdj4Hl-riWvVoVCYy0UHNDFuDhw')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest/80 via-transparent to-transparent flex items-end p-space-sm">
+<span class="font-label-caps text-label-caps text-on-surface flex items-center gap-1">
+<span class="material-symbols-outlined text-primary text-[14px]">pin_drop</span>
+          Estacionamento com Valet a 20m
+        </span>
+</div>
+</div>
+</div>
+<!-- Immediate Action CTAs -->
+<div class="flex flex-col gap-space-sm mb-space-lg">
+<!-- Primary Big Action Button -->
+<button class="w-full h-[52px] bg-primary hover:bg-primary-fixed-dim active:bg-primary-container text-on-primary font-headline-sm text-headline-sm font-bold rounded-xl flex items-center justify-center gap-space-sm shadow-md transition-transform active:scale-[0.98]" onclick="triggerWhatsApp()">
+<span class="material-symbols-outlined text-[22px]">chat</span>
+<span>Avisar no WhatsApp / Receber Lembrete</span>
+</button>
+<!-- Secondary Outline Action -->
+<button class="w-full h-[48px] bg-surface-container-high hover:bg-surface-bright active:bg-surface-variant text-on-surface font-headline-sm text-headline-sm font-semibold rounded-xl flex items-center justify-center gap-space-sm transition-transform active:scale-[0.98]" onclick="addToCalendar()">
+<span class="material-symbols-outlined text-[20px] text-primary">event_available</span>
+<span>Adicionar à Minha Agenda</span>
+</button>
+</div>
+<!-- Host Hospitality & Practical Tips (Moments of Delight) -->
+<div class="bg-surface-container-low rounded-xl p-space-md mb-space-lg shadow-sm">
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-space-sm flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">room_service</span>
+<span>Cortesia e Boas-Vindas</span>
+</h3>
+<div class="grid grid-cols-1 gap-space-sm">
+<div class="flex items-center gap-space-sm bg-surface-container p-space-sm rounded-lg">
+<div class="w-8 h-8 rounded-full bg-surface-container-highest flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined text-[16px]">coffee</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+<strong class="text-on-surface">Cortesia da casa:</strong> Café expresso moído na hora e água gelada à vontade.
+        </p>
+</div>
+<div class="flex items-center gap-space-sm bg-surface-container p-space-sm rounded-lg">
+<div class="w-8 h-8 rounded-full bg-surface-container-highest flex items-center justify-center text-secondary shrink-0">
+<span class="material-symbols-outlined text-[16px]">timer</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+<strong class="text-on-surface">Pontualidade:</strong> Recomendamos chegar com 5 minutos de antecedência para relaxar.
+        </p>
+</div>
+<div class="flex items-center gap-space-sm bg-surface-container p-space-sm rounded-lg">
+<div class="w-8 h-8 rounded-full bg-surface-container-highest flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined text-[16px]">local_parking</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+<strong class="text-on-surface">Valet Conveniado:</strong> Disponível no número 1440 com carimbo de desconto.
+        </p>
+</div>
+</div>
+</div>
+<!-- Subtle Reschedule/Cancel Link -->
+<div class="text-center py-space-sm">
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+      Surgiu um imprevisto na sua rotina?
+    </p>
+<button class="font-label-data text-label-data text-primary hover:text-primary-fixed underline transition-colors mt-0.5" onclick="promptReschedule()">
+      Precisa remarcar ou cancelar o agendamento? Clique aqui
+    </button>
+</div>
+</div>
+<script>
+  function copyCode() {
+    const code = document.getElementById('booking-code').innerText;
+    navigator.clipboard.writeText(code).then(() => {
+      const icon = document.getElementById('copy-icon');
+      const toast = document.getElementById('copy-toast');
+      icon.innerText = 'check';
+      toast.classList.remove('opacity-0');
+      setTimeout(() => {
+        icon.innerText = 'content_copy';
+        toast.classList.add('opacity-0');
+      }, 2500);
+    }).catch(() => {
+      const toast = document.getElementById('copy-toast');
+      toast.innerText = 'Código: #BP-84920';
+      toast.classList.remove('opacity-0');
+    });
+  }
+
+  function triggerWhatsApp() {
+    const message = encodeURIComponent("Olá Mateus! Confirmando meu agendamento na Barbearia Dom Pedro (CÓDIGO #BP-84920) para Sexta-feira às 15:00.");
+    window.open(`https://api.whatsapp.com/send?phone=5511999999999&text=${message}`, '_blank');
+  }
+
+  function addToCalendar() {
+    const title = encodeURIComponent("Corte & Barboterapia - Dom Pedro (Mateus Silva)");
+    const details = encodeURIComponent("Agendamento Barbearia Dom Pedro. Código #BP-84920. Rua Augusta, 1420.");
+    const location = encodeURIComponent("Rua Augusta, 1420 - Consolação, São Paulo");
+    const dates = "20241025T180000Z/20241025T190000Z";
+    const url = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${title}&dates=${dates}&details=${details}&location=${location}`;
+    window.open(url, '_blank');
+  }
+
+  function promptReschedule() {
+    if (confirm("Deseja abrir o suporte para remarcar seu horário do dia 25/10 com Mateus Silva?")) {
+      window.location.hash = "#reschedule-modal";
+    }
+  }
+</script></main></body></html>

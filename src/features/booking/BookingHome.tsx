@@ -74,20 +74,57 @@ export default function BookingHome() {
   }
 
   return (
-    <div className="booking">
-      <header className="booking-header">
-        {tenant.logoUrl ? (
-          <img className="booking-header__logo" src={tenant.logoUrl} alt={tenant.nome} />
-        ) : (
-          <span className="booking-header__mark">{tenant.nome.charAt(0).toUpperCase()}</span>
-        )}
-        <div>
-          <h1>{tenant.nome}</h1>
-          {tenant.endereco && <p className="booking-header__address">{tenant.endereco}</p>}
+    <div className="min-h-screen bg-surface text-on-surface flex flex-col selection:bg-primary/20 selection:text-primary">
+      {/* Top Navbar */}
+      <header className="sticky top-0 z-40 w-full bg-surface/90 backdrop-blur-xl border-b border-[#383129] shadow-[0_1px_12px_rgba(0,0,0,0.4)]">
+        <div className="max-w-3xl mx-auto h-16 px-4 flex items-center justify-between">
+          <div className="flex items-center gap-3">
+            <img
+              src={tenant.logoUrl || "/logo_icon.png"}
+              alt={tenant.nome}
+              className="h-8 w-auto object-contain rounded"
+              onError={(e) => {
+                // Fallback to local logo if custom url fails
+                (e.target as HTMLImageElement).src = "/logo_icon.png";
+              }}
+            />
+            <div className="flex flex-col">
+              <span className="font-label-caps text-primary tracking-widest text-[10px]">
+                AGENDAMENTO
+              </span>
+              <h1 className="text-base font-bold text-on-surface tracking-tight leading-none truncate max-w-[200px] md:max-w-xs">
+                {tenant.nome}
+              </h1>
+            </div>
+          </div>
+          <div className="flex items-center gap-2">
+            <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-secondary-container/20 text-secondary text-[11px] font-semibold border border-secondary/20">
+              <span className="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse" />
+              Aberto
+            </span>
+          </div>
         </div>
       </header>
 
-      {step <= 4 && <StepProgress currentStep={step} />}
+      {/* Main Content Area */}
+      <main className="flex-1 w-full max-w-xl md:max-w-2xl mx-auto px-4 py-4 flex flex-col gap-3">
+        {/* Shop Compact Branding & Address Banner */}
+        <section className="bg-surface-container-low p-3.5 rounded-xl border border-[#383129] flex items-center gap-3 shadow-sm">
+          <div className="w-11 h-11 rounded-xl bg-surface-container-highest flex items-center justify-center text-primary font-bold text-base flex-shrink-0 border border-[#383129]">
+            {tenant.nome.substring(0, 2).toUpperCase()}
+          </div>
+          <div className="flex flex-col min-w-0 flex-1">
+            <div className="flex items-center gap-1.5">
+              <h2 className="text-sm font-bold text-on-surface truncate">{tenant.nome}</h2>
+              <span className="w-1.5 h-1.5 rounded-full bg-secondary inline-block flex-shrink-0" />
+            </div>
+            <p className="text-xs text-on-surface-variant truncate">
+              {tenant.endereco ? `Aberto hoje • ${tenant.endereco}` : "Aberto hoje • Atendimento com excelência"}
+            </p>
+          </div>
+        </section>
+
+        {step <= 4 && <StepProgress currentStep={step} />}
 
       {step === 1 && (
         <ProfessionalStep
@@ -145,6 +182,7 @@ export default function BookingHome() {
           horaInicio={selection.horaInicio}
         />
       )}
+      </main>
     </div>
   );
 }

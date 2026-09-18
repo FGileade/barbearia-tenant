@@ -1,19 +1,54 @@
-/*
-  Identidade visual "APP Barb": barbearia clássica, sóbria e confiante —
-  carvão quente + latão, tipografia condensada nos títulos (só com pesos e
-  tracking do próprio sistema, sem depender de fonte externa: uma fonte
-  externa via CDN quebrou o funcionamento offline do Mimy Unhas antes).
-  --tenant-primary é sobrescrita por barbearia (ver TenantContext), o valor
-  abaixo é só o padrão de fallback.
-*/
+@import "tailwindcss";
+
+@theme {
+  --color-surface: #151310;
+  --color-surface-dim: #151310;
+  --color-surface-bright: #3b3935;
+  --color-surface-container-lowest: #100e0b;
+  --color-surface-container-low: #1d1b18;
+  --color-surface-container: #211f1c;
+  --color-surface-container-high: #2c2a26;
+  --color-surface-container-highest: #373431;
+
+  --color-on-surface: #e8e1dc;
+  --color-on-surface-variant: #d7c3b4;
+  --color-outline: #9f8e80;
+  --color-outline-variant: #524439;
+  --color-hairline: #383129;
+
+  --color-primary: var(--tenant-primary, #c17f3b);
+  --color-on-primary: #191714;
+  --color-primary-container: #c5823e;
+  --color-on-primary-container: #412200;
+
+  --color-secondary: #4e8752;
+  --color-secondary-container: #1b5425;
+  --color-on-secondary-container: #8bc78b;
+
+  --color-tertiary: #ffb3b0;
+  --color-error: #8b3a3a;
+  --color-error-container: #93000a;
+  --color-on-error-container: #ffdad6;
+
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-headline: 'Plus Jakarta Sans', sans-serif;
+
+  --spacing-space-xs: 0.25rem;
+  --spacing-space-sm: 0.5rem;
+  --spacing-space-md: 1rem;
+  --spacing-space-lg: 1.5rem;
+  --spacing-space-xl: 2.5rem;
+  --spacing-gutter: 1.5rem;
+}
+
 :root {
   --tenant-primary: #c17f3b;
   --ink: #f3ede3;
   --ink-muted: #a89a89;
-  --coal: #191714;
-  --coal-raised: #221f1b;
-  --line: rgba(243, 237, 227, 0.14);
-  --danger: #d9694f;
+  --coal: #151310;
+  --coal-raised: #211f1c;
+  --line: #383129;
+  --danger: #8b3a3a;
   color-scheme: dark;
 }
 
@@ -24,27 +59,37 @@
 html,
 body,
 #root {
-  height: 100%;
+  min-height: 100%;
 }
 
 body {
   margin: 0;
-  font-family: -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   background: var(--coal);
   color: var(--ink);
   -webkit-font-smoothing: antialiased;
 }
 
-h1,
-h2,
-h3 {
-  font-weight: 800;
-  letter-spacing: -0.02em;
-  margin: 0;
+.font-label-caps {
+  font-size: 11px;
+  line-height: 16px;
+  letter-spacing: 0.08em;
+  font-weight: 700;
+  text-transform: uppercase;
 }
 
-button {
-  font-family: inherit;
+.font-label-data {
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.04em;
+  font-weight: 600;
+}
+
+/* Dotted leader for vintage barbershop pricing */
+.dotted-leader {
+  flex: 1;
+  border-bottom: 1px dotted #383129;
+  margin: 0 0.5rem 0.25rem;
+  min-width: 1rem;
 }
 
 .status-message {

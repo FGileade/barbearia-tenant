@@ -1,0 +1,179 @@
+[
+  {
+    "id": "14729026218971598457",
+    "order": 1,
+    "title": "logo icon.png",
+    "width": "1536",
+    "height": "1024",
+    "files": {
+      "metadata": "screens\\01_logo icon.png\\metadata.json",
+      "screenshot": "screens\\01_logo icon.png\\logo_icon.png"
+    }
+  },
+  {
+    "id": "1892db1831314fdc8bd892500619ee84",
+    "order": 2,
+    "title": "1. Home de Agendamento - Profissionais",
+    "deviceType": "DESKTOP",
+    "width": "2560",
+    "height": "3432",
+    "files": {
+      "metadata": "screens\\02_1. Home de Agendamento - Profissionais\\metadata.json",
+      "screenshot": "screens\\02_1. Home de Agendamento - Profissionais\\screenshot.png",
+      "code": "screens\\02_1. Home de Agendamento - Profissionais\\screen.html"
+    }
+  },
+  {
+    "id": "422bad4c25a34a22b1ef588cf9416406",
+    "order": 3,
+    "title": "3. Escolha de Horário - Grade de Vagas",
+    "deviceType": "DESKTOP",
+    "width": "2560",
+    "height": "2296",
+    "files": {
+      "metadata": "screens\\03_3. Escolha de Horário - Grade de Vagas\\metadata.json",
+      "screenshot": "screens\\03_3. Escolha de Horário - Grade de Vagas\\screenshot.png",
+      "code": "screens\\03_3. Escolha de Horário - Grade de Vagas\\screen.html"
+    }
+  },
+  {
+    "id": "475fabc2a7a14901a9981cae1db3a90b",
+    "order": 4,
+    "title": "6. Gestão de Profissionais e Escalas",
+    "deviceType": "DESKTOP",
+    "width": "2560",
+    "height": "2662",
+    "files": {
+      "metadata": "screens\\04_6. Gestão de Profissionais e Escalas\\metadata.json",
+      "screenshot": "screens\\04_6. Gestão de Profissionais e Escalas\\screenshot.png",
+      "code": "screens\\04_6. Gestão de Profissionais e Escalas\\screen.html"
+    }
+  },
+  {
+    "id": "90ffb2058a4e4b7fbb0967ae574a573f",
+    "order": 5,
+    "title": "4. Confirmação de Agendamento",
+    "deviceType": "DESKTOP",
+    "width": "2560",
+    "height": "3356",
+    "files": {
+      "metadata": "screens\\05_4. Confirmação de Agendamento\\metadata.json",
+      "screenshot": "screens\\05_4. Confirmação de Agendamento\\screenshot.png",
+      "code": "screens\\05_4. Confirmação de Agendamento\\screen.html"
+    }
+  },
+  {
+    "id": "asset-stub-assets_10da7eccbb0f4e2086137af16d889cbb",
+    "order": 6,
+    "title": "Design System",
+    "isDesignSystem": true,
+    "files": {
+      "markdown": "design-system/DESIGN_SYSTEM.md",
+      "json": "design-system/design_system.json"
+    }
+  },
+  {
+    "id": "cdd61179e13a4b9c86a1796fa1fe3e05",
+    "order": 7,
+    "title": "5. Painel do Barbeiro - Agenda do Dia",
+    "deviceType": "DESKTOP",
+    "width": "2560",
+    "height": "2652",
+    "files": {
+      "metadata": "screens\\07_5. Painel do Barbeiro - Agenda do Dia\\metadata.json",
+      "screenshot": "screens\\07_5. Painel do Barbeiro - Agenda do Dia\\screenshot.png",
+      "code": "screens\\07_5. Painel do Barbeiro - Agenda do Dia\\screen.html"
+    }
+  },
+  {
+    "id": "cf62f30fe3b243459771129200b6f22e",
+    "order": 8,
+    "title": "2. Escolha de Serviço - Tabela de Preços",
+    "deviceType": "DESKTOP",
+    "width": "2560",
+    "height": "2986",
+    "files": {
+      "metadata": "screens\\08_2. Escolha de Serviço - Tabela de Preços\\metadata.json",
+      "screenshot": "screens\\08_2. Escolha de Serviço - Tabela de Preços\\screenshot.png",
+      "code": "screens\\08_2. Escolha de Serviço - Tabela de Preços\\screen.html"
+    }
+  },
+  {
+    "id": "8b9b53a75a8043c899edeb2f871e0670",
+    "order": 9,
+    "title": "Etapa 1 - Escolher Profissional",
+    "deviceType": "MOBILE",
+    "width": "780",
+    "height": "1860",
+    "files": {
+      "metadata": "screens\\09_Etapa 1 - Escolher Profissional\\metadata.json",
+      "screenshot": "screens\\09_Etapa 1 - Escolher Profissional\\screenshot.png",
+      "code": "screens\\09_Etapa 1 - Escolher Profissional\\screen.html"
+    }
+  },
+  {
+    "id": "596b2ef7d2364121a3e3319bea2e2539",
+    "order": 10,
+    "title": "Etapa 2 - Escolher Serviço",
+    "deviceType": "MOBILE",
+    "width": "780",
+    "height": "2536",
+    "files": {
+      "metadata": "screens\\10_Etapa 2 - Escolher Serviço\\metadata.json",
+      "screenshot": "screens\\10_Etapa 2 - Escolher Serviço\\screenshot.png",
+      "code": "screens\\10_Etapa 2 - Escolher Serviço\\screen.html"
+    }
+  },
+  {
+    "id": "f968fbcd8bb24d90a640ec2cd53b6005",
+    "order": 11,
+    "title": "Etapa 3 - Escolher Horário",
+    "deviceType": "MOBILE",
+    "width": "780",
+    "height": "1932",
+    "files": {
+      "metadata": "screens\\11_Etapa 3 - Escolher Horário\\metadata.json",
+      "screenshot": "screens\\11_Etapa 3 - Escolher Horário\\screenshot.png",
+      "code": "screens\\11_Etapa 3 - Escolher Horário\\screen.html"
+    }
+  },
+  {
+    "id": "2f8af9c5da71419995b54b682691c5ab",
+    "order": 12,
+    "title": "Etapa 4 - Identificação e Confirmação",
+    "deviceType": "MOBILE",
+    "width": "780",
+    "height": "3086",
+    "files": {
+      "metadata": "screens\\12_Etapa 4 - Identificação e Confirmação\\metadata.json",
+      "screenshot": "screens\\12_Etapa 4 - Identificação e Confirmação\\screenshot.png",
+      "code": "screens\\12_Etapa 4 - Identificação e Confirmação\\screen.html"
+    }
+  },
+  {
+    "id": "fc5d72b26bc147b29fda37a78d03967a",
+    "order": 13,
+    "title": "Sucesso - Agendamento Confirmado",
+    "deviceType": "MOBILE",
+    "width": "780",
+    "height": "3226",
+    "files": {
+      "metadata": "screens\\13_Sucesso - Agendamento Confirmado\\metadata.json",
+      "screenshot": "screens\\13_Sucesso - Agendamento Confirmado\\screenshot.png",
+      "code": "screens\\13_Sucesso - Agendamento Confirmado\\screen.html"
+    }
+  },
+  {
+    "id": "3e1a71750f1443cf8740fc290eaed3c2",
+    "order": 14,
+    "title": "Painel do Barbeiro - Agenda Mobile",
+    "deviceType": "MOBILE",
+    "width": "780",
+    "height": "2932",
+    "files": {
+      "metadata": "screens\\14_Painel do Barbeiro - Agenda Mobile\\metadata.json",
+      "screenshot": "screens\\14_Painel do Barbeiro - Agenda Mobile\\screenshot.png",
+      "code": "screens\\14_Painel do Barbeiro - Agenda Mobile\\screen.html"
+    }
+  }
+]

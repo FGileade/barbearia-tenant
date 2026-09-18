@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;background-color:#151310;}body{overscroll-behavior:none;-webkit-tap-highlight-color:transparent;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"inverse-surface":"#e8e1dc","on-tertiary":"#5d171a","secondary-container":"#1b5425","on-primary":"#4b2800","surface-tint":"#ffb873","surface-container-low":"#1d1b18","primary-fixed-dim":"#ffb873","primary-fixed":"#ffdcbf","surface-variant":"#373431","primary-container":"#c5823e","inverse-primary":"#89510e","on-primary-fixed-variant":"#6a3b00","on-surface":"#e8e1dc","error-container":"#93000a","inverse-on-surface":"#33302d","surface-container-highest":"#373431","secondary":"#98d599","on-secondary-fixed-variant":"#185123","on-tertiary-container":"#531014","outline":"#9f8e80","surface-container-high":"#2c2a26","surface-container-lowest":"#100e0b","primary":"#ffb873","on-primary-container":"#412200","secondary-fixed":"#b4f2b3","on-background":"#e8e1dc","on-error":"#690005","tertiary-fixed-dim":"#ffb3b0","background":"#151310","tertiary-fixed":"#ffdad8","on-tertiary-fixed-variant":"#7a2d2e","tertiary":"#ffb3b0","on-secondary-fixed":"#002107","on-secondary-container":"#8bc78b","surface":"#151310","on-surface-variant":"#d7c3b4","outline-variant":"#524439","surface-bright":"#3b3935","on-secondary":"#003910","on-tertiary-fixed":"#3f0207","on-primary-fixed":"#2d1600","secondary-fixed-dim":"#98d599","surface-container":"#211f1c","surface-dim":"#151310","tertiary-container":"#d67573","on-error-container":"#ffdad6","error":"#ffb4ab"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"space-sm":"0.5rem","space-md":"1rem","space-lg":"1.5rem","space-xs":"0.25rem","gutter":"1.5rem","space-xl":"2.5rem","margin":"2rem"},"fontFamily":{"headline-md":["Plus Jakarta Sans"],"headline-sm":["Plus Jakarta Sans"],"body-lg":["Plus Jakarta Sans"],"headline-xl":["Plus Jakarta Sans"],"label-data":["Plus Jakarta Sans"],"label-caps":["Plus Jakarta Sans"],"body-sm":["Plus Jakarta Sans"],"body-md":["Plus Jakarta Sans"],"display-lg":["Plus Jakarta Sans"]},"fontSize":{"headline-md":["24px",{"lineHeight":"32px","letterSpacing":"-0.02em","fontWeight":"700"}],"headline-sm":["18px",{"lineHeight":"26px","letterSpacing":"-0.015em","fontWeight":"600"}],"body-lg":["16px",{"lineHeight":"24px","letterSpacing":"0em","fontWeight":"400"}],"headline-xl":["32px",{"lineHeight":"40px","letterSpacing":"-0.025em","fontWeight":"700"}],"label-data":["12px",{"lineHeight":"16px","letterSpacing":"0.04em","fontWeight":"600"}],"label-caps":["11px",{"lineHeight":"16px","letterSpacing":"0.08em","fontWeight":"700"}],"body-sm":["13px",{"lineHeight":"18px","letterSpacing":"0.01em","fontWeight":"400"}],"body-md":["14px",{"lineHeight":"22px","letterSpacing":"0em","fontWeight":"400"}],"display-lg":["44px",{"lineHeight":"52px","letterSpacing":"-0.03em","fontWeight":"800"}]}}}};</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface text-on-surface font-body-md min-h-screen flex flex-col antialiased selection:bg-primary-container selection:text-on-primary-container"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/85 backdrop-blur-xl shadow-[0_1px_12px_rgba(0,0,0,0.4)]"><div class="h-16 px-gutter flex items-center justify-between"><div class="flex items-center gap-space-sm"><img alt="logo icon.png" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1XpCGDTjET34zT_DpGh8x00NkmPIWgJ_ONuvl9e_ZDrQ6FmI4sKBVngg1H-7RhPT8Xu4hU0ft19PJxueGAbmDTM294f3qRmRHbNiGojfzRYaDhNZR5to1Go27gi1Bf_XQLMeHNLaoU7jba850qWhHpl2cDq7IvjpCIhcgmK13OfBNFIz49kZX80FFTVuPd_6JdDQ_MRtBR2XZMzpqtO09NDb-eSzZCOMbBVqOIwr3NbGERIpabgFNq24vk_fdmJR6JdSyhydhozgNk"/><div class="flex flex-col"><span class="font-label-caps text-label-caps text-primary tracking-widest uppercase">APP BARB</span><h1 class="font-headline-sm text-headline-sm text-on-surface tracking-tight leading-none">Barber Queue</h1></div></div><div class="flex items-center gap-space-xs"><button class="w-11 h-11 flex items-center justify-center rounded-lg text-on-surface-variant hover:text-primary transition-colors active:scale-95"><span class="material-symbols-outlined text-[22px]">notifications</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center ml-space-xs"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 pb-24 bg-surface min-h-screen"><div class="flex flex-col w-full">
+<!-- Operational Sub-Header Bar -->
+<section class="px-gutter pt-space-md pb-space-sm bg-surface-container-low flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center text-primary font-headline-sm text-headline-sm shadow-md">
+          AB
+        </div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-sm text-headline-sm text-on-surface truncate">Mateus Silva</span>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-secondary-container/20 text-secondary text-[11px] font-label-caps">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse"></span>
+              EM ATENDIMENTO
+            </span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1 truncate">
+<span class="material-symbols-outlined text-[14px]">store</span> Unidade Augusta • Cadeira 02
+          </span>
+</div>
+</div>
+<button class="px-space-sm py-1.5 rounded-lg bg-surface-container-high hover:bg-surface-variant text-on-surface-variant text-label-data font-label-data flex items-center gap-1 active:scale-95 transition-all">
+<span class="material-symbols-outlined text-[16px]">logout</span> Sair
+      </button>
+</div>
+<!-- Navigation Tabs (Barber Operational Deck) -->
+<div class="flex items-center justify-between gap-space-xs pt-space-xs">
+<button class="flex-1 py-2 rounded-xl bg-primary text-on-primary font-label-caps text-label-caps tracking-wider flex items-center justify-center gap-1.5 shadow-sm active:scale-98 transition-transform">
+<span class="material-symbols-outlined text-[16px]">calendar_month</span> Agenda do Dia
+      </button>
+<button class="flex-1 py-2 rounded-xl bg-surface-container hover:bg-surface-container-high text-on-surface-variant font-label-caps text-label-caps tracking-wider flex items-center justify-center gap-1.5 transition-colors">
+<span class="material-symbols-outlined text-[16px]">group</span> Profissionais
+      </button>
+<button class="flex-1 py-2 rounded-xl bg-surface-container hover:bg-surface-container-high text-on-surface-variant font-label-caps text-label-caps tracking-wider flex items-center justify-center gap-1.5 transition-colors">
+<span class="material-symbols-outlined text-[16px]">payments</span> Tabela
+      </button>
+</div>
+</section>
+<!-- Metrics & Vitals Bento -->
+<section class="px-gutter pt-space-md flex flex-col gap-space-sm">
+<div class="grid grid-cols-2 gap-space-sm">
+<!-- Card Hoje -->
+<div class="bg-surface-container p-space-sm rounded-xl flex flex-col justify-between shadow-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-caps text-label-caps text-on-surface-variant">HOJE</span>
+<span class="material-symbols-outlined text-primary text-[18px]">event</span>
+</div>
+<div class="mt-space-xs">
+<div class="font-headline-sm text-headline-sm text-on-surface">Sex, 25/10</div>
+<div class="font-label-data text-label-data text-primary mt-0.5">18 agendamentos</div>
+</div>
+</div>
+<!-- Card Faturamento Previsto -->
+<div class="bg-surface-container p-space-sm rounded-xl flex flex-col justify-between shadow-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-caps text-label-caps text-on-surface-variant">PREVISÃO DIA</span>
+<span class="material-symbols-outlined text-secondary text-[18px]">trending_up</span>
+</div>
+<div class="mt-space-xs">
+<div class="font-headline-sm text-headline-sm text-secondary">R$ 1.840</div>
+<div class="font-label-data text-label-data text-on-surface-variant mt-0.5">Ticket médio: R$ 102</div>
+</div>
+</div>
+</div>
+<!-- Live Occupancy Pill -->
+<div class="bg-surface-container-high p-space-sm rounded-xl flex items-center justify-between shadow-sm">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="relative w-8 h-8 flex items-center justify-center">
+<svg class="w-8 h-8 -rotate-90" viewbox="0 0 36 36">
+<path class="text-surface-variant" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-width="3.5"></path>
+<path class="text-primary" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-dasharray="86, 100" stroke-linecap="round" stroke-width="3.5"></path>
+</svg>
+<span class="absolute text-[9px] font-headline-sm text-on-surface">86%</span>
+</div>
+<div class="flex flex-col truncate">
+<span class="font-label-caps text-label-caps text-on-surface truncate">OCUPAÇÃO DA UNIDADE</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">4 barbeiros ativos • 3 na cadeira agora</span>
+</div>
+</div>
+<div class="flex items-center gap-1 text-primary">
+<span class="material-symbols-outlined text-[18px]">schedule</span>
+</div>
+</div>
+<!-- Quick Action: Novo Encaixe Rápido -->
+<button class="w-full h-11 rounded-xl bg-primary text-on-primary font-headline-sm text-body-lg flex items-center justify-center gap-space-xs shadow-md active:scale-98 transition-transform" id="quick-slot-trigger">
+<span class="material-symbols-outlined text-[20px]">person_add</span>
+<span>+ Novo Encaixe Rápido</span>
+</button>
+</section>
+<!-- Barber Timeline Section -->
+<section class="px-gutter pt-space-lg pb-space-lg flex flex-col gap-space-sm">
+<div class="flex items-center justify-between mb-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<h2 class="font-label-caps text-label-caps text-primary tracking-widest uppercase">CRONOGRAMA OPERACIONAL</h2>
+</div>
+<span class="font-label-data text-label-data text-on-surface-variant">Turno Manhã/Tarde</span>
+</div>
+<!-- Timeline List -->
+<div class="flex flex-col gap-space-sm relative">
+<!-- Slot 09:00 - Concluído -->
+<div class="bg-surface-container p-space-md rounded-xl flex items-center justify-between shadow-sm opacity-80 hover:opacity-100 transition-opacity">
+<div class="flex items-start gap-space-sm min-w-0">
+<div class="flex flex-col items-center justify-center pt-0.5">
+<span class="font-headline-sm text-headline-sm text-on-surface-variant">09:00</span>
+<span class="font-label-data text-[10px] text-on-surface-variant">35 min</span>
+</div>
+<div class="w-[1px] h-9 bg-surface-variant self-center"></div>
+<div class="flex flex-col min-w-0">
+<span class="font-headline-sm text-headline-sm text-on-surface truncate">Lucas Prado</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Corte na Tesoura</span>
+<span class="font-label-data text-label-data text-primary font-semibold mt-0.5">R$ 75,00</span>
+</div>
+</div>
+<div class="flex flex-col items-end gap-space-xs">
+<span class="px-2.5 py-1 rounded-full bg-secondary-container/20 text-secondary text-label-data font-label-caps flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">check_circle</span> Concluído
+          </span>
+<span class="text-[11px] text-on-surface-variant">Pix Dom Pedro</span>
+</div>
+</div>
+<!-- Slot 10:00 - Concluído -->
+<div class="bg-surface-container p-space-md rounded-xl flex items-center justify-between shadow-sm opacity-80 hover:opacity-100 transition-opacity">
+<div class="flex items-start gap-space-sm min-w-0">
+<div class="flex flex-col items-center justify-center pt-0.5">
+<span class="font-headline-sm text-headline-sm text-on-surface-variant">10:00</span>
+<span class="font-label-data text-[10px] text-on-surface-variant">45 min</span>
+</div>
+<div class="w-[1px] h-9 bg-surface-variant self-center"></div>
+<div class="flex flex-col min-w-0">
+<span class="font-headline-sm text-headline-sm text-on-surface truncate">Rafael Gomes</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Barba Completa</span>
+<span class="font-label-data text-label-data text-primary font-semibold mt-0.5">R$ 85,00</span>
+</div>
+</div>
+<div class="flex flex-col items-end gap-space-xs">
+<span class="px-2.5 py-1 rounded-full bg-secondary-container/20 text-secondary text-label-data font-label-caps flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">check_circle</span> Concluído
+          </span>
+<span class="text-[11px] text-on-surface-variant">Cartão Débito</span>
+</div>
+</div>
+<!-- Slot 11:15 - Concluído VIP -->
+<div class="bg-surface-container p-space-md rounded-xl flex items-center justify-between shadow-sm opacity-80 hover:opacity-100 transition-opacity">
+<div class="flex items-start gap-space-sm min-w-0">
+<div class="flex flex-col items-center justify-center pt-0.5">
+<span class="font-headline-sm text-headline-sm text-on-surface-variant">11:15</span>
+<span class="font-label-data text-[10px] text-on-surface-variant">60 min</span>
+</div>
+<div class="w-[1px] h-9 bg-surface-variant self-center"></div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="font-headline-sm text-headline-sm text-on-surface truncate">Bruno Silveira</span>
+<span class="px-1.5 py-0.5 rounded bg-primary-container text-on-primary-container text-[10px] font-label-caps">VIP</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Combo Dom Pedro (Corte + Barba)</span>
+<span class="font-label-data text-label-data text-primary font-semibold mt-0.5">R$ 125,00</span>
+</div>
+</div>
+<div class="flex flex-col items-end gap-space-xs">
+<span class="px-2.5 py-1 rounded-full bg-secondary-container/20 text-secondary text-label-data font-label-caps flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">check_circle</span> Concluído
+          </span>
+<span class="text-[11px] text-on-surface-variant">Crédito App</span>
+</div>
+</div>
+<!-- Lunch Break Slot -->
+<div class="py-space-xs px-space-md rounded-lg bg-surface-container-lowest flex items-center justify-between text-on-surface-variant">
+<span class="font-label-caps text-[11px] flex items-center gap-1 text-outline">
+<span class="material-symbols-outlined text-[14px]">restaurant</span> Intervalo Operacional da Equipe
+        </span>
+<span class="font-label-data text-[11px] text-outline">12:30 - 13:45</span>
+</div>
+<!-- Slot 14:00 - EM ANDAMENTO (Hero Card da Cadeira Ativa) -->
+<div class="bg-surface-container-high rounded-xl p-space-md shadow-xl flex flex-col gap-space-md relative overflow-hidden">
+<div class="absolute top-0 left-0 bottom-0 w-1.5 bg-primary"></div>
+<div class="flex items-start justify-between pl-space-xs">
+<div class="flex items-start gap-space-sm min-w-0">
+<div class="flex flex-col items-center justify-center pt-0.5">
+<span class="font-headline-sm text-headline-sm text-primary font-bold">14:00</span>
+<span class="font-label-data text-[10px] text-primary">NA CADEIRA</span>
+</div>
+<div class="w-[1px] h-10 bg-surface-variant self-center"></div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-headline-sm text-on-surface truncate">Felipe Martins</span>
+<span class="px-2 py-0.5 rounded-full bg-primary/20 text-primary text-[10px] font-label-caps tracking-wide uppercase animate-pulse">
+                  Agora
+                </span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Corte Fade Navalhado</span>
+<div class="flex items-center gap-space-sm mt-1">
+<span class="font-label-data text-label-data text-primary font-bold">R$ 70,00</span>
+<span class="text-[11px] text-on-surface-variant flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[13px] text-primary">timer</span> Início: 14:03
+                </span>
+</div>
+</div>
+</div>
+<button class="w-9 h-9 rounded-lg bg-surface-container hover:bg-surface-variant flex items-center justify-center text-on-surface-variant active:scale-95 transition-all">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+<!-- Big Action Button -->
+<button class="w-full h-11 rounded-lg bg-primary hover:bg-primary-container text-on-primary font-headline-sm text-headline-sm flex items-center justify-center gap-space-xs shadow-md active:scale-98 transition-all" id="btn-finish-slot">
+<span class="material-symbols-outlined text-[20px]">verified</span>
+<span>Finalizar Atendimento</span>
+</button>
+</div>
+<!-- Slot 15:00 - PRÓXIMO ATENDIMENTO -->
+<div class="bg-surface-container rounded-xl p-space-md shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-start justify-between">
+<div class="flex items-start gap-space-sm min-w-0">
+<div class="flex flex-col items-center justify-center pt-0.5">
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">15:00</span>
+<span class="font-label-data text-[10px] text-primary">A SEGUIR</span>
+</div>
+<div class="w-[1px] h-10 bg-surface-variant self-center"></div>
+<div class="flex flex-col min-w-0">
+<span class="font-headline-sm text-headline-sm text-on-surface truncate">Lucas Ferreira</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Corte Clássico + Barboterapia</span>
+<div class="flex items-center gap-space-sm mt-0.5">
+<span class="font-label-data text-label-data text-primary font-bold">R$ 135,00</span>
+<span class="font-label-data text-[11px] text-secondary flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[12px]">how_to_reg</span> Na sala de espera
+                </span>
+</div>
+</div>
+</div>
+</div>
+<!-- Direct Quick Actions -->
+<div class="flex items-center gap-space-xs pt-space-xs">
+<!-- WhatsApp Notification -->
+<a class="flex-1 h-9 rounded-lg bg-surface-container-high hover:bg-surface-variant text-on-surface flex items-center justify-center gap-1.5 text-label-data font-label-data transition-colors" href="https://wa.me/?text=Ola%20Lucas,%20seu%20horario%20na%20Dom%20Pedro%20inicia%20em%20instantes!" target="_blank">
+<span class="material-symbols-outlined text-secondary text-[16px]">chat</span>
+<span>Avisar Whats</span>
+</a>
+<!-- Check / Confirm Start -->
+<button class="flex-1 h-9 rounded-lg bg-surface-container-high hover:bg-surface-variant text-secondary flex items-center justify-center gap-1 text-label-data font-label-data transition-colors">
+<span class="material-symbols-outlined text-[16px]">check</span>
+<span>Chamar</span>
+</button>
+<!-- Cancel Slot -->
+<button class="w-9 h-9 rounded-lg bg-surface-container-high hover:bg-error-container text-outline hover:text-on-error-container flex items-center justify-center transition-colors">
+<span class="material-symbols-outlined text-[16px]">close</span>
+</button>
+</div>
+</div>
+<!-- Slot 16:30 -->
+<div class="bg-surface-container p-space-md rounded-xl flex items-center justify-between shadow-sm">
+<div class="flex items-start gap-space-sm min-w-0">
+<div class="flex flex-col items-center justify-center pt-0.5">
+<span class="font-headline-sm text-headline-sm text-on-surface">16:30</span>
+<span class="font-label-data text-[10px] text-on-surface-variant">30 min</span>
+</div>
+<div class="w-[1px] h-9 bg-surface-variant self-center"></div>
+<div class="flex flex-col min-w-0">
+<span class="font-headline-sm text-headline-sm text-on-surface truncate">Gabriel Santos</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Barba Tradicional com Toalha Quente</span>
+<span class="font-label-data text-label-data text-primary font-semibold mt-0.5">R$ 60,00</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="w-9 h-9 rounded-lg bg-surface-container-high hover:bg-surface-variant text-secondary flex items-center justify-center active:scale-95 transition-transform" title="Concluir Antecipado">
+<span class="material-symbols-outlined text-[18px]">done_all</span>
+</button>
+<button class="w-9 h-9 rounded-lg bg-surface-container-high hover:bg-surface-variant text-outline hover:text-error flex items-center justify-center active:scale-95 transition-transform" title="Cancelar">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+</div>
+<!-- Slot 17:30 -->
+<div class="bg-surface-container p-space-md rounded-xl flex items-center justify-between shadow-sm">
+<div class="flex items-start gap-space-sm min-w-0">
+<div class="flex flex-col items-center justify-center pt-0.5">
+<span class="font-headline-sm text-headline-sm text-on-surface">17:30</span>
+<span class="font-label-data text-[10px] text-on-surface-variant">30 min</span>
+</div>
+<div class="w-[1px] h-9 bg-surface-variant self-center"></div>
+<div class="flex flex-col min-w-0">
+<span class="font-headline-sm text-headline-sm text-on-surface truncate">Thiago Rocha</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Corte Infantil (Tesoura)</span>
+<span class="font-label-data text-label-data text-primary font-semibold mt-0.5">R$ 65,00</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="w-9 h-9 rounded-lg bg-surface-container-high hover:bg-surface-variant text-secondary flex items-center justify-center active:scale-95 transition-transform" title="Confirmar">
+<span class="material-symbols-outlined text-[18px]">done_all</span>
+</button>
+<button class="w-9 h-9 rounded-lg bg-surface-container-high hover:bg-surface-variant text-outline hover:text-error flex items-center justify-center active:scale-95 transition-transform" title="Cancelar">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Realtime Sync & Operational Bottom Deck -->
+<footer class="px-gutter pt-space-xs pb-space-lg flex flex-col gap-space-sm">
+<div class="p-space-sm rounded-xl bg-surface-container-low flex items-center justify-between shadow-sm">
+<div class="flex items-center gap-space-xs min-w-0">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="font-label-data text-label-data text-on-surface-variant truncate">Sincronizado via BarberCloud • 14:12</span>
+</div>
+<div class="flex items-center gap-space-sm">
+<button class="text-primary hover:text-primary-fixed font-label-caps text-label-caps flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[15px]">analytics</span> Relatório
+        </button>
+<button class="text-on-surface-variant hover:text-on-surface font-label-caps text-label-caps flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[15px]">help</span> Ajuda
+        </button>
+</div>
+</div>
+</footer>
+<!-- Modal / Dialog Mock for Fast Walk-in ("Novo Encaixe Rápido") -->
+<div class="hidden fixed inset-0 z-50 bg-surface-container-lowest/80 backdrop-blur-sm p-gutter flex items-end sm:items-center justify-center" id="quick-slot-modal">
+<div class="w-full max-w-sm bg-surface-container-high rounded-xl p-space-lg flex flex-col gap-space-md shadow-2xl">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">chair</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">Novo Encaixe Rápido</span>
+</div>
+<button class="text-on-surface-variant hover:text-on-surface" id="close-modal">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<div class="flex flex-col gap-space-sm">
+<div>
+<label class="font-label-caps text-label-caps text-on-surface-variant block mb-1">NOME DO CLIENTE</label>
+<input class="w-full bg-surface p-space-sm rounded-lg text-on-surface font-body-md focus:outline-none placeholder:text-outline text-sm" placeholder="Ex: Carlos Eduardo" type="text"/>
+</div>
+<div>
+<label class="font-label-caps text-label-caps text-on-surface-variant block mb-1">SERVIÇO</label>
+<select class="w-full bg-surface p-space-sm rounded-lg text-on-surface font-body-md focus:outline-none text-sm">
+<option>Corte na Tesoura - R$ 75</option>
+<option>Barba Completa - R$ 85</option>
+<option>Combo Dom Pedro - R$ 125</option>
+<option>Acabamento &amp; Pezinho - R$ 40</option>
+</select>
+</div>
+<div>
+<label class="font-label-caps text-label-caps text-on-surface-variant block mb-1">HORÁRIO ESTIMADO</label>
+<input class="w-full bg-surface p-space-sm rounded-lg text-on-surface font-body-md focus:outline-none text-sm" type="time" value="14:45"/>
+</div>
+</div>
+<button class="w-full h-11 rounded-lg bg-primary text-on-primary font-headline-sm text-body-lg flex items-center justify-center gap-2 active:scale-95 transition-all shadow-md" id="save-slot-btn">
+<span class="material-symbols-outlined text-[18px]">add_task</span> Encaixar na Fila
+      </button>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    const trigger = document.getElementById('quick-slot-trigger');
+    const modal = document.getElementById('quick-slot-modal');
+    const closeBtn = document.getElementById('close-modal');
+    const saveBtn = document.getElementById('save-slot-btn');
+    const finishBtn = document.getElementById('btn-finish-slot');
+
+    if (trigger && modal) {
+      trigger.addEventListener('click', () => modal.classList.remove('hidden'));
+    }
+    if (closeBtn && modal) {
+      closeBtn.addEventListener('click', () => modal.classList.add('hidden'));
+    }
+    if (saveBtn && modal) {
+      saveBtn.addEventListener('click', () => {
+        modal.classList.add('hidden');
+      });
+    }
+    if (finishBtn) {
+      finishBtn.addEventListener('click', function() {
+        this.innerHTML = '<span class="material-symbols-outlined text-[20px]">check_circle</span> Atendimento Concluído!';
+        this.classList.remove('bg-primary', 'text-on-primary');
+        this.classList.add('bg-secondary-container', 'text-on-secondary-container');
+      });
+    }
+  })();
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_-4px_24px_rgba(0,0,0,0.5)]" data-active-classes="text-primary font-bold"><div class="flex justify-around items-center h-16 px-space-xs"><a class="flex-1 min-h-[44px] flex flex-col items-center justify-center gap-space-xs text-on-surface-variant hover:text-on-surface transition-colors" data-path="appointments" href="#"><span class="material-symbols-outlined text-[22px]">calendar_today</span><span class="font-label-caps text-label-caps tracking-wider">SCHEDULE</span></a><a class="flex-1 min-h-[44px] flex flex-col items-center justify-center gap-space-xs text-on-surface-variant hover:text-on-surface transition-colors" data-path="services-catalog" href="#"><span class="material-symbols-outlined text-[22px]">content_cut</span><span class="font-label-caps text-label-caps tracking-wider">SERVICES</span></a><a aria-current="page" class="flex-1 min-h-[44px] flex flex-col items-center justify-center gap-space-xs transition-colors text-primary font-bold" data-path="barber-queue" href="#"><span class="material-symbols-outlined text-[22px]">view_kanban</span><span class="font-label-caps text-label-caps tracking-wider">QUEUE</span></a><a class="flex-1 min-h-[44px] flex flex-col items-center justify-center gap-space-xs text-on-surface-variant hover:text-on-surface transition-colors" data-path="client-dossier" href="#"><span class="material-symbols-outlined text-[22px]">badge</span><span class="font-label-caps text-label-caps tracking-wider">CLIENTS</span></a></div></nav></body></html>

@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;background-color:#151310;}body{overscroll-behavior:none;-webkit-tap-highlight-color:transparent;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"inverse-surface":"#e8e1dc","on-tertiary":"#5d171a","secondary-container":"#1b5425","on-primary":"#4b2800","surface-tint":"#ffb873","surface-container-low":"#1d1b18","primary-fixed-dim":"#ffb873","primary-fixed":"#ffdcbf","surface-variant":"#373431","primary-container":"#c5823e","inverse-primary":"#89510e","on-primary-fixed-variant":"#6a3b00","on-surface":"#e8e1dc","error-container":"#93000a","inverse-on-surface":"#33302d","surface-container-highest":"#373431","secondary":"#98d599","on-secondary-fixed-variant":"#185123","on-tertiary-container":"#531014","outline":"#9f8e80","surface-container-high":"#2c2a26","surface-container-lowest":"#100e0b","primary":"#ffb873","on-primary-container":"#412200","secondary-fixed":"#b4f2b3","on-background":"#e8e1dc","on-error":"#690005","tertiary-fixed-dim":"#ffb3b0","background":"#151310","tertiary-fixed":"#ffdad8","on-tertiary-fixed-variant":"#7a2d2e","tertiary":"#ffb3b0","on-secondary-fixed":"#002107","on-secondary-container":"#8bc78b","surface":"#151310","on-surface-variant":"#d7c3b4","outline-variant":"#524439","surface-bright":"#3b3935","on-secondary":"#003910","on-tertiary-fixed":"#3f0207","on-primary-fixed":"#2d1600","secondary-fixed-dim":"#98d599","surface-container":"#211f1c","surface-dim":"#151310","tertiary-container":"#d67573","on-error-container":"#ffdad6","error":"#ffb4ab"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"space-sm":"0.5rem","space-md":"1rem","space-lg":"1.5rem","space-xs":"0.25rem","gutter":"1.5rem","space-xl":"2.5rem","margin":"2rem"},"fontFamily":{"headline-md":["Plus Jakarta Sans"],"headline-sm":["Plus Jakarta Sans"],"body-lg":["Plus Jakarta Sans"],"headline-xl":["Plus Jakarta Sans"],"label-data":["Plus Jakarta Sans"],"label-caps":["Plus Jakarta Sans"],"body-sm":["Plus Jakarta Sans"],"body-md":["Plus Jakarta Sans"],"display-lg":["Plus Jakarta Sans"]},"fontSize":{"headline-md":["24px",{"lineHeight":"32px","letterSpacing":"-0.02em","fontWeight":"700"}],"headline-sm":["18px",{"lineHeight":"26px","letterSpacing":"-0.015em","fontWeight":"600"}],"body-lg":["16px",{"lineHeight":"24px","letterSpacing":"0em","fontWeight":"400"}],"headline-xl":["32px",{"lineHeight":"40px","letterSpacing":"-0.025em","fontWeight":"700"}],"label-data":["12px",{"lineHeight":"16px","letterSpacing":"0.04em","fontWeight":"600"}],"label-caps":["11px",{"lineHeight":"16px","letterSpacing":"0.08em","fontWeight":"700"}],"body-sm":["13px",{"lineHeight":"18px","letterSpacing":"0.01em","fontWeight":"400"}],"body-md":["14px",{"lineHeight":"22px","letterSpacing":"0em","fontWeight":"400"}],"display-lg":["44px",{"lineHeight":"52px","letterSpacing":"-0.03em","fontWeight":"800"}]}}}};</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface text-on-surface font-body-md min-h-screen flex flex-col antialiased selection:bg-primary-container selection:text-on-primary-container"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/90 backdrop-blur-xl shadow-[0_1px_12px_rgba(0,0,0,0.4)]"><div class="h-16 px-gutter flex items-center justify-between"><div class="flex items-center gap-space-sm"><button class="w-11 h-11 -ml-space-xs flex items-center justify-center rounded-lg text-on-surface hover:text-primary transition-colors active:scale-95" onclick="history.back()"><span class="material-symbols-outlined text-[22px]">arrow_back</span></button><img alt="logo icon.png" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1XpCGDTjET34zT_DpGh8x00NkmPIWgJ_ONuvl9e_ZDrQ6FmI4sKBVngg1H-7RhPT8Xu4hU0ft19PJxueGAbmDTM294f3qRmRHbNiGojfzRYaDhNZR5to1Go27gi1Bf_XQLMeHNLaoU7jba850qWhHpl2cDq7IvjpCIhcgmK13OfBNFIz49kZX80FFTVuPd_6JdDQ_MRtBR2XZMzpqtO09NDb-eSzZCOMbBVqOIwr3NbGERIpabgFNq24vk_fdmJR6JdSyhydhozgNk"/><h1 class="font-headline-sm text-headline-sm text-on-surface tracking-tight truncate max-w-[190px]">Booking Wizard</h1></div><div class="flex items-center"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 pb-safe bg-surface min-h-screen"><div class="flex flex-col w-full px-gutter pb-space-xl text-on-surface">
+<!-- Shop Compact Branding & Status -->
+<section class="flex items-center gap-space-md py-space-md bg-surface-container-low px-space-md rounded-xl shadow-md my-space-xs">
+<div class="w-12 h-12 rounded-full bg-surface-container-highest flex items-center justify-center shadow-inner flex-shrink-0">
+<span class="font-headline-sm text-primary tracking-tighter">DP</span>
+</div>
+<div class="flex flex-col min-w-0 flex-1">
+<div class="flex items-center gap-space-xs">
+<h2 class="font-headline-sm text-headline-sm text-on-surface truncate">Barbearia Dom Pedro</h2>
+<span class="w-2 h-2 rounded-full bg-secondary inline-block"></span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">
+        Aberto hoje • Rua Augusta, 1420
+      </p>
+</div>
+</section>
+<!-- Step Wizard Indicator -->
+<section class="mt-space-md flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-caps text-label-caps uppercase text-primary tracking-wider">Etapa 1 de 4</span>
+<span class="font-label-data text-label-data text-on-surface-variant">25% concluído</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface">Escolha o Profissional</h3>
+<!-- 4-Segment Progress Bar -->
+<div class="grid grid-cols-4 gap-space-xs mt-space-xs">
+<div class="h-1.5 rounded-full bg-primary shadow-[0_0_8px_rgba(255,184,115,0.4)]"></div>
+<div class="h-1.5 rounded-full bg-surface-container-highest"></div>
+<div class="h-1.5 rounded-full bg-surface-container-highest"></div>
+<div class="h-1.5 rounded-full bg-surface-container-highest"></div>
+</div>
+</section>
+<!-- Express Option: First Available Barber -->
+<section class="mt-space-lg">
+<div class="staff-card group relative bg-surface-container p-space-md rounded-xl shadow-md flex items-center justify-between cursor-pointer transition-all active:scale-[0.98] hover:bg-surface-container-high" data-id="any" onclick="selectStaff(this, 'Qualquer Barbeiro (Primeiro Livre)', 'Hoje às 14:00')">
+<div class="flex items-center gap-space-md min-w-0">
+<div class="w-12 h-12 rounded-xl bg-primary-container/20 flex items-center justify-center text-primary flex-shrink-0">
+<span class="material-symbols-outlined text-[26px]">bolt</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-xs">
+<h4 class="font-headline-sm text-headline-sm text-on-surface truncate">Primeiro Horário Livre</h4>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">Para quem tem pressa ou sem preferência</p>
+</div>
+</div>
+<div class="flex flex-col items-end flex-shrink-0 pl-space-xs">
+<span class="bg-secondary-container text-on-secondary-container px-2 py-0.5 rounded-full font-label-data text-label-data flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]">schedule</span>
+          Hoje 14:00
+        </span>
+<span class="check-icon material-symbols-outlined text-primary text-[20px] mt-1 opacity-0 transition-opacity">check_circle</span>
+</div>
+</div>
+</section>
+<!-- 2-Column Barbers Grid -->
+<section class="mt-space-md">
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-caps text-label-caps uppercase text-on-surface-variant">Nossa Equipe de Mestres</span>
+<span class="font-label-data text-label-data text-primary">4 disponíveis</span>
+</div>
+<div class="grid grid-cols-2 gap-space-sm">
+<!-- Card 1: Mateus Silva -->
+<div class="staff-card relative bg-surface-container p-space-md rounded-xl shadow-sm flex flex-col justify-between cursor-pointer transition-all active:scale-[0.97] hover:bg-surface-container-high min-h-[200px]" data-id="mateus" onclick="selectStaff(this, 'Mateus Silva', 'Hoje 14:30')">
+<div>
+<div class="flex justify-between items-start">
+<div class="relative">
+<img class="w-14 h-14 rounded-full object-cover shadow-md" data-alt="Close-up portrait of a distinguished master male barber with a well-groomed dark beard and focused expression in warm moody barbershop interior, ambient tungsten rim lighting, depth of field." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC4fXNY-HaunyzI5XuEFkCEVUTJhMeqnpfHwq-fdv_Tcnc7WtpoQpMu7TWxGS8A2jl4fKYv8wPMCcx052u4RenGDLGJiiBwHjkkOmX4OzdP9L-umR5g1xl_umh93T5PuTdRfeI2H85sWZgggU_uP_PaCDO8i1TQWXssWkYbc2B9-mZppO6Qn4meGSm8aNziKRK6lX-O553krZ8mLkVIB3pf_St6Mf_gDubNZe_iL7eD9kslFRIAX3f9aw"/>
+<span class="check-icon material-symbols-outlined text-primary absolute -bottom-1 -right-1 bg-surface-container-lowest rounded-full text-[18px] opacity-0 transition-opacity">check_circle</span>
+</div>
+<span class="bg-primary/15 text-primary px-1.5 py-0.5 rounded font-label-caps text-label-caps">MASTER</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface mt-space-sm truncate">Mateus Silva</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2 mt-0.5">Corte Tesoura &amp; Barba</p>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between">
+<span class="font-label-data text-label-data text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px] text-primary">event_available</span>
+            Hoje 14:30
+          </span>
+<span class="material-symbols-outlined text-on-surface-variant text-[18px]">chevron_right</span>
+</div>
+</div>
+<!-- Card 2: Rodrigo Fontana -->
+<div class="staff-card relative bg-surface-container p-space-md rounded-xl shadow-sm flex flex-col justify-between cursor-pointer transition-all active:scale-[0.97] hover:bg-surface-container-high min-h-[200px]" data-id="rodrigo" onclick="selectStaff(this, 'Rodrigo Fontana', 'Hoje 15:15')">
+<div>
+<div class="flex justify-between items-start">
+<div class="relative">
+<img class="w-14 h-14 rounded-full object-cover shadow-md" data-alt="Sharp portrait of an energetic young professional urban barber with tattoos and clean fade hairstyle, standing inside vintage walnut-paneled studio with leather chairs, warm ambient lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCnMAXkG1ZfEeveGgFSCJNYGOxeVt9w1sWuR0gX0MAjQmSNOorjpMcKcFLstv3LoVCTCDk4CKZJcxMgwKOhmxDnRDCBR7HAnVuHqDawvQDz96K35fn2hLFK8FZWHpF0HMg6mNpV7xVgzW0A5clu_SiN-dsOh0Y1g2cw1zvBtP47w-cGYj3qyYvyOjyR8nDZxYMMI8NIKMMl9CkCbdKBh1mY7Gfm9pxHO0-qk58YT2F0XNuQ_VTKGrFRCw"/>
+<span class="check-icon material-symbols-outlined text-primary absolute -bottom-1 -right-1 bg-surface-container-lowest rounded-full text-[18px] opacity-0 transition-opacity">check_circle</span>
+</div>
+<span class="bg-primary/15 text-primary px-1.5 py-0.5 rounded font-label-caps text-label-caps">FADE</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface mt-space-sm truncate">Rodrigo Fontana</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2 mt-0.5">Degradê &amp; Navalha</p>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between">
+<span class="font-label-data text-label-data text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px] text-primary">event_available</span>
+            Hoje 15:15
+          </span>
+<span class="material-symbols-outlined text-on-surface-variant text-[18px]">chevron_right</span>
+</div>
+</div>
+<!-- Card 3: Carlos Mendes -->
+<div class="staff-card relative bg-surface-container p-space-md rounded-xl shadow-sm flex flex-col justify-between cursor-pointer transition-all active:scale-[0.97] hover:bg-surface-container-high min-h-[200px]" data-id="carlos" onclick="selectStaff(this, 'Carlos Mendes', 'Hoje 16:00')">
+<div>
+<div class="flex justify-between items-start">
+<div class="relative">
+<img class="w-14 h-14 rounded-full object-cover shadow-md" data-alt="Portrait of an experienced mature craftsman barber with silver-streaked mustache and apron holding a straight razor safely, warm golden ambient lights, classic dark wood barber shop aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD28LeOQknusIGLj-4lfQNuFb8u1M9ei41QNBV-qybi5QP9KkpduuTrKvtIWjo7wbdXuh7zSiCtu3RrY4l0QPOq4yHkxQ_YngChyyIHyA25lekPVVJiD3j8ji3K7kgEIZq4BIgKNgG1hwF-tIhfTAv0XMpGxIAg0x4IHRJXqP9bnYc59-qGtb9bqX0dzwKf8rVHj9J-wztU1GrQESH9O4WZrrMDBxrq1NdADGj6PKj7SWSJZhbenetWug"/>
+<span class="check-icon material-symbols-outlined text-primary absolute -bottom-1 -right-1 bg-surface-container-lowest rounded-full text-[18px] opacity-0 transition-opacity">check_circle</span>
+</div>
+<span class="bg-primary/15 text-primary px-1.5 py-0.5 rounded font-label-caps text-label-caps">CLÁSSICO</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface mt-space-sm truncate">Carlos Mendes</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2 mt-0.5">Navalha &amp; Toalha Quente</p>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between">
+<span class="font-label-data text-label-data text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px] text-primary">event_available</span>
+            Hoje 16:00
+          </span>
+<span class="material-symbols-outlined text-on-surface-variant text-[18px]">chevron_right</span>
+</div>
+</div>
+<!-- Card 4: Henrique Duarte -->
+<div class="staff-card relative bg-surface-container p-space-md rounded-xl shadow-sm flex flex-col justify-between cursor-pointer transition-all active:scale-[0.97] hover:bg-surface-container-high min-h-[200px]" data-id="henrique" onclick="selectStaff(this, 'Henrique Duarte', 'Hoje 17:00')">
+<div>
+<div class="flex justify-between items-start">
+<div class="relative">
+<img class="w-14 h-14 rounded-full object-cover shadow-md" data-alt="Editorial headshot of a stylish modern male hair stylist specialist in grooming and treatments, warm studio lights with dark brown backdrop, polished and elegant barber presentation." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCpoOICCg9yNhN-KP3ET33P9zOkZzifxLdkPaScR2q_BYjNkowI9ZHhKws91KHBVu3m7H0RKN8MOKNfdSsC1T5DvzHlNB7GJ0n7pP0Xb48V259ueKOXib8_YbslqiTWoMnTdzkdEy7FEtkUJzMjnWP6bJhrjP6ONDYcYQk6WK4UaqNoOQWCyk4xsWH8qoRBNbo3MuzmC0DNf1ZFID1jhvpBtp6I3xZHGHFiMG7B60yvZmDy6GtWCWEf-w"/>
+<span class="check-icon material-symbols-outlined text-primary absolute -bottom-1 -right-1 bg-surface-container-lowest rounded-full text-[18px] opacity-0 transition-opacity">check_circle</span>
+</div>
+<span class="bg-primary/15 text-primary px-1.5 py-0.5 rounded font-label-caps text-label-caps">QUÍMICA</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface mt-space-sm truncate">Henrique Duarte</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2 mt-0.5">Tratamento Capilar</p>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between">
+<span class="font-label-data text-label-data text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px] text-primary">event_available</span>
+            Hoje 17:00
+          </span>
+<span class="material-symbols-outlined text-on-surface-variant text-[18px]">chevron_right</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Sticky Bottom Summary & CTA -->
+<section class="mt-space-lg flex flex-col gap-space-sm">
+<div class="flex items-center justify-center gap-space-xs text-on-surface-variant py-space-xs">
+<span class="material-symbols-outlined text-[16px] text-secondary">verified_user</span>
+<span class="font-label-data text-label-data">Sem necessidade de senha ou cadastro prévio</span>
+</div>
+<button class="w-full h-12 bg-primary text-on-primary font-headline-sm text-headline-sm rounded-xl flex items-center justify-center gap-space-xs shadow-lg transition-transform active:scale-[0.98] hover:bg-primary-fixed" id="btnContinue" onclick="proceedToServices()">
+<span id="ctaText">Continuar para Serviços</span>
+<span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+</button>
+</section>
+</div>
+<script>
+  let currentSelection = {
+    name: 'Mateus Silva',
+    time: 'Hoje 14:30'
+  };
+
+  // Pre-select first barber on initial load
+  document.addEventListener('DOMContentLoaded', () => {
+    const firstCard = document.querySelector('.staff-card[data-id="mateus"]');
+    if (firstCard) {
+      applyCardState(firstCard);
+    }
+  });
+
+  function applyCardState(cardEl) {
+    document.querySelectorAll('.staff-card').forEach(c => {
+      c.classList.remove('bg-surface-bright', 'shadow-xl');
+      c.classList.add('bg-surface-container');
+      const chk = c.querySelector('.check-icon');
+      if (chk) chk.classList.replace('opacity-100', 'opacity-0');
+    });
+
+    cardEl.classList.remove('bg-surface-container');
+    cardEl.classList.add('bg-surface-bright', 'shadow-xl');
+    const activeChk = cardEl.querySelector('.check-icon');
+    if (activeChk) activeChk.classList.replace('opacity-0', 'opacity-100');
+  }
+
+  function selectStaff(element, name, time) {
+    currentSelection = { name, time };
+    applyCardState(element);
+
+    const ctaText = document.getElementById('ctaText');
+    if (ctaText) {
+      ctaText.textContent = `Continuar com ${name.split(' ')[0]}`;
+    }
+  }
+
+  function proceedToServices() {
+    // Provide tactile feedback and simulate route advance
+    const btn = document.getElementById('btnContinue');
+    btn.classList.add('opacity-90', 'scale-95');
+    setTimeout(() => {
+      btn.classList.remove('opacity-90', 'scale-95');
+      // Wizard flow advance trigger
+      console.log('Selected Professional:', currentSelection);
+    }, 150);
+  }
+</script></main></body></html>

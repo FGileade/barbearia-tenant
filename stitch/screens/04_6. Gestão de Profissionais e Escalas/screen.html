@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="pt-BR"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><title>APP Barb - Painel da Barbearia</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base { html, body { margin: 0; padding: 0; } body { overscroll-behavior: none; } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "surface-dim": "#151310", "on-tertiary": "#5d171a", "surface-container-lowest": "#100e0b", "tertiary-container": "#d67573", "on-secondary-fixed-variant": "#185123", "secondary-fixed-dim": "#98d599", "surface-tint": "#ffb873", "on-primary-container": "#412200", "on-secondary": "#003910", "surface-container-high": "#2c2a26", "primary": "#ffb873", "on-background": "#e8e1dc", "background": "#151310", "surface-container-highest": "#373431", "on-primary-fixed": "#2d1600", "on-surface-variant": "#d7c3b4", "on-tertiary-container": "#531014", "on-primary": "#4b2800", "primary-fixed-dim": "#ffb873", "secondary-fixed": "#b4f2b3", "surface-container-low": "#1d1b18", "secondary": "#98d599", "error": "#ffb4ab", "on-error": "#690005", "on-tertiary-fixed": "#3f0207", "on-primary-fixed-variant": "#6a3b00", "on-secondary-fixed": "#002107", "error-container": "#93000a", "outline": "#9f8e80", "surface-variant": "#373431", "outline-variant": "#524439", "on-secondary-container": "#8bc78b", "on-surface": "#e8e1dc", "surface-bright": "#3b3935", "tertiary-fixed": "#ffdad8", "primary-fixed": "#ffdcbf", "surface-container": "#211f1c", "inverse-primary": "#89510e", "surface": "#151310", "secondary-container": "#1b5425", "inverse-on-surface": "#33302d", "tertiary": "#ffb3b0", "inverse-surface": "#e8e1dc", "on-error-container": "#ffdad6", "primary-container": "#c5823e", "on-tertiary-fixed-variant": "#7a2d2e", "tertiary-fixed-dim": "#ffb3b0" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "spacing": { "space-lg": "1.5rem", "space-xs": "0.25rem", "space-xl": "2.5rem", "space-sm": "0.5rem", "margin": "2rem", "gutter": "1.5rem", "space-md": "1rem" }, "fontFamily": { "headline-xl": [ "Plus Jakarta Sans" ], "headline-md": [ "Plus Jakarta Sans" ], "headline-sm": [ "Plus Jakarta Sans" ], "body-lg": [ "Plus Jakarta Sans" ], "body-sm": [ "Plus Jakarta Sans" ], "label-caps": [ "Plus Jakarta Sans" ], "display-lg": [ "Plus Jakarta Sans" ], "label-data": [ "Plus Jakarta Sans" ], "body-md": [ "Plus Jakarta Sans" ] }, "fontSize": { "headline-xl": [ "32px", { "lineHeight": "40px", "letterSpacing": "-0.025em", "fontWeight": "700" } ], "headline-md": [ "24px", { "lineHeight": "32px", "letterSpacing": "-0.02em", "fontWeight": "700" } ], "headline-sm": [ "18px", { "lineHeight": "26px", "letterSpacing": "-0.015em", "fontWeight": "600" } ], "body-lg": [ "16px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400" } ], "body-sm": [ "13px", { "lineHeight": "18px", "letterSpacing": "0.01em", "fontWeight": "400" } ], "label-caps": [ "11px", { "lineHeight": "16px", "letterSpacing": "0.08em", "fontWeight": "700" } ], "display-lg": [ "44px", { "lineHeight": "52px", "letterSpacing": "-0.03em", "fontWeight": "800" } ], "label-data": [ "12px", { "lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "600" } ], "body-md": [ "14px", { "lineHeight": "22px", "letterSpacing": "0em", "fontWeight": "400" } ] } } } };</script></head><body class="bg-background font-body-md text-on-surface antialiased min-h-screen"><aside class="fixed left-0 top-0 h-full w-64 bg-surface-container-lowest z-50 flex flex-col pt-space-md pb-space-lg"><div class="px-space-md mb-space-lg flex items-center gap-space-sm"><div class="w-2 h-2 rounded-full bg-secondary"></div><span class="font-label-caps text-label-caps text-secondary uppercase tracking-wider">Aberto agora</span></div><div class="px-space-md mb-space-md"><div class="font-label-caps text-label-caps text-outline-variant uppercase tracking-wider mb-space-xs">Operação</div><div class="font-headline-sm text-headline-sm text-on-surface">Unidade Jardins</div></div><nav class="flex-1 px-space-sm flex flex-col gap-space-xs" data-active-classes="bg-primary-container text-on-primary-container font-bold rounded-lg"><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="agenda-do-dia" href="#"><span class="material-symbols-outlined text-outline">calendar_today</span><span class="font-body-md text-body-md">Agenda do Dia</span></a><a aria-current="page" class="flex items-center gap-space-sm px-space-md py-space-sm transition-all bg-primary-container text-on-primary-container font-bold rounded-lg" data-path="profissionais-e-escala" href="#"><span class="material-symbols-outlined text-outline">badge</span><span class="font-body-md text-body-md">Profissionais &amp; Escala</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="servicos-e-precos" href="#"><span class="material-symbols-outlined text-outline">content_cut</span><span class="font-body-md text-body-md">Serviços &amp; Preços</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="relatorios-gerenciais" href="#"><span class="material-symbols-outlined text-outline">analytics</span><span class="font-body-md text-body-md">Relatórios &amp; Faturamento</span></a></nav><div class="px-space-sm pt-space-md"><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-error hover:bg-error-container hover:text-on-error-container transition-all" data-path="selecao-de-profissional" href="#"><span class="material-symbols-outlined">logout</span><span class="font-body-md text-body-md">Sair</span></a></div></aside><div class="pl-64"><header class="fixed top-0 left-64 right-0 h-16 bg-surface-container/90 backdrop-blur-md z-40 flex items-center justify-between px-space-lg"><div class="flex items-center gap-space-md"><img alt="Selo e monograma circular de precisão 'AB' para APP Barb em latão/âmbar sobre carvão escuro. Brand logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1UsF3GCqriu_ZD6yOgvm1IZxBREvFM-Ox1vO2Sj5RjOQvaP-T2vSMFXhesQzovEB7ixmqrCVhjPRAju1mx7jd6wcSdoK7m9KUi9jizdfkI7smjjYeFyrigPmuWXYPka5JmZ-yi81Ld8b4alqaoM-16la1gTtRZnHlc3Y9qyMpQuFdFIhBZivqC5qia24HfiJBHLXs5ksZtipBm1e1xL2vDIN89SSR0Vqq5uzaglkzgJjTEnQWcxJYxc9v4"/><span class="font-label-caps text-label-caps uppercase tracking-wider text-on-surface-variant">Painel da Barbearia • Unidade Jardins</span></div><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs px-space-sm py-space-xs rounded-full bg-secondary-container text-on-secondary-container font-label-data text-label-data"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span><span>Aberto agora</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></header><main class="relative pt-16 bg-background min-h-screen"><div class="max-w-6xl mx-auto px-margin py-space-xl"><div class="flex flex-col w-full">
+<!-- Top Navigation Tabs & Primary Action -->
+<header class="flex flex-col md:flex-row md:items-center justify-between gap-space-md mb-space-xl">
+<div>
+<div class="flex items-center gap-space-xs mb-space-xs">
+<span class="font-label-caps text-label-caps text-primary tracking-widest uppercase">Corpo Operacional</span>
+<span class="text-outline-variant font-body-sm">•</span>
+<span class="font-label-data text-label-data text-on-surface-variant">4 Profissionais Ativos</span>
+</div>
+<!-- Internal Tab Bar -->
+<nav aria-label="Abas de Gestão" class="flex items-center gap-space-xs bg-surface-container-lowest p-1 rounded-xl w-fit">
+<button class="px-space-md py-space-xs rounded-lg font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors">
+          Agenda do Dia
+        </button>
+<button class="px-space-md py-space-xs rounded-lg font-body-sm text-body-sm bg-primary-container text-on-primary-container font-semibold shadow-sm transition-all flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+          Profissionais &amp; Escalas
+        </button>
+<button class="px-space-md py-space-xs rounded-lg font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors">
+          Tabela de Serviços &amp; Valores
+        </button>
+</nav>
+</div>
+<!-- Action Button -->
+<div class="flex items-center gap-space-sm">
+<button class="flex items-center gap-space-xs bg-primary text-on-primary px-space-md py-space-sm rounded-lg font-headline-sm text-body-md hover:bg-primary-container hover:text-on-primary-container transition-colors shadow-md active:translate-y-px">
+<span class="material-symbols-outlined text-[18px]">person_add</span>
+<span>Cadastrar Novo Profissional</span>
+</button>
+</div>
+</header>
+<!-- 2-Column Split: 40% Left Staff Directory / 60% Right Shift & Workday Editor -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-start">
+<!-- LEFT COLUMN (5 of 12 cols ~= 41%) -->
+<aside class="lg:col-span-5 flex flex-col gap-space-md">
+<div class="flex items-center justify-between px-space-xs">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-wider">Membros da Equipe</span>
+<span class="font-label-data text-label-data text-outline">Exibindo 4 de 4</span>
+</div>
+<!-- Staff Member 1: Mateus Silva (SELECTED) -->
+<article class="bg-surface-container-high rounded-xl p-space-md transition-all relative overflow-hidden shadow-lg">
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-primary"></div>
+<div class="flex items-start gap-space-md">
+<div class="relative shrink-0">
+<img class="w-14 h-14 rounded-full object-cover shadow-md" data-alt="Close-up portrait of a distinguished Brazilian master barber in his late 30s with a manicured dark beard, vintage leather apron over a tailored charcoal shirt, warm moody ambient studio lighting with warm brass reflections in an artisan barbershop setting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBNx48kjF4gN8eIfAC8rE5MFc9-JoWCOR7mExCyruVonnPHXbZ6ywl6CY_1CigM0SBMpgkz7_bQrprX-1ewhTw4EfaKZHLEIvUYZVtWDb1-ff9ovDsrjw1xsNYw9FKPRwRRnkTUbY969puOI64AgRcbA-8nAoKZhkUssWPDViJ4eSZKfEVIxwpAtjiyDruJiBptH_JuiOjIDopEIpTYhwAuL8JWtIwEB7F06Dw90ar5tokCCgvxTVlpjA"/>
+<span class="absolute -bottom-1 -right-1 w-3.5 h-3.5 rounded-full bg-secondary ring-2 ring-surface-container-high" title="Online na agenda"></span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center justify-between gap-space-xs">
+<h3 class="font-headline-sm text-headline-sm text-on-surface truncate">Mateus Silva</h3>
+<span class="px-space-xs py-0.5 rounded font-label-caps text-[10px] bg-secondary-container text-on-secondary-container uppercase tracking-wide">Ativo</span>
+</div>
+<p class="font-body-sm text-body-sm text-primary font-semibold">Barbeiro Master / Sócio</p>
+<div class="mt-space-xs flex flex-wrap gap-1">
+<span class="font-label-data text-[11px] px-1.5 py-0.5 rounded bg-surface-container text-on-surface-variant">Corte Tesoura</span>
+<span class="font-label-data text-[11px] px-1.5 py-0.5 rounded bg-surface-container text-on-surface-variant">Barboterapia</span>
+<span class="font-label-data text-[11px] px-1.5 py-0.5 rounded bg-surface-container text-on-surface-variant">Visagismo</span>
+</div>
+<div class="mt-space-sm pt-space-xs flex items-center justify-between text-on-surface-variant">
+<div class="flex items-center gap-1 font-label-data text-label-data text-outline">
+<span class="material-symbols-outlined text-[15px]">schedule</span>
+<span>Ter a Sáb (44h/sem)</span>
+</div>
+<span class="font-label-caps text-label-caps text-primary flex items-center gap-1 uppercase">
+                Editando Agora
+                <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</span>
+</div>
+</div>
+</div>
+</article>
+<!-- Staff Member 2: Rodrigo Fontana -->
+<article class="bg-surface-container rounded-xl p-space-md hover:bg-surface-container-high transition-colors group cursor-pointer">
+<div class="flex items-start gap-space-md">
+<div class="relative shrink-0">
+<img class="w-12 h-12 rounded-full object-cover grayscale group-hover:grayscale-0 transition-all" data-alt="Portrait of a young male barber with subtle arm tattoos holding professional precision clippers, dressed in a sharp minimal black t-shirt, set against a dark oiled walnut wall with soft amber lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD4Df5ywyeUwWDS6c2U8d8jzRAsXoCz1fq0ntYTCS4tgs7gMUpjRdfQnVTv0eauUEjt_ZuRa7UoQMbs-kue71MRBCR2Al3Z595gJQq9q1QMEZ5oSLxim6DxXRfpOtiYcjtn5ruqQua7dhQKltC0h_72lWysCLJYtGPO6qaGs2LmsILbD_a9hxwkBJGe1-6OwaYDp0EDeEFEtKQye9eZ-kQ7WCVv0xbNFjcJ6uH0DLdybP684f5Llp1BMQ"/>
+<span class="absolute -bottom-0.5 -right-0.5 w-3 h-3 rounded-full bg-secondary ring-2 ring-surface-container"></span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center justify-between gap-space-xs">
+<h3 class="font-headline-sm text-headline-sm text-on-surface truncate group-hover:text-primary transition-colors">Rodrigo Fontana</h3>
+<span class="font-label-caps text-[10px] px-1.5 py-0.5 rounded bg-surface-container-highest text-on-surface-variant uppercase">40h/sem</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Especialista Fade &amp; Navalha</p>
+<div class="mt-space-xs flex items-center justify-between">
+<span class="font-label-data text-label-data text-outline">Seg a Sex • 10:00 – 19:00</span>
+<button class="px-space-sm py-1 rounded bg-surface-container-highest hover:bg-primary hover:text-on-primary text-on-surface font-label-data text-label-data transition-colors">
+                Editar
+              </button>
+</div>
+</div>
+</div>
+</article>
+<!-- Staff Member 3: Carlos Mendes -->
+<article class="bg-surface-container rounded-xl p-space-md hover:bg-surface-container-high transition-colors group cursor-pointer">
+<div class="flex items-start gap-space-md">
+<div class="relative shrink-0">
+<img class="w-12 h-12 rounded-full object-cover grayscale group-hover:grayscale-0 transition-all" data-alt="Headshot of a middle-aged senior barber with styled silver hair and vintage round brass glasses, dark brown waistcoat, warm dramatic chiaroscuro grooming parlor atmosphere." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAUdhfEJEjW2aWhnuIC3VLzwZZt1lOLMIJIU93FRGxhIBFAynoZtd35JiknZKKnweJ-zDj6vF0CO0u64VR1lLidDO0iN6DNhDPMUBHtECiG2MPZhHk45caymBPrGNCrw_gI7dt5PfOSDYqvq5HHnUMjt5qFxBiyviOTWNaNZhm4c8OvY_O4sOGUcuIubR0FRcLqQqnGx323ef609rN0q5Cm1Z_p7Xy59yvjI838F0tWUTiG4gdKvLEiig"/>
+<span class="absolute -bottom-0.5 -right-0.5 w-3 h-3 rounded-full bg-secondary ring-2 ring-surface-container"></span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center justify-between gap-space-xs">
+<h3 class="font-headline-sm text-headline-sm text-on-surface truncate group-hover:text-primary transition-colors">Carlos Mendes</h3>
+<span class="font-label-caps text-[10px] px-1.5 py-0.5 rounded bg-surface-container-highest text-on-surface-variant uppercase">40h/sem</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Corte Clássico Tradicional &amp; Toalha Quente</p>
+<div class="mt-space-xs flex items-center justify-between">
+<span class="font-label-data text-label-data text-outline">Ter a Sáb • 09:00 – 18:00</span>
+<button class="px-space-sm py-1 rounded bg-surface-container-highest hover:bg-primary hover:text-on-primary text-on-surface font-label-data text-label-data transition-colors">
+                Editar
+              </button>
+</div>
+</div>
+</div>
+</article>
+<!-- Staff Member 4: Henrique Duarte -->
+<article class="bg-surface-container rounded-xl p-space-md hover:bg-surface-container-high transition-colors group cursor-pointer">
+<div class="flex items-start gap-space-md">
+<div class="relative shrink-0">
+<img class="w-12 h-12 rounded-full object-cover grayscale group-hover:grayscale-0 transition-all" data-alt="Portrait of a modern stylist barber leaning beside an antique leather barber chair with brushed steel fixtures, warm amber interior backlighting, professional confident expression." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDMnxPNkf4Sr8HdjwzwMB8jA51mwRF7s_biVsLpNLXdPW3UArBBpLhMlDPNDG7sApSZ5nwanjASmXlhAGOJdNKK8kmmuvZ0LtEyez1PgrCsw7s7PtftcxAYjHvvtjmDYPKX48bU1SDwoNHOhoj9zOjh6jqzgUGcaIZXPUu-205vI2Fw-soQRhjp55Zgg_yrRaq0D-CZf_f4Tup2rpQfnyYGTgUVKqcvlS4tw6D36JtLK_0LT5VqfTDKww"/>
+<span class="absolute -bottom-0.5 -right-0.5 w-3 h-3 rounded-full bg-secondary ring-2 ring-surface-container"></span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center justify-between gap-space-xs">
+<h3 class="font-headline-sm text-headline-sm text-on-surface truncate group-hover:text-primary transition-colors">Henrique Duarte</h3>
+<span class="font-label-caps text-[10px] px-1.5 py-0.5 rounded bg-surface-container-highest text-on-surface-variant uppercase">36h/sem</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Barbeiro Sênior • Químicas &amp; Alinhamento</p>
+<div class="mt-space-xs flex items-center justify-between">
+<span class="font-label-data text-label-data text-outline">Qua a Dom • 11:00 – 20:00</span>
+<button class="px-space-sm py-1 rounded bg-surface-container-highest hover:bg-primary hover:text-on-primary text-on-surface font-label-data text-label-data transition-colors">
+                Editar
+              </button>
+</div>
+</div>
+</div>
+</article>
+<!-- Operational Metric Micro-Card -->
+<div class="bg-surface-container-low rounded-xl p-space-md flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-surface-container-highest flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[18px]">verified_user</span>
+</div>
+<div>
+<div class="font-label-data text-label-data text-on-surface">Capacidade Nominal</div>
+<div class="font-body-sm text-body-sm text-outline">160 slots/dia em operação completa</div>
+</div>
+</div>
+<div class="text-right">
+<span class="font-headline-sm text-headline-sm text-primary">94%</span>
+<div class="font-label-caps text-[9px] text-outline uppercase tracking-wider">Ocupação Média</div>
+</div>
+</div>
+</aside>
+<!-- RIGHT COLUMN: Staff Editor & Weekly Roster (7 of 12 cols ~= 59%) -->
+<section class="lg:col-span-7 bg-surface-container rounded-xl p-space-lg shadow-xl">
+<!-- Section Header -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm pb-space-md mb-space-lg bg-surface-container-high -mx-space-lg -mt-space-lg p-space-lg rounded-t-xl">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined text-[22px]">manage_accounts</span>
+</div>
+<div>
+<span class="font-label-caps text-label-caps text-primary uppercase tracking-wider">Edição Ativa</span>
+<h2 class="font-headline-md text-headline-md text-on-surface">Mateus Silva</h2>
+</div>
+</div>
+<div class="flex items-center gap-space-xs self-start sm:self-auto">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="font-label-data text-label-data text-on-surface-variant">Sincronizado na nuvem</span>
+</div>
+</div>
+<!-- Master Form Structure -->
+<form class="flex flex-col gap-space-lg" id="schedule-form" onsubmit="event.preventDefault();">
+<!-- Registration Fields (Grid 2 cols) -->
+<fieldset class="space-y-space-md">
+<legend class="font-label-caps text-label-caps text-outline-variant uppercase tracking-wider mb-space-sm">
+            01 • Informações Cadastrais &amp; Cargo
+          </legend>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<!-- Full Name -->
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-data text-label-data text-on-surface-variant" for="input-name">Nome Completo</label>
+<input class="bg-surface-container-lowest text-on-surface px-space-md py-space-sm rounded-lg font-body-md text-body-md focus:outline-none focus:bg-surface-container-high transition-colors" id="input-name" type="text" value="Mateus Silva"/>
+</div>
+<!-- Direct Phone / WhatsApp -->
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-data text-label-data text-on-surface-variant" for="input-phone">Telefone / WhatsApp Direto</label>
+<div class="relative">
+<input class="w-full bg-surface-container-lowest text-on-surface px-space-md py-space-sm rounded-lg font-body-md text-body-md focus:outline-none focus:bg-surface-container-high transition-colors pl-9" id="input-phone" type="text" value="(11) 99123-4567"/>
+<span class="material-symbols-outlined absolute left-2.5 top-2.5 text-outline text-[18px]">phone</span>
+</div>
+</div>
+</div>
+<!-- Specialties Tag Editor -->
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-data text-label-data text-on-surface-variant">Especialidades &amp; Habilidades Habilitadas</label>
+<div class="flex flex-wrap items-center gap-space-xs p-space-sm bg-surface-container-lowest rounded-lg">
+<span class="inline-flex items-center gap-1 px-space-sm py-1 rounded bg-primary-container text-on-primary-container font-label-data text-label-data">
+                Corte Tesoura
+                <button class="hover:text-on-surface cursor-pointer flex items-center" type="button"><span class="material-symbols-outlined text-[14px]">close</span></button>
+</span>
+<span class="inline-flex items-center gap-1 px-space-sm py-1 rounded bg-primary-container text-on-primary-container font-label-data text-label-data">
+                Barboterapia
+                <button class="hover:text-on-surface cursor-pointer flex items-center" type="button"><span class="material-symbols-outlined text-[14px]">close</span></button>
+</span>
+<span class="inline-flex items-center gap-1 px-space-sm py-1 rounded bg-primary-container text-on-primary-container font-label-data text-label-data">
+                Navalhado Clássico
+                <button class="hover:text-on-surface cursor-pointer flex items-center" type="button"><span class="material-symbols-outlined text-[14px]">close</span></button>
+</span>
+<span class="inline-flex items-center gap-1 px-space-sm py-1 rounded bg-surface-container-highest text-on-surface-variant font-label-data text-label-data">
+                Visagismo Facial
+                <button class="hover:text-on-surface cursor-pointer flex items-center" type="button"><span class="material-symbols-outlined text-[14px]">close</span></button>
+</span>
+<button class="inline-flex items-center gap-1 px-space-sm py-1 rounded bg-surface-container-high hover:bg-surface-container text-primary font-label-data text-label-data transition-colors" type="button">
+<span class="material-symbols-outlined text-[14px]">add</span>
+                Adicionar Tag
+              </button>
+</div>
+</div>
+<!-- Commission Percentage -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between p-space-md bg-surface-container-lowest rounded-lg gap-space-sm">
+<div>
+<div class="font-body-md text-body-md text-on-surface font-semibold">Repasse &amp; Comissão Individual</div>
+<div class="font-body-sm text-body-sm text-outline">Percentual contratual creditado no fechamento semanal</div>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-headline-sm text-primary font-bold">60%</span>
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">sobre serviços</span>
+</div>
+</div>
+</fieldset>
+<!-- Weekly Schedule Table -->
+<fieldset class="space-y-space-md">
+<div class="flex items-center justify-between">
+<legend class="font-label-caps text-label-caps text-outline-variant uppercase tracking-wider">
+              02 • Escala Semanal de Atendimento
+            </legend>
+<span class="font-label-data text-[11px] text-primary">Carga total: 44h semanais</span>
+</div>
+<!-- Day Rows -->
+<div class="space-y-space-xs">
+<!-- SEGUNDA-FEIRA: Off -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between p-space-sm px-space-md bg-surface-container-lowest rounded-lg opacity-60">
+<div class="flex items-center gap-space-md w-36">
+<!-- Toggle switch OFF -->
+<button class="w-9 h-5 bg-surface-container-highest rounded-full p-0.5 flex items-center transition-colors" type="button">
+<span class="w-4 h-4 rounded-full bg-outline transition-transform"></span>
+</button>
+<span class="font-body-md text-body-md text-outline">Segunda</span>
+</div>
+<div class="font-label-data text-label-data text-outline italic py-1 sm:py-0">
+                Folga semanal regular
+              </div>
+<div class="font-label-caps text-label-caps text-outline uppercase tracking-wider">
+                Indisponível
+              </div>
+</div>
+<!-- TERÇA-FEIRA: Active -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between p-space-sm px-space-md bg-surface-container-low rounded-lg gap-y-space-xs">
+<div class="flex items-center gap-space-md w-36">
+<!-- Toggle switch ON -->
+<button class="w-9 h-5 bg-secondary-container rounded-full p-0.5 flex items-center justify-end transition-colors" type="button">
+<span class="w-4 h-4 rounded-full bg-secondary transition-transform"></span>
+</button>
+<span class="font-body-md text-body-md text-on-surface font-semibold">Terça-feira</span>
+</div>
+<div class="flex items-center flex-wrap gap-space-sm font-label-data text-label-data">
+<span class="text-on-surface-variant">09:00 – 19:30</span>
+<span class="text-outline">•</span>
+<span class="text-outline">Almoço: 12:30 às 13:30</span>
+</div>
+<div class="font-label-data text-label-data text-primary font-semibold">
+                9h30 líquidas
+              </div>
+</div>
+<!-- QUARTA-FEIRA: Active -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between p-space-sm px-space-md bg-surface-container-low rounded-lg gap-y-space-xs">
+<div class="flex items-center gap-space-md w-36">
+<button class="w-9 h-5 bg-secondary-container rounded-full p-0.5 flex items-center justify-end transition-colors" type="button">
+<span class="w-4 h-4 rounded-full bg-secondary transition-transform"></span>
+</button>
+<span class="font-body-md text-body-md text-on-surface font-semibold">Quarta-feira</span>
+</div>
+<div class="flex items-center flex-wrap gap-space-sm font-label-data text-label-data">
+<span class="text-on-surface-variant">09:00 – 19:30</span>
+<span class="text-outline">•</span>
+<span class="text-outline">Almoço: 12:30 às 13:30</span>
+</div>
+<div class="font-label-data text-label-data text-primary font-semibold">
+                9h30 líquidas
+              </div>
+</div>
+<!-- QUINTA-FEIRA: Active -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between p-space-sm px-space-md bg-surface-container-low rounded-lg gap-y-space-xs">
+<div class="flex items-center gap-space-md w-36">
+<button class="w-9 h-5 bg-secondary-container rounded-full p-0.5 flex items-center justify-end transition-colors" type="button">
+<span class="w-4 h-4 rounded-full bg-secondary transition-transform"></span>
+</button>
+<span class="font-body-md text-body-md text-on-surface font-semibold">Quinta-feira</span>
+</div>
+<div class="flex items-center flex-wrap gap-space-sm font-label-data text-label-data">
+<span class="text-on-surface-variant">09:00 – 20:00</span>
+<span class="text-outline">•</span>
+<span class="text-outline">Almoço: 12:30 às 13:30</span>
+</div>
+<div class="font-label-data text-label-data text-primary font-semibold">
+                10h00 líquidas
+              </div>
+</div>
+<!-- SEXTA-FEIRA: Active -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between p-space-sm px-space-md bg-surface-container-low rounded-lg gap-y-space-xs">
+<div class="flex items-center gap-space-md w-36">
+<button class="w-9 h-5 bg-secondary-container rounded-full p-0.5 flex items-center justify-end transition-colors" type="button">
+<span class="w-4 h-4 rounded-full bg-secondary transition-transform"></span>
+</button>
+<span class="font-body-md text-body-md text-on-surface font-semibold">Sexta-feira</span>
+</div>
+<div class="flex items-center flex-wrap gap-space-sm font-label-data text-label-data">
+<span class="text-on-surface-variant">09:00 – 20:00</span>
+<span class="text-outline">•</span>
+<span class="text-outline">Almoço: 12:30 às 13:30</span>
+</div>
+<div class="font-label-data text-label-data text-primary font-semibold">
+                10h00 líquidas
+              </div>
+</div>
+<!-- SÁBADO: Active (Pico) -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between p-space-sm px-space-md bg-surface-container-high rounded-lg gap-y-space-xs">
+<div class="flex items-center gap-space-md w-36">
+<button class="w-9 h-5 bg-secondary-container rounded-full p-0.5 flex items-center justify-end transition-colors" type="button">
+<span class="w-4 h-4 rounded-full bg-secondary transition-transform"></span>
+</button>
+<span class="font-body-md text-body-md text-on-surface font-bold text-primary">Sábado (Pico)</span>
+</div>
+<div class="flex items-center flex-wrap gap-space-sm font-label-data text-label-data">
+<span class="text-on-surface font-semibold">08:30 – 18:30</span>
+<span class="text-outline">•</span>
+<span class="text-outline">Almoço: 12:00 às 12:45</span>
+</div>
+<div class="font-label-data text-label-data text-primary font-semibold">
+                9h15 líquidas
+              </div>
+</div>
+<!-- DOMINGO: Closed -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between p-space-sm px-space-md bg-surface-container-lowest rounded-lg opacity-60">
+<div class="flex items-center gap-space-md w-36">
+<button class="w-9 h-5 bg-surface-container-highest rounded-full p-0.5 flex items-center transition-colors" type="button">
+<span class="w-4 h-4 rounded-full bg-outline transition-transform"></span>
+</button>
+<span class="font-body-md text-body-md text-outline">Domingo</span>
+</div>
+<div class="font-label-data text-label-data text-outline italic py-1 sm:py-0">
+                Barbearia fechada
+              </div>
+<div class="font-label-caps text-label-caps text-outline uppercase tracking-wider">
+                Indisponível
+              </div>
+</div>
+</div>
+</fieldset>
+<!-- Service Gap / Interval Settings -->
+<div class="p-space-md bg-surface-container-lowest rounded-lg flex flex-col sm:flex-row sm:items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[20px]">timelapse</span>
+<div>
+<div class="font-body-md text-body-md text-on-surface font-semibold">Intervalo Técnico Obrigatório</div>
+<div class="font-body-sm text-body-sm text-outline">Higienização de bancada e esterilização de ferramentas</div>
+</div>
+</div>
+<div class="sm:w-64">
+<select class="w-full bg-surface-container-high text-on-surface px-space-md py-space-sm rounded-lg font-body-md text-body-md focus:outline-none cursor-pointer">
+<option value="5">05 minutos de intervalo</option>
+<option selected="" value="10">10 minutos de intervalo técnico</option>
+<option value="15">15 minutos de intervalo estendido</option>
+</select>
+</div>
+</div>
+<!-- Footer Actions -->
+<footer class="flex items-center justify-end gap-space-md pt-space-md bg-surface-container-high -mx-space-lg -mb-space-lg p-space-lg rounded-b-xl">
+<button class="px-space-lg py-space-sm rounded-lg font-body-md text-body-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" type="button">
+            Cancelar
+          </button>
+<button class="flex items-center gap-space-xs bg-primary text-on-primary px-space-xl py-space-sm rounded-lg font-headline-sm text-body-md hover:bg-primary-container hover:text-on-primary-container transition-all shadow-md active:translate-y-px" id="save-roster-btn" type="button">
+<span class="material-symbols-outlined text-[18px]">save</span>
+<span>Salvar Alterações de Escala</span>
+</button>
+</footer>
+</form>
+</section>
+</div>
+</div>
+<script>
+  (function() {
+    const saveBtn = document.getElementById('save-roster-btn');
+    if (saveBtn) {
+      saveBtn.addEventListener('click', function() {
+        const originalText = saveBtn.innerHTML;
+        saveBtn.disabled = true;
+        saveBtn.innerHTML = '<span class="material-symbols-outlined text-[18px] animate-spin">sync</span><span>Salvando dados...</span>';
+        
+        setTimeout(() => {
+          saveBtn.innerHTML = '<span class="material-symbols-outlined text-[18px]">check_circle</span><span>Escala Atualizada!</span>';
+          saveBtn.classList.remove('bg-primary', 'text-on-primary');
+          saveBtn.classList.add('bg-secondary', 'text-on-secondary');
+          
+          setTimeout(() => {
+            saveBtn.disabled = false;
+            saveBtn.classList.remove('bg-secondary', 'text-on-secondary');
+            saveBtn.classList.add('bg-primary', 'text-on-primary');
+            saveBtn.innerHTML = originalText;
+          }, 2000);
+        }, 600);
+      });
+    }
+  })();
+</script></div></main></div></body></html>
